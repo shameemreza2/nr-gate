@@ -161,24 +161,31 @@ def pos_en(pos_zh):
     return "/".join(labels)
 
 # ── 6. Write Anki import file ─────────────────────────────────────────────────
-# Fields: Word | Pinyin | POS | Level | (Tags column)
-# Anki import: File > Import > select this .txt, separator = Tab
-# Suggested note type: "HSK" with fields: Word, Pinyin, POS, Level
-# Card front: {{Word}}   back: {{Pinyin}}<br>{{POS}}<br>Level {{Level}}
+# 3-column format for Basic+++ note type:
+#   col 1 → Word   (front field)
+#   col 2 → Definition  (back field: "pīnyīn  |  pos  |  HSK N")
+#   col 3 → Tags   (HSK1 / HSK2 / …)
+# In Anki import dialog: Word→1, Definition→2, Tags→3  — Audio/Example stay blank
 
 anki_path = OUT_DIR / "hsk_anki.txt"
 with open(anki_path, "w", encoding="utf-8-sig", newline="\n") as f:
     f.write("#separator:tab\n")
     f.write("#html:false\n")
-    f.write("#tags column:5\n")
-    f.write("#columns:Word\tPinyin\tPOS\tLevel\tTags\n")
+    f.write("#tags column:3\n")
+    f.write("#columns:Word\tDefinition\tTags\n")
     for e in entries:
         word   = e["word"]
         pinyin = e["pinyin"]
         pos    = pos_en(e["pos"])
         level  = e["level"] if e["level"] else ""
         tag    = f"HSK{level}" if level else "HSK_unknown"
-        f.write(f"{word}\t{pinyin}\t{pos}\t{level}\t{tag}\n")
+        # Build Definition: "pīnyīn  |  pos  |  HSK N"
+        parts = [pinyin]
+        if pos:
+            parts.append(pos)
+        parts.append(f"HSK {level}" if level else "")
+        definition = "  |  ".join(p for p in parts if p)
+        f.write(f"{word}\t{definition}\t{tag}\n")
 
 print(f"\nAnki  → {anki_path}  ({len(entries)} notes)")
 

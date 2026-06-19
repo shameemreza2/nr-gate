@@ -1,0 +1,32 @@
+﻿Extracted 10994 vocabulary entries
+  HSK 1:  300  (cumulative 300)
+  HSK 2:  200  (cumulative 500)
+  HSK 3:  500  (cumulative 1000)
+  HSK 4:  999  (cumulative 1999)
+  HSK 5: 1597  (cumulative 3596)
+  HSK 6: 1798  (cumulative 5394)
+  HSK 7: 5600  (cumulative 10994)
+
+Entries with no POS (495 total, sample):
+  seq=   14  lv=1  不客气  bú kèqi
+  seq=   24  lv=1  打电话  dǎ diànhuà
+  seq=  120  lv=1  没关系  méi guānxi
+  seq=  147  lv=1  你好  nǐ hǎo
+  seq=  227  lv=1  下雨  xià yǔ
+  seq=  300  lv=1  做饭  zuò fàn
+  seq=  313  lv=2  不好意思  bù hǎoyìsi
+  seq=  398  lv=2  没意思  méi yìsi
+  seq=  454  lv=2  为什么  wèi shénme
+  seq=  479  lv=2  有意思  yǒu yìsi
+
+Anki  → D:\hsk3~5\decks\hsk_anki.txt  (10994 notes)
+Pleco → D:\hsk3~5\decks\hsk_pleco.xml
+  HSK1 (新版2026): 300 cards
+  HSK2 (新版2026): 200 cards
+  HSK3 (新版2026): 500 cards
+  HSK4 (新版2026): 999 cards
+  HSK5 (新版2026): 1597 cards
+  HSK6 (新版2026): 1798 cards
+  HSK7-9 (新版2026): 5600 cards
+
+Done.

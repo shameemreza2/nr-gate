@@ -1,2 +1,10 @@
 corpus/tone_perfect/
 logs/hvpt_sessions.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# graphify local/machine-specific + cache (graph outputs themselves are kept)
+graphify-out/.graphify_python
+graphify-out/cache/

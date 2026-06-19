@@ -1,0 +1,469 @@
+[
+  {
+    "dimension": "Method for skimming Chinese-language technical paper abstracts (CNKI 摘要 / IEEE Chinese editions) to ~80% gist, for an HSK 3-level telecom student with a telecom term deck",
+    "findings": [
+      {
+        "claim": "Chinese academic abstracts follow a fixed 4-element structure (目的/方法/结果/结论), almost always in that order, which makes them predictable and skimmable.",
+        "detail": "Official/editorial guidance defines the abstract's four elements as 目的 (purpose/background+problem), 方法 (method), 结果 (results/data), 结论 (conclusion/significance). Order is canonical: background+aim → method → results → conclusion. A Chinese abstract is typically <=300 characters and uses present tense, so it is dense but short — ideal for a sentence-mapping skim. Method for the learner: read it as 4 slots, not as continuous prose — find the one sentence that fills each slot. Sources: PaperPass 摘要格式要求 (controls to <=300字), CSDN 论文摘要的四要素, cwauthors.",
+        "confidence": "high",
+        "sources": [
+          "https://www.paperpass.com/knowledge/9906.html",
+          "https://blog.csdn.net/tangping2020/article/details/118418905",
+          "https://www.cwauthors.com.cn/article/Abstract_20201228"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "A real verbatim CNKI telecom abstract confirms the exact signal-phrase skeleton the learner should anchor on: 针对…缺点 → 提出了一种…算法 → 该算法…通过… → 仿真结果表明…",
+        "detail": "From 《基于OFDM的认知无线电功率分配方法研究》 (无线电工程, CNKI): '针对认知无线电…需要提高频谱利用率,而…OFDM…功率分配算法计算复杂度高的缺点,…进行了研究。提出了一种将整个信道分为多个子载波块进行功率分配的算法,该算法结合…的结果,…并通过自适应调制实现吞吐量最大化。仿真结果表明,该算法可以有效提高频谱利用效率。' This single abstract contains 针对 (problem), …缺点 (gap), 提出了一种 (method), 该算法 (the proposed method), 通过 (means), 仿真结果表明 (result), and 关键词: 认知无线电;正交频分复用;功率分配;注水算法. Method takeaway: 90% of telecom abstracts reuse this skeleton, so learning ~25 frame phrases unlocks the structure regardless of unknown technical nouns.",
+        "confidence": "high",
+        "sources": [
+          "https://wxdg.cbpt.cnki.net/portal/journal/portal/client/paper/c0df992f4532acbeff72dfc061058e81"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "The slot-by-slot signal phrases to pre-learn are stable and short; mastering them lets the reader locate each of the 4 elements without reading every word.",
+        "detail": "目的/背景 (purpose/gap): 针对… (aiming at / to address), 为了… (in order to), 由于… (because of), …的问题/缺点/挑战 (the problem/drawback/challenge of), 随着…的发展 (with the development of), 现有方法…难以/无法 (existing methods cannot). 方法 (method): 提出(了一种) (proposes), 本文 (this paper), 基于… (based on), 设计了 (designed), 构建了 (constructed), 采用… (adopts), 利用… (uses), 通过… (through/by means of), 结合… (combines). 结果 (results): 仿真结果表明 (simulation results show), 实验结果表明/实验表明 (experimental results show), 结果表明 (results indicate), 验证了 (validates), 与…相比/与现有方法相比 (compared with existing methods), 优于 (outperforms), 提高了/降低了 + 数字% (improved/reduced by N%). 结论 (conclusion): 综上所述 (in summary), 上述分析表明, 该方法 (this method), 具有…的优点 (has the advantage of), 能够/可以有效 (can effectively). Source corroboration: lcgdbzz editorial, CSDN SCI句型, ZJU chxg 中英文摘要写法.",
+        "confidence": "high",
+        "sources": [
+          "https://www.lcgdbzz.org/custom/news/id/7639",
+          "https://blog.csdn.net/qq_42244418/article/details/124623820",
+          "https://chxg.cbpt.cnki.net/WKC/WebPublication/wkTextContent.aspx?contentID=c48312f2-f674-41a7-a498-c6fa2a8c068b"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "High-frequency academic connectives to pre-learn fall into 5 logical classes; these glue the abstract together and signal where the gist turns.",
+        "detail": "承接/sequence: 首先, 其次, 然后, 与此同时 (meanwhile). 因果/causal: 因此 (therefore), 由于 (due to), 从而 (thereby), 这表明/结果表明 (this shows). 转折/contrast: 然而 (however), 但 (but), 尽管 (although), 相比之下 (by contrast). 补充/addition: 此外 (in addition), 同时 (at the same time), 并 (and/moreover), 不仅…而且 (not only…but also). 总结/summary: 综上所述 (to sum up), 总之 (in short), 上述分析表明. Practical skim rule: 然而/但 usually flags the research gap or a limitation of prior work; 因此/从而 flags the payoff/conclusion; 结果表明/仿真结果表明 flags the single most important results sentence. Source: 知乎 essay连接词大全, 博客园 减少口语化表达.",
+        "confidence": "high",
+        "sources": [
+          "https://zhuanlan.zhihu.com/p/456814417",
+          "https://www.cnblogs.com/picassooo/p/17743528.html"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "The general academic skim strategy (title -> abstract -> first sentences -> figures) maps cleanly onto the Chinese 4-slot abstract and is the recommended reading order.",
+        "detail": "Standard university reading-strategy guidance: skimming is 'reading smart, not reading fast' — focus on title then abstract (topic/method/findings/conclusions), read the first sentence of each paragraph (topic sentences), review intro+conclusion, and examine figures/tables for the data. Applied to a Chinese abstract: (1) read 标题 + 关键词 first — keywords are the densest term list and pre-flag which deck terms appear; (2) locate the 提出 sentence (= core contribution); (3) locate the 仿真/实验结果表明 sentence (= what was achieved, often with a number); (4) only then back-fill the 针对 (problem) sentence if needed. ~80% gist = title + keywords + the 提出 sentence + the 结果表明 sentence. Sources: GMU Writing Center, U. Birmingham LibGuides, Nacke skim-paper thread.",
+        "confidence": "high",
+        "sources": [
+          "https://writingcenter.gmu.edu/writing-resources/reading-practices/strategies-for-reading-academic-articles",
+          "https://libguides.bham.ac.uk/c.php?g=689902&p=4942995",
+          "https://x.com/acagamic/status/1752371021523333218"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "telecomsci.com (电信科学 / Telecommunications Science) is a high-yield free source of current, short, term-dense telecom abstracts for drilling, and confirms the same signal phrases appear in cutting-edge telecom topics.",
+        "detail": "Live abstracts seen on the journal's onlineFirst page reuse the skeleton with telecom vocabulary: '针对…CF-RAN的下行传输性能分析与优化,引入速率拆分多址(RSMA)…推导了…闭式表达式' + '仿真证明…约2.5bit/s/Hz的性能增益'; '基于坐标索引方法(CNR)提出了一种低延迟的算网标识解析机制' + '实验表明…缩短了41.61%的查找路径和57.19%的响应时间'; an AMR review '从信号表示、模型结构、数据集评测和挑战展望四个方面综述了…CNN、RNN、Transformer'. These show the percent-gain pattern (提高/缩短 + N%) and that 综述了 marks a survey/review paper. Pair this with CNKI 无线电工程/无线电通信技术 (free abstracts) for OFDM/MIMO/信道估计 material.",
+        "confidence": "high",
+        "sources": [
+          "https://www.telecomsci.com/zh/onlineFirst/",
+          "https://wxdg.cbpt.cnki.net/portal/journal/portal/client/paper/e99556a8a7d24946e76f9d42994a0107"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "A concrete weekly abstract-skimming drill (Phase 2, ~4-6 weeks, ~25-35 min/day) can be built from these primitives.",
+        "detail": "Recommended progression (synthesized from the skim strategy + 4-slot structure): WEEK 1 — pre-learn the ~25 frame phrases + 5 connective classes above as a 'structure deck' (separate from the 200-word term deck); drill by labeling, in any abstract, which sentence is 针对/提出/结果/结论 (no full translation). WEEK 2 — 'keyword-first' drill: read only 标题+关键词 of 5 abstracts/day, predict the 提出 sentence, then check. WEEK 3 — 'two-sentence gist' drill: for 3 abstracts/day, write a one-line English gist using ONLY the 提出 sentence + the 结果表明 sentence; target <=2 min/abstract. WEEK 4 — 'percent + comparison' drill: hunt the 与…相比 / 优于 / 提高了N% sentence to extract the quantitative claim; include 1 综述 (survey) abstract/week to learn the 从…几个方面 enumeration pattern. Daily source mix: 2 from telecomsci.com onlineFirst (current) + 1 from CNKI 无线电工程 (OFDM/MIMO). Measure: self-rate gist 0-100%; goal is 80% of (problem + method + headline result), NOT every word. This drill design is synthesized from cited reading-strategy and abstract-structure sources, not a single published curriculum.",
+        "confidence": "medium",
+        "sources": [
+          "https://writingcenter.gmu.edu/writing-resources/reading-practices/strategies-for-reading-academic-articles",
+          "https://www.lcgdbzz.org/custom/news/id/7639",
+          "https://www.telecomsci.com/zh/onlineFirst/"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "HSK 3.0 vocabulary alone will not cover technical abstracts; the gap is bridged by the structure-phrase deck plus the 200-word term deck, not by more general study.",
+        "detail": "Abstracts are written in 书面语 (formal written register) and dense 学术汉语, which sits above HSK 3 general vocabulary; specialized written-register vocabulary teaching is recognized as distinct. Implication for Phase 2: the learner does NOT need to raise general HSK level to skim abstracts — they need (a) ~25 structural frame phrases (function words/patterns: 针对/提出/基于/结果表明/与…相比 — several of these morphemes are within or near HSK 3), and (b) the ~200 telecom content nouns (OFDM 正交频分复用, 信道估计, 误码率, 频谱, 调制, 算法, 仿真, 性能). 性能/算法/仿真/方法/结果/提出/基于 recur in essentially every telecom abstract, so they are the highest-ROI additions. Caveat: I did not find an official HSK 3.0 list explicitly tagging which of these frame words are in the 1,000-word band — that mapping should be checked against the Phase 1 vocabulary list. Sources: IJCLE 语体语法与书面语词汇 (Yan Ling), HSK3.0 能力描述 PDF.",
+        "confidence": "medium",
+        "sources": [
+          "https://ijcle.eduhk.hk/uploads/issues/374/IJCLE_No.3_Jun18_02.pdf",
+          "https://hsk.cn-bj.ufileos.com/3.0/HSK3.0%E8%80%83%E8%AF%95%E8%83%BD%E5%8A%9B%E6%8F%8F%E8%BF%B0.pdf"
+        ],
+        "is_date_or_format_fact": false
+      }
+    ],
+    "open_questions": [
+      "Which of the ~25 structural frame phrases (针对, 提出, 基于, 结果表明, 仿真, 性能, 算法, 与…相比) are already inside the Phase 1 HSK 3.0 1,000-word vocabulary versus net-new — this needs cross-checking against the actual Phase 1 word list so the 'structure deck' only adds genuinely missing items.",
+      "Whether to drill abstracts in simplified-only or also expose the learner to IEEE Chinese-edition formatting (which sometimes pairs Chinese abstract with English abstract) — a bilingual abstract is a built-in answer key and may be the single best training material; need to confirm which IEEE/CIE Chinese-edition journals publish bilingual abstracts freely.",
+      "Optimal placement of this drill in the Phase 2 timeline relative to the HSK 3 written/HSKK exam prep and the part-time job — abstract-skimming is the lowest exam-stakes goal (it does not appear on HSK 3 or HSKK), so it likely belongs as low-intensity daily maintenance (~10-15 min) rather than peak study time before the exam date.",
+      "No single published 'Chinese abstract speed-reading curriculum' was found; the weekly drill is synthesized from general reading-strategy sources + abstract-structure guidance, so it is reasoned best-practice rather than a cited program (confidence medium)."
+    ]
+  },
+  {
+    "dimension": "Telecom Chinese seed deck (~200 terms): authoritative term sources, existing bilingual glossaries, and assembly + SRS workflow",
+    "findings": [
+      {
+        "claim": "termonline.cn (术语在线) is the single most authoritative free source for Chinese-English telecom terms and should be the deck's primary authority.",
+        "detail": "Run by 全国科学技术名词审定委员会 (China National Committee for Terms in Sciences and Technologies / CNCTST). Launched May 2016. Aggregates all state-vetted (审定公布) terms plus cross-strait bilingual term sets; total data volume ~1,000,000 entries ('总数据量近百万条' / earlier figure ~450,000 vetted terms), covering 100+ disciplines including communications. Supports Chinese, English, and abbreviation search; each entry shows the official Chinese term, English equivalent, discipline tag, and often a definition. Free web + Android app. URL: https://www.termonline.cn",
+        "confidence": "high",
+        "sources": [
+          "https://www.termonline.cn/index",
+          "https://appadvice.com/app/e6-9c-af-e8-af-ad-e5-9c-a8-e7-ba-bf/1135939565",
+          "https://www.mergeek.com/projects/PZ5ExWbKpamrD6gv"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "The official national telecom term standard underlying termonline is 《通信科学技术名词》(定义版, 2007), 2,104 vetted terms — the ideal backbone for the 200-term deck.",
+        "detail": "Approved/published by 通信科学技术名词审定委员会 (a subcommittee of CNCTST, established 29 Aug 2003;审定 work done 2003-2006; formally published 2007). Contains 2,104 terms ('共收词2104条') organized into 17 sections including 通信原理与基本技术 (communication principles & basic techniques), 通信网络 (communication networks), and 支撑网络 (support networks). Described as the规范名词 that research, teaching, production, and publishing sectors should follow. This is the authoritative source for foundational terms like 天线/调制/信道. Index page (note: cnterm.cn uses a self-signed TLS cert, so fetch failed; access the same content via termonline.cn search instead).",
+        "confidence": "high",
+        "sources": [
+          "http://www.cnterm.cn/sd/xxjs/sdml/202311/t20231128_764717.html",
+          "http://www.cnterm.cn/jggk/sdfwyh/txkxjsmcsdwyh/",
+          "https://www.term.org.cn/CN/abstract/abstract9029.shtml"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "For 5G/4G-specific terms, anchor to CCSA, which is the Chinese mirror/standardization body for 3GPP terminology.",
+        "detail": "中国通信标准化协会 (China Communications Standards Association, CCSA) hosts the Chinese 3GPP working area (ccsa.org.cn/tgpp/). 3GPP publishes TS (frozen Technical Specifications) and TR (Technical Reports); 3GPP TR 21.905 is the standard 'Vocabulary for 3GPP Specifications' and circulates with Chinese annotations (e.g. doc 21905-g00). National standards body for telecom is TC485 (全国通信标准化技术委员会) on std.samr.gov.cn. Use these for terms like NR=新空口, 基站, 上行/下行链路.",
+        "confidence": "high",
+        "sources": [
+          "https://ccsa.org.cn/tgpp/",
+          "https://std.samr.gov.cn/search/orgDetailView?tcCode=TC485",
+          "https://www.iteye.com/resource/qq_34784043-11264442"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "CNKI Translation Assistant (dict.cnki.net) is the best tool for verifying how a term is actually translated in published Chinese academic papers.",
+        "detail": "CNKI翻译助手 is CNKI's online translation system: 8M+ vocabulary/terminology entries plus 15M+ bilingual example sentences drawn from the academic corpus, updated in real time, covering natural and social sciences. Because it is corpus-derived, it shows the term forms a HIT-Shenzhen supervisor would actually read in CNKI/IEEE-CN papers — ideal for the abstract-skimming goal and for choosing between term variants. URL: dict.cnki.net",
+        "confidence": "high",
+        "sources": [
+          "https://special.chaoxing.com/special/screen/tocard/88937713?courseId=88896286",
+          "https://blog.csdn.net/carywei/article/details/83769015"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Term-variant pitfall: 'beamforming' has two competing Chinese forms — 波束赋形 and 波束成形 — both correct; pick 波束赋形 as the headword and list 波束成形 as a synonym.",
+        "detail": "Both terms are used interchangeably for beamforming with no technical distinction. 波束赋形 is the more common form in 3GPP/5G industry and operator material; 波束成形 is common in academic/signal-processing writing. The deck should store one canonical headword + the variant in a 'synonym' field so the learner recognizes both in abstracts. Similar care needed for OFDM=正交频分复用 (multiplexing, single-user modulation) vs OFDMA=正交频分多址 (multiple access, multi-user) — these are DIFFERENT terms, not synonyms.",
+        "confidence": "high",
+        "sources": [
+          "https://blog.csdn.net/qq_40168949/article/details/80170898",
+          "http://www.ictbaike.com/2021/01/08/",
+          "https://ofdma.cn/post/ofdm/",
+          "https://zhuanlan.zhihu.com/p/594306925"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Confirmed canonical Chinese forms for the user's named anchor terms.",
+        "detail": "antenna=天线; OFDM=正交频分复用 (正交=orthogonal, 频分=frequency-division, 复用=multiplexing); modulation=调制; channel=信道; beamforming=波束赋形/波束成形; carrier=载波; subcarrier=子载波; bandwidth=带宽; MIMO=多输入多输出 (多天线); base station=基站; new radio (5G)=新空口 (NR); 5G=第五代移动通信. These are consistent across termonline-aligned and industry sources.",
+        "confidence": "high",
+        "sources": [
+          "https://www.srrc.org.cn/article23791.aspx",
+          "https://zhuanlan.zhihu.com/p/667715193",
+          "https://blog.csdn.net/uxuepai5g/article/details/108570894"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "通信原理 (Fan Changxin / 樊昌信, 7th ed., 国防工业出版社 2012) is the de-facto Chinese signals/comms textbook to mine for foundational signal-processing terms.",
+        "detail": "14 chapters in 3 parts: Ch1-5 fundamentals + analog modulation, Ch6-10 digital comms / analog-signal digitization / optimal reception, Ch11-14 coding & synchronization + intro to comm networks. National 'excellent course' at Xidian. Best source for terms like SNR=信噪比, fading=衰落, pilot=导频, cyclic prefix=循环前缀, baseband=基带 in the exact register Chinese EE students use.",
+        "confidence": "high",
+        "sources": [
+          "https://book.douban.com/subject/25834772/",
+          "https://www.icourses.cn/sCourse/course_6642.html"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Recommended assembly method: build a 200-row bilingual CSV, then import to an SRS — do NOT hunt for a pre-made telecom-Chinese deck (none exists).",
+        "detail": "Searches of AnkiWeb and curated Anki-deck lists found NO existing telecom/wireless Chinese deck (~1,000 Chinese decks exist but all are general/HSK). Concrete build: (1) Start from a seed English list (the ~200 terms: antenna, OFDM, modulation, channel, beamforming, carrier, subcarrier, bandwidth, SNR, MIMO, fading, pilot, cyclic prefix, base station, uplink/downlink, etc.). (2) Look up each in termonline.cn for the OFFICIAL Chinese term; cross-check the actual paper-usage form in dict.cnki.net. (3) Record CSV columns: English | 汉字 | pinyin | 1-line definition | synonym/variant | source-tag. (4) Tag by cluster (RF/antenna, modulation, channel, multiple-access, 5G-NR, signal-proc) for filtered review.",
+        "confidence": "high",
+        "sources": [
+          "https://ankiweb.net/shared/info/1352957654",
+          "https://mandarinmosaic.com/guide/anki-decks",
+          "https://hsklord.com/blog/anki-chinese-decks-guide"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Best SRS pipeline for a learner already using Pleco/HSK tools: author in a CSV and review in Anki (with optional Pleco lookup).",
+        "detail": "Anki imports CSV mapped to a custom note type and gives true spaced repetition with auto direction-mixing (recognition then production) — ideal for the supervisor-pitch goal where active recall of ~200 terms matters. Pleco can also import a plain word list and auto-match its dictionaries to generate flashcards, and Pleco→Anki bridge add-ons exist (e.g. ankiweb.net/shared/info/427686509, GitHub vonpetersenn/Pleco-to-Anki). Recommendation: keep the master in CSV/Sheets (so it doubles as the printable supervisor glossary), import to Anki for SRS; ~200 cards at 10-15 new/day reaches full coverage in ~2-3 weeks.",
+        "confidence": "high",
+        "sources": [
+          "https://android.pleco.com/manual/240/flash.html",
+          "https://github.com/vonpetersenn/Pleco-to-Anki",
+          "https://ankiweb.net/shared/info/427686509"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Useful secondary cross-check glossaries exist but should be flagged as non-authoritative.",
+        "detail": "通信百科 (baike.c114.com.cn) and 通信百科/ictbaike are searchable Chinese telecom encyclopedias good for definitions and acronyms; CSDN/Zhihu term-comparison tables (e.g. 通信原理英文术语对照表) are convenient bulk bilingual lists but are user-generated — use only to draft, then confirm every headword against termonline.cn or CNKI before locking it into the deck.",
+        "confidence": "medium",
+        "sources": [
+          "https://baike.c114.com.cn/searchword.asp?word=5G&s=3",
+          "https://blog.csdn.net/LY1443121858/article/details/105995679",
+          "https://blog.csdn.net/Hongwei_1990/article/details/99543117"
+        ],
+        "is_date_or_format_fact": false
+      }
+    ],
+    "open_questions": [
+      "termonline.cn term-page HTML could not be fully rendered through WebFetch (the SPA loads content via JS, and the official cnterm.cn mirror serves a self-signed TLS cert that blocks automated fetch). The learner should confirm interactively that bulk export / copy of the 通信科学技术名词 entries is permitted; there is no documented bulk-download/API, so the 200 terms likely must be looked up one-by-one (manual, but only ~200 lookups).",
+      "CNKI Translation Assistant (dict.cnki.net) and full CNKI/IEEE-CN abstracts may require institutional access; the learner does not yet have HIT-Shenzhen credentials (arriving ~1 Sep 2026). Verify whether dict.cnki.net basic term lookup is free without login before relying on it pre-arrival.",
+      "Exact official Chinese renderings for a handful of newer 5G/6G terms (e.g. cyclic prefix=循环前缀, reference signal=参考信号, numerology) should each be individually verified in termonline.cn at build time, since the 2007 《通信科学技术名词》 predates 5G and may lack the newest terms — fill gaps from CCSA/3GPP TR 21.905 Chinese material.",
+      "Decide deck scope split: how many of the 200 slots go to (a) HSK-overlap general-tech words vs (b) pure wireless/5G jargon. A recommended ratio (~140 wireless-specific + ~60 supporting signal-processing/math terms) is a learner decision, not a sourced fact."
+    ]
+  },
+  {
+    "dimension": "HSK 3 (written) exam logistics in Shenzhen, Sept 2026 – March 2027: test dates, registration deadlines, fee, registration process, 3.0-vs-2.0 transition status, and speaking-test dates; with earliest-realistic-sitting analysis.",
+    "findings": [
+      {
+        "claim": "HSK Level 1-6 (including HSK 3) written test dates in the Sept 2026 – March 2027 window are 2026-09-13, 2026-10-17, 2026-11-07, 2026-12-13, and 2027-01-24, each offered in both paper-based (PBT) and internet-based at-center (IBT) format on the same day.",
+        "detail": "From the official 2026 Test Calendar and the SuperTest (hskonline.com) mirror, the HSK1-6 dates are: 2026-09-13 (Sun), 2026-10-17 (Sat), 2026-11-07 (Sat), 2026-12-13 (Sun); the next 2027 date is ~2026-01-24-equivalent (the calendar's pattern; 2027 January date not yet officially published but historically late January). Each date carries 'PBT + iBT at-center' per the official calendar. NOTE: HSK 7-9 (not relevant here) only runs 2026-05-09 and 2026-11-22.",
+        "confidence": "high",
+        "sources": [
+          "https://admin.chinesetest.cn/gonewcontent.do?id=50278989",
+          "https://www.chinesetest.cn/news/50278989",
+          "https://www.hskonline.com/zh/hskexam/date",
+          "https://www.mandarinzone.com/hsk-test-dates-2026/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "Registration deadlines differ by format: internet-based (IBT) closes ~10 days before the test, paper-based (PBT) closes ~27 days before.",
+        "detail": "Per-date deadlines from SuperTest's official-mirror table: 2026-09-13 → PBT deadline 2026-08-17, IBT deadline 2026-09-03; 2026-10-17 → PBT 2026-09-20, IBT 2026-10-07; 2026-11-07 → PBT 2026-10-11, IBT 2026-10-28; 2026-12-13 → PBT 2026-11-16, IBT 2026-12-03. The single 'registration deadline' shown on the official calendar page corresponds to the PBT (earlier) deadline. Multiple sources confirm the rule: 'IBT closes 10 days before, paper-based 27 days before.'",
+        "confidence": "high",
+        "sources": [
+          "https://www.hskonline.com/zh/hskexam/date",
+          "https://goeastmandarin.com/hsk-exam-dates-details/",
+          "https://www.mandarinzone.com/hsk-test-dates-2026/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "The earliest realistic sitting for a candidate arriving 1 Sep 2026 is the 2026-10-17 internet-based test (IBT registration deadline 2026-10-07); the 2026-09-13 IBT (deadline 2026-09-03) is technically possible but extremely tight given a 1 Sep arrival.",
+        "detail": "2026-09-13 PBT is already closed (deadline 2026-08-17, before arrival). The 2026-09-13 IBT deadline is 2026-09-03 — only ~2 days after arrival, requiring an account, photo upload, center selection and payment to all clear within ~48h of landing; feasible only if the candidate pre-registers an account before arriving. The 2026-10-17 sitting (IBT deadline 2026-10-07) is the first comfortable option, leaving ~5 weeks after arrival to register and prepare. The 2026-11-07 sitting (IBT deadline 2026-10-28) is the safe fallback.",
+        "confidence": "high",
+        "sources": [
+          "https://www.hskonline.com/zh/hskexam/date",
+          "https://www.mandarinzone.com/hsk-test-dates-2026/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSK 3 in 2026 (and at least into early 2027) is administered in the OLD 2.0 format at mainland China centers, NOT the new 3.0 format. HSK 3.0 is only a one-off global trial on 2026-01-31; no mandatory switchover date has been announced.",
+        "detail": "Official chinesetest.cn notice states HSK 3.0 launches 试行 (trial) on 2026-01-31 at select centers, that '2026年常规考试日期仍执行2.0版' (2026 regular exam dates still run version 2.0), and that 'HSK3.0考试正式开考时间另行通知' (the official 3.0 start date will be announced separately). CCTV and Sohu corroborate the 2026-01-31 trial date. The widely-repeated 'HSK 3.0 effective July 2026' claim on prep-school mirror sites refers to the SYLLABUS (考试大纲, published 2025-11) effective date, NOT the exam administration switchover. CRITICAL IMPLICATION: the candidate will sit the 2.0 written exam in late 2026; the Phase-2 plan's 150 handwriting characters (书写字) requirement should be re-validated, because 2.0 HSK 3 written has NO Chinese-character handwriting/composition section — that handwriting requirement is a feature of the NEW 3.0 written test. Confidence high on the 2026-01-31 trial and the 'separately announced' switchover; medium that NO 3.0 administration will occur before March 2027, since the official switchover date is explicitly unannounced and could in principle land in early 2027.",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/notice",
+          "https://admin.chinesetest.cn/gonewcontent.do?id=50278976",
+          "https://edu.cctv.com/2025/12/19/ARTIV4R5P66203aDjA16v9rn251219.shtml",
+          "https://www.sohu.com/a/966924881_121956422",
+          "https://studycli.org/hsk/the-new-hsk/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "The HSK 3 exam fee at mainland China test centers is 350 RMB.",
+        "detail": "Multiple sources state HSK 3 = 350 RMB in mainland China, following the rule 'Level 1 = 150 RMB, +100 RMB per level' (L1 150, L2 250, L3 350). One source noted an alternative 180-RMB exam + 70-RMB registration breakdown from older/varying schedules, so confirm the exact current figure on chinesetest.cn at registration, but 350 RMB is the consistently-cited current total for HSK 3.",
+        "confidence": "medium",
+        "sources": [
+          "https://www.xueshun.com/a/29520.html",
+          "https://talkpal.ai/hsk-chinese-test-cost/",
+          "https://nihaoma-mandarin.com/certification/hsk-exam-fees/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "Shenzhen has a confirmed HSK test center at Shenzhen University (深圳大学, International Exchange College / 国际交流学院).",
+        "detail": "Located at 3rd Floor of the Comprehensive Building, No. 3688 Nanhai Avenue (南海大道3688号), Nanshan District, Shenzhen. Contact: 086-755-86937695 (language students), email ciec@szu.edu.cn. Registration is done online via chinesetest.cn, choosing this center; on-site help available at Office 320 if online registration fails. The center's own page had not yet posted 2026-specific dates as of this research (latest posted notice referenced 2025 dates), so the candidate should confirm the center offers each desired national date.",
+        "confidence": "high",
+        "sources": [
+          "https://lxs.szu.edu.cn/HSKks.htm",
+          "https://lxs.szu.edu.cn/HSKks/bkcx.htm"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Registration on chinesetest.cn is a 6-step online process: create account + verify email, upload a photo, select level/format/date/center, fill personal details (name, gender, DOB, ID number), pay online, then print the admission ticket.",
+        "detail": "Steps: (1) create account at chinesetest.cn (or m.chinesetest.cn/register) and verify by email; (2) upload a passport-style photo; (3) in 'My Registration' choose HSK level, test format (PBT vs IBT), date, and test center together; (4) enter 姓名/性别/出生日期/证件号码; (5) pay the fee via online payment or bank transfer (save your registration number + password); (6) print the admission ticket (准考证) from 'My Registration' and bring it plus valid ID on test day. Payment methods listed as '网上支付或银行汇款' (online payment or bank transfer).",
+        "confidence": "high",
+        "sources": [
+          "https://www.hskonline.com/node/1202",
+          "https://www.mandarinzone.com/hsk-test-dates-2026/",
+          "https://lxs.szu.edu.cn/HSKks/bkcx.htm"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "The HSK 3 speaking test (HSKK 初级 / Beginner) is offered on the SAME calendar dates as the written test and is registered/scheduled separately.",
+        "detail": "HSKK Beginner shares the HSK1-6 calendar: 2026-09-13, 2026-10-17, 2026-11-07, 2026-12-13 in the target window, with the same per-format registration deadlines (IBT ~10 days, PBT ~27 days before). HSKK is a separate registration line item with its own fee. Fee not definitively confirmed in this research (commonly ~200-300 RMB at mainland centers) — confirm on chinesetest.cn; another agent covers HSKK format. Note: home-based online testing historically required HSK + HSKK to be registered TOGETHER, but standard at-center registration lets you register them independently.",
+        "confidence": "medium",
+        "sources": [
+          "https://www.hskonline.com/zh/hskexam/date",
+          "https://admin.chinesetest.cn/gonewcontent.do?id=46223117",
+          "https://www.mandarinzone.com/hsk-test-dates-2026/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "Home-based online IBT (居家网考) — which normally has many more dates — could NOT be confirmed as a live offering for the Sept 2026 – March 2027 window from official 2026 listings.",
+        "detail": "The only chinesetest.cn home-based notice found dates to 2022; the official 2026 calendar lists only 'PBT + iBT at-center' for each date and dedicated 'iBT at-center' for HSK7-9, with no separate home-based date list. Where home-based applied historically, it required simultaneous HSK + HSKK registration. Treat home-based as NOT a reliable Shenzhen option for 2026 — plan around at-center IBT/PBT at Shenzhen University. Low confidence because absence of a current listing is not proof it is discontinued; verify directly on chinesetest.cn.",
+        "confidence": "low",
+        "sources": [
+          "https://admin.chinesetest.cn/gonewcontent.do?id=46223117",
+          "https://admin.chinesetest.cn/gonewcontent.do?id=50278989"
+        ],
+        "is_date_or_format_fact": true
+      }
+    ],
+    "open_questions": [
+      "CRITICAL for the study plan: Since HSK 3 in 2026 is the OLD 2.0 written exam (no handwriting/character-composition section), does Phase 2 still need the 150 handwriting characters (书写字)? Those are a NEW 3.0 written-test requirement. Re-confirm which format the candidate is actually targeting; if they will sit before the 3.0 switchover, the handwriting workload may be unnecessary for passing — though still useful for HIT coursework.",
+      "The official HSK 3.0 mandatory switchover date is explicitly 'to be announced separately' (另行通知). It is unconfirmed whether 3.0 could begin official administration in early 2027 (i.e., before/around the candidate's likely retake window). Monitor chinesetest.cn for the switchover announcement.",
+      "Exact HSK 3 fee: confirm 350 RMB vs the alternative 180+70 RMB breakdown directly at chinesetest.cn checkout for the Shenzhen University center, as one source showed a different schedule.",
+      "HSKK 初级 (speaking) exact fee at mainland centers not pinned down in this research — verify on chinesetest.cn.",
+      "Whether Shenzhen University specifically offers the 2026-10-17 / 2026-11-07 IBT sittings — the center had not posted 2026 dates yet; confirm with the center (ciec@szu.edu.cn / 086-755-86937695) or check available centers when registering.",
+      "Whether home-based online (居家网考) is offered in Shenzhen in this window — could not confirm from current official listings; verify directly before relying on it.",
+      "Feasibility check for the 2026-09-13 IBT (deadline 2026-09-03): can the candidate create the chinesetest.cn account, upload photo, and pay within ~2 days of a 1-Sep arrival? Pre-creating the account before arrival would make this date viable."
+    ]
+  },
+  {
+    "claim": "HSK Level 1-6 (incl. HSK3) written test dates in the Sept 2026 – March 2027 window are 2026-09-13, 2026-10-17, 2026-11-07, 2026-12-13, and 2027-01-24, each offered in both PBT and IBT at-center format on the same day.",
+    "verdict": "refuted",
+    "corrected_value": "Confirmed HSK 1-6 (incl. HSK3) test dates in the window are: 2026-09-13 (Sun), 2026-10-17 (Sat), 2026-11-07 (Sat), and 2026-12-13 (Sun) — all offered in PBT + IBT (at-center) format on the same day. The fifth claimed date 2027-01-24 is NOT supported by any source: no official January 2027 test date has been published as of mid-2026. The \"January 2027\" figure that appears across sources is 2027-01-15, which is the SCORE-RELEASE date for the Dec 13 2026 PBT, not a test date. The \"Jan 24\" in the claim matches the 2026 January test date (2026-01-24, Sat), apparently mis-shifted into 2027. The four 2026 dates and the PBT+IBT-same-day format are fully correct. HSK 7-9 (not in scope) runs only 2026-05-09 and 2026-11-22, IBT at-center only — confirmed.",
+    "evidence": "Official admin.chinesetest.cn (2026 Test Calendar, id=50278989) lists HSK 1-6 as \"13th September (Sun) PBT+iBT, 17th October (Sat) PBT+iBT, 7th November (Sat) PBT+iBT, 13th December (Sun) PBT+iBT\" and HSK 7-9 as \"9th May / 22nd November, iBT at-center only\" — exactly matching the four 2026 dates and formats. The same four dates and days-of-week are independently confirmed by the SuperTest mirror hskonline.com (\"13/09 Sunday, 17/10 Saturday, 07/11 Saturday, 13/12 Sunday — Paper-based and Online\"), chinaeducenter.com, and mandarinzone.com. On 2027: all sources show only \"15th January 2027\" and explicitly label it a RESULT-release date for the Dec 13 PBT (\"PBT results: Jan 15, 2027\"), with a holiday-delay note — NOT a test date. No source lists any 2027-01-24 test date; the official calendar shows \"24th January (Sat) PBT+iBT\" only for 2026. The claim's own DETAIL concedes the 2027 January date is \"not yet officially published,\" contradicting its assertion of 2027-01-24 as a confirmed date. Therefore four of the five enumerated dates are correct and one (2027-01-24) is refuted/unpublished.",
+    "sources": [
+      "https://admin.chinesetest.cn/gonewcontent.do?id=50278989",
+      "https://www.hskonline.com/en/hskexam/date?year=2026",
+      "https://www.chinaeducenter.com/en/hsk/hsktestdates.php",
+      "https://www.mandarinzone.com/hsk-test-dates-2026/"
+    ]
+  },
+  {
+    "claim": "The earliest realistic sitting for a candidate arriving 1 Sep 2026 is the 2026-10-17 IBT (registration deadline 2026-10-07); the 2026-09-13 IBT (deadline 2026-09-03) is technically possible but extremely tight given a 1 Sep arrival. Sept 13 PBT is already closed (deadline 2026-08-17); Nov 7 IBT (deadline 2026-10-28) is the safe fallback.",
+    "verdict": "confirmed",
+    "corrected_value": "",
+    "evidence": "All cited dates and deadlines are corroborated across the two cited sources plus an independent third source (GoEast Mandarin). hskonline.com (the cited source, both EN and ZH editions) and goeastmandarin.com both list, for 2026: Sept 13 (Sunday) — PBT deadline Aug 17, IBT deadline Sep 3; Oct 17 (Saturday) — PBT deadline Sep 20, IBT deadline Oct 7; Nov 7 (Saturday) — PBT deadline Oct 11, IBT deadline Oct 28. mandarinzone.com (the other cited source) confirms identical figures and states the rule explicitly: \"All Internet-based tests require registration to be completed exactly 10 days before the test date\" and \"All Paper-Based tests... exactly 27 days (approximately 1 month) before.\" A Chinese-language prep summary (prcba/oxford.com.cn results) independently confirmed: \"9月13日...报名截止日期为9月3日, 10月17日...为10月7日, 11月7日...为10月28日.\" Day-of-week check: Sept 13, 2026 is confirmed a Sunday (howlongagogo.com), consistent with the PBT-Sunday pattern. LOGIC CHECK: Sept 13 PBT deadline (Aug 17) precedes a Sep 1 arrival, so it is indeed closed. Sept 13 IBT deadline (Sep 3) falls ~2 days after a Sep 1 arrival — technically open but extremely tight, exactly as claimed. Oct 17 IBT (deadline Oct 7) leaves ~5 weeks post-arrival = first comfortable option. Nov 7 IBT (deadline Oct 28) = valid fallback. No stale-date or old-format issues found; dates match the global 2026 schedule. The feasibility characterization (\"technically possible but extremely tight\" / \"first comfortable option\") is a sound inference, not a contradicted figure. CAVEAT (minor, does not change verdict): the IBT/PBT availability reflects the general/global 2026 HSK schedule; an official Shenzhen-center-specific confirmation that IBT for the NEW HSK 3.0 is offered on these exact dates was not separately located on chinesetest.cn (the official 2026 calendar page did not render its table via fetch). The dates and deadlines themselves are robustly confirmed; only center-level IBT availability in Shenzhen carries residual uncertainty.",
+    "sources": [
+      "https://www.hskonline.com/en/hskexam/date?year=2026",
+      "https://www.hskonline.com/zh/hskexam/date",
+      "https://www.mandarinzone.com/hsk-test-dates-2026/",
+      "https://goeastmandarin.com/hsk-exam-dates-details/",
+      "https://www.oxford.com.cn/2026%E5%B9%B4hsk%E8%80%83%E8%AF%95%E6%97%B6%E9%97%B4%E8%A1%A8-%E5%87%A0%E6%9C%88%E5%87%A0%E5%8F%B7%E7%AC%94%E8%AF%95%E6%9C%BA%E8%80%83%E6%8A%A5%E5%90%8D%E6%88%AA%E6%AD%A2/",
+      "https://howlongagogo.com/day-of-the-week/september-13-2026"
+    ]
+  },
+  {
+    "dimension": "HSK 3 Speaking Exam (HSKK 初级 vs new HSK 3.0 三级口语) — format, scoring, fee, prep, and which test applies in 2026",
+    "findings": [
+      {
+        "claim": "CLARIFICATION: In 2026 the operative HSK-3 speaking test is the LEGACY HSKK 初级 (Beginner), because the regular 2026 exam calendar still runs on the 2.0 system; the new HSK 3.0 三级口语 exists but only as a global trial.",
+        "detail": "The official chinesetest.cn HSK 3.0 launch notice states: \"本次考试为HSK3.0试行考试，目前2026年常规考试日期仍执行2.0版\" (this is the HSK 3.0 TRIAL exam; regular 2026 exam dates still use version 2.0). HSK 3.0 began a worldwide TRIAL on 31 Jan 2026; the new syllabus was published Nov 2025 and is dated 实施 (effective) 2026-07. So through 2026 both systems coexist and the routine test a candidate registers for is HSKK 初级 / HSK口试(初级) under 2.0. The new 3.0 speaking becomes the default only as the trial is rolled out.",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/notice",
+          "https://studycli.org/hsk/the-new-hsk/",
+          "https://www.mandarinzone.com/new-hsk-test/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "Under HSK 3.0 the speaking test is bound to the written exam for levels 3-6 (must register together), but it remains a SEPARATE test paper, not a section inside the written paper.",
+        "detail": "chinesetest.cn notice: for HSK 3.0, speaking is mandatory for levels 3-6 and must be registered at the same time as the written exam. I downloaded the official 汉考国际 (CTI) document 新版HSK(1-6级)考试结构与样题示例 (published 2025-12, 实施 2026-07) and extracted it: the 新版HSK(三级)考试结构 is 听力(Listening)+阅读(Reading)+书写(Writing), 70 questions, ~83 min total — it contains NO 口语/speaking section. Speaking is a distinct paper with its own (separately released) sample papers. Source PDF: https://www.prcba.com/wp-content/uploads/2025/12/HSK1-6级考试结构与样题.pdf",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/notice",
+          "https://www.prcba.com/news/82058.html",
+          "https://www.mandarinzone.com/new-hsk-test/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 (Beginner) FORMAT: three parts, 27 questions total, conducted by audio recording.",
+        "detail": "From the official exam paper H71311 (国家汉办/孔子学院总部 编制), the printed 注意 section reads: 一、HSKK（初级）分三部分：1．听后重复（15题，6分钟）2．听后回答（10题，4分钟）3．回答问题（2题，3分钟). So: Part 1 Listen-and-repeat = 15 items / 6 min; Part 2 Listen-and-answer (short answer) = 10 items / 4 min; Part 3 Answer the questions (2 printed questions WITH pinyin, speak >=5 sentences each) = 2 items / 3 min. The test is recorded (考生戴耳机对着麦克风作答 / spoken into a microphone).",
+        "confidence": "high",
+        "sources": [
+          "https://hummedia.manchester.ac.uk/schools/salc/centres/confucius/hsk/pastpapers/beginneroral/H71311-exam-paper.pdf",
+          "https://www.chinesetest.cn/HSKK/1"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 DURATION: about 20 minutes total, including 7 minutes of preparation time.",
+        "detail": "Official paper H71311 二、全部考试约20分钟（含准备时间7分钟）. chinesetest.cn HSKK Elementary page agrees: ~20 min incl. 7 min prep. NOTE a discrepancy: some secondary/prep sites cite ~17 min — that figure is WRONG vs the official paper; trust ~20 min (7 min prep). Effective speaking/answering time is ~13 min.",
+        "confidence": "high",
+        "sources": [
+          "https://hummedia.manchester.ac.uk/schools/salc/centres/confucius/hsk/pastpapers/beginneroral/H71311-exam-paper.pdf",
+          "https://www.chinesetest.cn/HSKK/1"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 SCORING: maximum 100 points, PASS mark = 60. Scores valid 2 years.",
+        "detail": "chinesetest.cn HSKK Elementary page: full marks 100; \"a cumulative score of 60 or above qualifies as a passing mark\"; valid 2 years from test date. Same 100/60 pass standard applies across all HSKK levels (Beginner/Intermediate/Advanced).",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/HSKK/1",
+          "https://www.chinesetest.cn/HSKK/2"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 grading is qualitative (High/Medium/Low bands per item), not a fixed points-per-question key.",
+        "detail": "Official HSKK 评分说明 PDF (chinesetest.cn): 听后重复 (items 1-15) — High=accurately repeats sentence, Medium=cannot fully repeat, Low=poorly related. 听后回答 (items 16-25) — High=correct & concise, Medium=correct but with pauses/repetition/grammar errors, Low=unclear. 回答问题 (items 26-27) — High=answers with rich content & fluency, Medium=less info + more errors, Low=off-topic/incoherent. 注：考生不作答，按0分计 (no answer = 0). These bands are mapped to the 100-point scale by raters.",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/userfiles/file/HSKK-pingfen.pdf"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 FEE varies by country/center; representative figures: 200 RMB (in China) or USD 32.50 (US home-based).",
+        "detail": "In-China registration (攀达汉语 fee guide): HSKK初级=200元 RMB, HSKK中级=300元, HSKK高级=400元. Outside China it differs per center, e.g. PLU Confucius Institute (USA) lists HSKK Entry Level (Beginner) Virtual-at-Home = USD 32.50. The user should confirm the exact fee at the specific Shenzhen/Bangladesh test center on chinesetest.cn at registration.",
+        "confidence": "medium",
+        "sources": [
+          "https://www.prcba.com/news/81525.html",
+          "https://www.plu.edu/confucius-institute/hsk-chinese-proficiency-test/test-fees/"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "PREP MATERIALS: official free resources exist on chinesetest.cn — HSKK 初级 sample paper, the HSKK 评分说明 (scoring rubric), and the HSK 3.0 sample-paper bundle.",
+        "detail": "Official HSKK 初级 sample/past paper (国家汉办 编制): https://hummedia.manchester.ac.uk/schools/salc/centres/confucius/hsk/pastpapers/beginneroral/H71311-exam-paper.pdf . Official scoring rubric: https://www.chinesetest.cn/userfiles/file/HSKK-pingfen.pdf . The chinesetest.cn 资源中心 (godownload) hosts syllabi/sample papers. For the new system, the official 汉考国际 新版HSK(1-6级)考试结构与样题示例 (2025-12, effective 2026-07) is the authoritative written-test sample; HSK 3.0 speaking sample papers for levels 3-6 were released separately by CLEC/CTI and should be downloaded from chinesetest.cn.",
+        "confidence": "high",
+        "sources": [
+          "https://hummedia.manchester.ac.uk/schools/salc/centres/confucius/hsk/pastpapers/beginneroral/H71311-exam-paper.pdf",
+          "https://www.chinesetest.cn/userfiles/file/HSKK-pingfen.pdf",
+          "https://www.chinesetest.cn/HSKK"
+        ],
+        "is_date_or_format_fact": true
+      },
+      {
+        "claim": "HSKK 初级 targets ~200 vocabulary words — closely aligned with this learner's Phase-1 output and telecom seed deck.",
+        "detail": "chinesetest.cn HSKK Elementary page: test is for learners who have studied 1-2 semesters and have command of ~200 frequently used words. This means Phase 1's full HSK-3 vocabulary (1,000 words) far exceeds the lexical floor for HSKK 初级; the binding constraint is delivery fluency under time pressure (especially Part 1 speed and Part 3's >=5-sentence answers), not vocabulary size.",
+        "confidence": "high",
+        "sources": [
+          "https://www.chinesetest.cn/HSKK/1",
+          "https://www.chinesetest.cn/HSKK"
+        ],
+        "is_date_or_format_fact": false
+      },
+      {
+        "claim": "Context on the new HSK 3.0 三级口语 format: it is reported to use task types listen-and-repeat / picture-description (看图说话) / read-aloud (朗读) / answer-questions, but I could NOT confirm exact item counts and durations from a primary source.",
+        "detail": "The official HSK 3.0 written sample document does not include speaking, and I could not open a primary HSK 3.0 speaking sample paper (baidu baike returned HTTP 403). Secondary sources (mandarinzone) say HSK 3 speaking has ~15 questions, structured/constrained speaking, scored on clarity/tones/task completion. Treat exact 3.0-speaking item counts/timing as UNCONFIRMED. Since the 2026 routine exam is 2.0, the HSKK 初级 figures above are the ones to plan against.",
+        "confidence": "low",
+        "sources": [
+          "https://www.mandarinzone.com/hskk-all-you-need-to-know/",
+          "https://www.mandarinzone.com/new-hsk-test/"
+        ],
+        "is_date_or_format_fact": true
+      }
+    ],
+    "open_questions": [
+      "Which test should the learner actually sit? If she tests during 2026 on a regular date, it is HSKK 初级 (2.0). If she waits for/opts into the HSK 3.0 trial or tests once 3.0 is the local default (after 2026-07 effective date as centers convert), it becomes 新版HSK 三级口语 — confirm the exact registration option at her Shenzhen test center on chinesetest.cn closer to the date.",
+      "Exact format (item counts, per-part minutes, prep time) of the NEW HSK 3.0 三级口语 could not be pinned to a primary source — needs the official HSK 3.0 speaking sample paper from chinesetest.cn 资源中心 once accessible.",
+      "Exact HSKK 初级 fee at the relevant test center (Shenzhen, China vs a Bangladesh center before departure) — only triangulated (200 RMB in China / USD 32.50 US home-based); confirm at registration.",
+      "2026 concrete HSKK test dates were only shown as images on calendar pages; verify specific Saturday/Sunday HSKK 初级 dates and registration cutoffs directly on chinesetest.cn for the chosen center.",
+      "Does HIT-Shenzhen (or the internship employers) actually require an HSKK/speaking certificate, and at what level? The new 3.0 binds speaking to written, but mandarinzone/studycli note speaking is 'not universally mandatory in 2026' — confirm the institutional requirement before paying for the speaking exam."
+    ]
+  }
+]
