@@ -102,3 +102,7 @@ async def main() -> None:
     print()
     print("Corpus is TTS-generated speech — adequate for tone training until official")
     print("Tone Perfect corpus arrives. Drop official MP3s into the same folder.")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
