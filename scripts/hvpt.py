@@ -65,8 +65,15 @@ def run_trials(trials, mode, day_number, feedback_pause_ms, scored=True):
         print("─" * 45)
         print("  [playing...]", flush=True)
         play_audio(trial["path"])
-        print("  Press 1 / 2 / 3 / 4 : ", end="", flush=True)
-        given = get_keypress()
+        while True:
+            print("\r  r=replay  |  1/2/3/4 : ", end="", flush=True)
+            ch = msvcrt.getwch()
+            if ch == "r":
+                print("\r  [replaying...]                    ")
+                play_audio(trial["path"])
+            elif ch in ("1", "2", "3", "4"):
+                given = int(ch)
+                break
         correct = trial["tone"]
         if given == correct:
             print(f"\r  ✓ Correct — Tone {correct}                    ")
