@@ -8,6 +8,7 @@ import time
 from datetime import date
 from pathlib import Path
 
+import msvcrt  # Windows-only; intentional — spec is Windows-exclusive (§12)
 import pygame
 
 import hvpt_engine as engine
@@ -28,7 +29,6 @@ def resolve(cfg, key):
 
 def get_keypress():
     """Block until user presses 1/2/3/4. Re-prompt on any other key."""
-    import msvcrt
     while True:
         ch = msvcrt.getwch()
         if ch in ("1", "2", "3", "4"):
@@ -114,6 +114,7 @@ def print_end_report(scores, gates, n_trials, mode, day_number, gate_cfg):
 def append_csv(log_path, row):
     log_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(row.keys())
+    # Single-process assumption: check then open has a TOCTOU window but is safe in practice
     write_header = not log_path.exists()
     with open(log_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -158,7 +159,7 @@ def main():
     if mode == "baseline" and engine.baseline_exists(log_path):
         print("ERROR: baseline already anchored (day_number=0 row exists).")
         print("  Re-anchoring would destroy your Day-0 reference. Use --mode default instead.")
-        sys.exit(0)
+        sys.exit(1)
 
     # pygame init — hard stop on failure
     try:
