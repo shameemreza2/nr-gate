@@ -63,3 +63,41 @@ def build_trial_set(corpus, n_trials, weights):
             continue
         trials.append(dict(random.choice(pool)))
     return trials
+
+
+def score_session(responses):
+    """
+    responses: list of (correct_tone, given_response) — both 1-indexed int.
+    Returns dict with accuracy_pct, t1..t4_pct, t2t3_pct, cm_tXtY for all X,Y in 1..4.
+    """
+    confusion = defaultdict(int)
+    per_correct = {1: 0, 2: 0, 3: 0, 4: 0}
+    per_total   = {1: 0, 2: 0, 3: 0, 4: 0}
+
+    for correct, given in responses:
+        confusion[(correct, given)] += 1
+        per_total[correct] += 1
+        if correct == given:
+            per_correct[correct] += 1
+
+    total = len(responses)
+    total_correct = sum(per_correct.values())
+
+    def pct(num, den):
+        return round(100 * num / den, 1) if den else 0.0
+
+    t2t3_correct = per_correct[2] + per_correct[3]
+    t2t3_total   = per_total[2]   + per_total[3]
+
+    scores = {
+        "accuracy_pct": pct(total_correct, total),
+        "t1_pct": pct(per_correct[1], per_total[1]),
+        "t2_pct": pct(per_correct[2], per_total[2]),
+        "t3_pct": pct(per_correct[3], per_total[3]),
+        "t4_pct": pct(per_correct[4], per_total[4]),
+        "t2t3_pct": pct(t2t3_correct, t2t3_total),
+    }
+    for heard in range(1, 5):
+        for said in range(1, 5):
+            scores[f"cm_t{heard}t{said}"] = confusion.get((heard, said), 0)
+    return scores

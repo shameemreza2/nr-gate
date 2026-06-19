@@ -102,3 +102,51 @@ def test_build_trial_set_item_keys():
     corpus = _make_corpus([(1, "FV1")])
     trials = engine.build_trial_set(corpus, 1, {"T1": 1.0, "T2": 0.0, "T3": 0.0, "T4": 0.0})
     assert set(trials[0].keys()) == {"path", "syllable", "tone", "speaker"}
+
+
+def test_score_session_accuracy():
+    responses = [(1, 1), (2, 2), (3, 3), (4, 4), (1, 2)]  # 4/5 correct
+    scores = engine.score_session(responses)
+    assert scores["accuracy_pct"] == 80.0
+
+
+def test_score_session_per_tone():
+    responses = [(2, 2), (3, 3), (3, 2)]  # T2: 1/1=100%, T3: 1/2=50%
+    scores = engine.score_session(responses)
+    assert scores["t2_pct"] == 100.0
+    assert scores["t3_pct"] == 50.0
+
+
+def test_score_session_t2t3():
+    # T2: 1/1 correct, T3: 1/2 correct → combined 2/3 = 66.7%
+    responses = [(2, 2), (3, 3), (3, 2)]
+    scores = engine.score_session(responses)
+    assert scores["t2t3_pct"] == 66.7
+
+
+def test_score_session_confusion_matrix():
+    responses = [(3, 2)]  # heard T3, said T2
+    scores = engine.score_session(responses)
+    assert scores["cm_t3t2"] == 1
+    assert scores["cm_t3t3"] == 0
+
+
+def test_score_session_all_correct():
+    responses = [(t, t) for t in [1, 2, 3, 4] * 5]
+    scores = engine.score_session(responses)
+    assert scores["accuracy_pct"] == 100.0
+    assert scores["t2t3_pct"] == 100.0
+    for heard in range(1, 5):
+        for said in range(1, 5):
+            expected = 5 if heard == said else 0
+            assert scores[f"cm_t{heard}t{said}"] == expected
+
+
+def test_score_session_keys():
+    responses = [(1, 1)]
+    scores = engine.score_session(responses)
+    required = {"accuracy_pct", "t1_pct", "t2_pct", "t3_pct", "t4_pct", "t2t3_pct"}
+    for heard in range(1, 5):
+        for said in range(1, 5):
+            required.add(f"cm_t{heard}t{said}")
+    assert required.issubset(scores.keys())
