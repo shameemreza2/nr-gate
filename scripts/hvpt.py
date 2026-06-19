@@ -121,13 +121,46 @@ def print_end_report(scores, gates, n_trials, mode, day_number, gate_cfg):
 def append_csv(log_path, row):
     log_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(row.keys())
-    # Single-process assumption: check then open has a TOCTOU window but is safe in practice
     write_header = not log_path.exists()
     with open(log_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if write_header:
             writer.writeheader()
         writer.writerow(row)
+
+
+def upsert_csv(log_path, new_row):
+    """Replace the existing day_number+mode row only if new accuracy is higher; append if none."""
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = list(new_row.keys())
+    new_acc = float(new_row["accuracy_pct"])
+
+    existing = []
+    if log_path.exists():
+        with open(log_path, newline="", encoding="utf-8") as f:
+            existing = list(csv.DictReader(f))
+
+    out = []
+    handled = False
+    for row in existing:
+        if row.get("day_number") == str(new_row["day_number"]) and row.get("mode") == new_row["mode"]:
+            old_acc = float(row.get("accuracy_pct", 0))
+            if new_acc > old_acc:
+                out.append(new_row)
+                print(f"  New best: {new_acc}% > previous {old_acc}% — log updated.")
+            else:
+                out.append(row)
+                print(f"  Previous best {old_acc}% kept (this run: {new_acc}%).")
+            handled = True
+        else:
+            out.append(row)
+    if not handled:
+        out.append(new_row)
+
+    with open(log_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(out)
 
 
 def append_tracker(tracker_path, line):
@@ -141,31 +174,47 @@ def append_tracker(tracker_path, line):
 def main():
     parser = argparse.ArgumentParser(description="HVPT Mandarin tone trainer")
     parser.add_argument("--mode", default="default", choices=MODES)
-    parser.add_argument("--day", type=int, required=True,
+    parser.add_argument("--day", type=int, default=None,
                         help="Sprint day number (0–47)")
+    parser.add_argument("--retake", action="store_true",
+                        help="Bypass baseline guard; keep only the higher score in the log.")
+    parser.add_argument("--clear", action="store_true",
+                        help="Delete the session log and exit.")
     args = parser.parse_args()
 
     cfg = load_config()
     mode = args.mode
+    log_path     = resolve(cfg, "log_path")
+    tracker_path = resolve(cfg, "tracker_path")
+
+    if args.clear:
+        if log_path.exists():
+            log_path.unlink()
+            print(f"Session log cleared: {log_path}")
+        else:
+            print("No session log found — nothing to clear.")
+        sys.exit(0)
+
+    if args.day is None:
+        parser.error("--day is required (use --clear to reset the log without running a session)")
     day_number = args.day
 
     corpus_path  = resolve(cfg, "corpus_path")
-    log_path     = resolve(cfg, "log_path")
-    tracker_path = resolve(cfg, "tracker_path")
 
     # Corpus check — hard stop before any trial
     corpus = engine.load_corpus(corpus_path)
     if not corpus:
         print(f"ERROR: No audio files found in {corpus_path}")
         print("  Place Tone Perfect MP3/WAV files there (e.g. fan3_FV1_MP3.mp3).")
-        print("  Or run: python scripts/make_test_corpus.py")
+        print("  Or run: python scripts/make_alt_corpus.py")
         print("  Official corpus: https://tone.lib.msu.edu/")
         sys.exit(1)
 
-    # Baseline guard
-    if mode == "baseline" and engine.baseline_exists(log_path):
+    # Baseline guard — hard stop by default; bypassed only with --retake
+    if mode == "baseline" and engine.baseline_exists(log_path) and not args.retake:
         print("ERROR: baseline already anchored (day_number=0 row exists).")
-        print("  Re-anchoring would destroy your Day-0 reference. Use --mode default instead.")
+        print("  Re-anchoring destroys your Day-0 reference. Use --mode default instead.")
+        print("  To retake and keep only your best score: add --retake")
         sys.exit(1)
 
     # pygame init — hard stop on failure
@@ -204,8 +253,11 @@ def main():
     t_line  = engine.format_tracker_line(today, day_number, mode, scores, gates)
 
     try:
-        append_csv(log_path, csv_row)
-        print(f"  Logged → {log_path}")
+        if args.retake:
+            upsert_csv(log_path, csv_row)
+        else:
+            append_csv(log_path, csv_row)
+            print(f"  Logged → {log_path}")
     except Exception as e:
         print(f"  [warn] CSV write failed: {e}")
 
