@@ -17,14 +17,16 @@ def parse_filename(filename: str):
 
 
 def load_corpus(corpus_path):
-    """Return list of {path, syllable, tone, speaker} for all valid audio files."""
+    """Return sorted list of {path, syllable, tone, speaker} for all valid audio files.
+    Flat directory only — subdirectories are not searched. Raises OSError if path
+    exists but is unreadable."""
     # PHASE2-UPGRADE: accept corpus_paths: list[Path] to merge multiple corpora
     # (e.g. AISHELL, MagicData). Caller passes a list; this function folds them.
     p = Path(corpus_path)
     if not p.exists():
         return []
     result = []
-    for f in p.iterdir():
+    for f in sorted(p.iterdir()):
         if f.suffix.lower() not in (".mp3", ".wav"):
             continue
         parsed = parse_filename(f.name)
