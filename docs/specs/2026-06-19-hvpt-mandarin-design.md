@@ -3,6 +3,12 @@
 **High-Variability Phonetic Training for Mandarin tone perception.**
 Date: 2026-06-19 · Repo: `D:\hsk3~5` · Target: Phase 1 (Day 0 = 15 Jul 2026 → fly day 1 Sep 2026)
 
+> **Status: spec locked 2026-06-19.**
+> Official Tone Perfect corpus request submitted to MSU (ryuc@msu.edu) — pending FileDepot delivery.
+> Build proceeds on a real-format sample; official corpus swaps in as a flat folder drop into
+> `corpus/tone_perfect/` with **zero code or spec changes**. Checkpoint: 2026-07-08.
+> See §3.3 for the decision rule and §13 R1 for the risk entry.
+
 ---
 
 ## 1. Goal & context
