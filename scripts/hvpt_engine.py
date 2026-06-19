@@ -38,12 +38,19 @@ def load_corpus(corpus_path):
 
 
 def build_trial_set(corpus, n_trials, weights):
-    """Sample n_trials from corpus by tone weight. Syllable+speaker are jointly random."""
+    """Sample n_trials from corpus by tone weight. Syllable+speaker are jointly random.
+
+    Returns fewer than n_trials if a weighted tone has no items in the corpus — the
+    runner checks corpus completeness before calling this. Tones are drawn by
+    random.choices so short runs of the same tone are possible (acceptable per HVPT).
+    """
     # PHASE2-UPGRADE: accept trial_generator parameter for sandhi/multi-syllable modes.
     # Default generator is this weighted-random-tone sampler; callers swap in their own.
     by_tone = {1: [], 2: [], 3: [], 4: []}
     for item in corpus:
-        by_tone[item["tone"]].append(item)
+        # Silently ignore tones outside 1-4 (e.g. neutral tone 0 in real corpora)
+        if item["tone"] in by_tone:
+            by_tone[item["tone"]].append(item)
 
     tones = [1, 2, 3, 4]
     tone_weights = [weights[f"T{t}"] for t in tones]
