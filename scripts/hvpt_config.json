@@ -1,0 +1,24 @@
+{
+  "corpus_path": "../corpus/tone_perfect",
+  "log_path": "../logs/hvpt_sessions.csv",
+  "tracker_path": "../tracker.md",
+  "feedback_pause_ms": 500,
+  "weights": {
+    "default":    {"T1": 0.25, "T2": 0.25, "T3": 0.25, "T4": 0.25},
+    "focus-T2T3": {"T1": 0.15, "T2": 0.35, "T3": 0.35, "T4": 0.15},
+    "baseline":   {"T1": 0.25, "T2": 0.25, "T3": 0.25, "T4": 0.25},
+    "diagnostic": {"T1": 0.25, "T2": 0.25, "T3": 0.25, "T4": 0.25}
+  },
+  "trial_counts": {
+    "default": 80,
+    "focus-T2T3": 80,
+    "baseline": 80,
+    "diagnostic": 100
+  },
+  "gate": {
+    "unlock_overall": 0.95,
+    "unlock_t2t3": 0.92,
+    "flyday_overall": 0.97,
+    "flyday_t2t3": 0.95
+  }
+}
