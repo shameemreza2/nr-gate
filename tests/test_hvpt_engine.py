@@ -63,3 +63,42 @@ def test_load_corpus_empty_dir(tmp_path):
 def test_load_corpus_missing_dir():
     from pathlib import Path
     assert engine.load_corpus(Path("/nonexistent/path")) == []
+
+
+def _make_corpus(tones_and_speakers):
+    """Helper: build fake corpus list without real files."""
+    corpus = []
+    for tone, speaker in tones_and_speakers:
+        corpus.append({
+            "path": None,
+            "syllable": "ba",
+            "tone": tone,
+            "speaker": speaker,
+        })
+    return corpus
+
+
+def test_build_trial_set_count():
+    corpus = _make_corpus([(t, "FV1") for t in [1, 2, 3, 4]] * 10)
+    trials = engine.build_trial_set(corpus, 40, {"T1": 0.25, "T2": 0.25, "T3": 0.25, "T4": 0.25})
+    assert len(trials) == 40
+
+
+def test_build_trial_set_weight_distribution():
+    corpus = _make_corpus([(t, "FV1") for t in [1, 2, 3, 4]] * 50)
+    weights = {"T1": 0.15, "T2": 0.35, "T3": 0.35, "T4": 0.15}
+    trials = engine.build_trial_set(corpus, 2000, weights)
+    counts = {1: 0, 2: 0, 3: 0, 4: 0}
+    for t in trials:
+        counts[t["tone"]] += 1
+    # Allow ±5% absolute deviation from expected
+    assert 200 <= counts[1] <= 400   # ~15% of 2000
+    assert 600 <= counts[2] <= 800   # ~35% of 2000
+    assert 600 <= counts[3] <= 800   # ~35% of 2000
+    assert 200 <= counts[4] <= 400   # ~15% of 2000
+
+
+def test_build_trial_set_item_keys():
+    corpus = _make_corpus([(1, "FV1")])
+    trials = engine.build_trial_set(corpus, 1, {"T1": 1.0, "T2": 0.0, "T3": 0.0, "T4": 0.0})
+    assert set(trials[0].keys()) == {"path", "syllable", "tone", "speaker"}
