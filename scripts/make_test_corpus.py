@@ -46,7 +46,7 @@ def main():
                 created += 1
 
     print(f"Created {created} synthetic WAV files in {out}")
-    print("These are build-phase placeholders. Swap in the official Tone Perfect MP3s on arrival.")
+    print("These are build-phase placeholders. Swap in the official Tone Perfect MP3s (or WAVs) on arrival.")
 
 
 if __name__ == "__main__":
