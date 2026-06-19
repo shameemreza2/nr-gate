@@ -1,5 +1,5 @@
 # Day 44 — Fri 28 Aug 2026 · Week 7 · Stage B
-**Weak-item drilling.** Cross 1,000 words. Target your personal leech list, not new breadth.
+**Weak-item drilling.** Cross 1,000 words = **full HSK 3 vocabulary**. Target your personal leech list, not new breadth.
 
 ## Hard gate
 Tones **≥97%** **and** **35 new words** retained ≥85% **and** leech-list retention ≥85%. Missed → §7.
@@ -14,7 +14,7 @@ Tones **≥97%** **and** **35 new words** retained ≥85% **and** leech-list ret
 - 0:20 — Log + commit.
 
 ## Self-test
-Tone ≥97%; recall ≥85%; leeches down. **Vocab past 1,000 — primary target met.**
+Tone ≥97%; recall ≥85%; leeches down. **Vocab past 1,000 — full HSK 3 vocabulary reached.**
 
 ## Commit when done
 `day44: tones <x>% + 35 new | <h>h | vocab 1015`

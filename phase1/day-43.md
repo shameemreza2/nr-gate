@@ -1,5 +1,5 @@
 # Day 43 — Thu 27 Aug 2026 · Week 7 · Stage B
-**HSK-2 mock, section 2 + error sweep.** Turn yesterday's misses into today's reviews.
+**HSK-3 mock, section 2 + error sweep.** Turn yesterday's misses into today's reviews.
 
 ## Hard gate
 Tones **≥97%** **and** **35 new words** retained ≥85% **and** all Day-42 mock-miss items now correct on re-test. Missed → §7.

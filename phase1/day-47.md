@@ -12,7 +12,7 @@ Miss any → log honestly; the remainder carries into Phase 2 (the plane doesn't
 - 0:30 — HVPT light (confirm ≥97%).
 - 0:30 — Self-intro final delivery + record (your Phase-2 supervisor pitch baseline).
 - 0:40 — SRS reviews (no new cards).
-- 0:30 — Final HSK-2 vocab spot-check (sample 50, score retention).
+- 0:30 — Final HSK 1–3 vocab spot-check (sample 50 across the full set, score retention).
 - 0:30 — Phase-1 retrospective: fill the **tracker totals** (hours, peak tone %, final vocab, slips).
 - 0:20 — Travel logistics final check.
 - 0:20 — Log + commit.

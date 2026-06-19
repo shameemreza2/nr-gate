@@ -8,12 +8,14 @@ The one metric that predicts everything: **executed hours per week.** Fill a row
 |---|---|---|
 | Days passed | 48 | 0 |
 | Hours logged | ~250–280 | 0 |
-| Vocab (cum) | ~1,075 (stretch 1,272) | 0 |
+| Vocab (cum) | ~1,075 (full HSK 3 vocab, 1,000) | 0 |
+| Recognition chars | ~655 (full HSK 3 set) | 0 |
 | Tone-pair ID (latest) | ≥97% by fly | — |
 | Unlock cleared? | ~Day 21 | no |
 | Adjusted vocab target | 1,075 | 1,075 |
 
 > Auto-shrink rule: each slip lowers the adjusted vocab target by ~35. Update the cell above.
+> Level boundaries: 300 = HSK 1 · 500 = HSK 2 · 1,000 = HSK 3 · 2,000 = HSK 4.
 
 ## Daily log
 
@@ -39,7 +41,7 @@ The one metric that predicts everything: **executed hours per week.** Fill a row
 | 17 | 1 Aug | | | | 275 | ☐ | |
 | 18 | 2 Aug | | | | 275 | ☐ | deload |
 | 19 | 3 Aug | | | | 290 | ☐ | |
-| 20 | 4 Aug | | | | 300 | ☐ | wk3 gate; floor |
+| 20 | 4 Aug | | | | 300 | ☐ | wk3 gate; ★ HSK1 done (300) |
 | 21 | 5 Aug | | | | 300 | ☐ | UNLOCK |
 | 22 | 6 Aug | | | | 330 | ☐ | sprint start |
 | 23 | 7 Aug | | | | 360 | ☐ | |
@@ -48,7 +50,7 @@ The one metric that predicts everything: **executed hours per week.** Fill a row
 | 26 | 10 Aug | | | | 425 | ☐ | |
 | 27 | 11 Aug | | | | 460 | ☐ | |
 | 28 | 12 Aug | | | | 495 | ☐ | |
-| 29 | 13 Aug | | | | 530 | ☐ | |
+| 29 | 13 Aug | | | | 530 | ☐ | ★ HSK2 done (500) |
 | 30 | 14 Aug | | | | 565 | ☐ | |
 | 31 | 15 Aug | | | | 600 | ☐ | |
 | 32 | 16 Aug | | | | 600 | ☐ | deload |
@@ -61,9 +63,9 @@ The one metric that predicts everything: **executed hours per week.** Fill a row
 | 39 | 23 Aug | | | | 830 | ☐ | deload |
 | 40 | 24 Aug | | | | 870 | ☐ | |
 | 41 | 25 Aug | | | | 910 | ☐ | |
-| 42 | 26 Aug | | | | 945 | ☐ | mock 1 |
-| 43 | 27 Aug | | | | 980 | ☐ | mock 2 |
-| 44 | 28 Aug | | | | 1015 | ☐ | |
-| 45 | 29 Aug | | | | 1045 | ☐ | full mock |
+| 42 | 26 Aug | | | | 945 | ☐ | HSK-3 mock 1 |
+| 43 | 27 Aug | | | | 980 | ☐ | HSK-3 mock 2 |
+| 44 | 28 Aug | | | | 1015 | ☐ | ★ HSK3 vocab done (1,000) |
+| 45 | 29 Aug | | | | 1045 | ☐ | full HSK-3 mock |
 | 46 | 30 Aug | | | | 1045 | ☐ | deload; pack |
 | 47 | 31 Aug | | | | 1075 | ☐ | fly-ready |
