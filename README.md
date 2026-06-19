@@ -50,7 +50,9 @@ Slip commits (`dayNN-rN`, an honest logged miss) and ordinary commits pass strai
 
 **Install (once per clone):** `bash hooks/install.sh` (sets `core.hooksPath=hooks`). Already active in this checkout.
 
-**Honest limit:** a hook is forceful, not unbypassable — `git commit --no-verify` skips it, and nothing stops you typing a fake number into the tracker. It stops you *skipping silently*; it can't stop you *lying to yourself*. Truly unbypassable enforcement needs a server-side check (a GitHub Action + a required status check on `main`) — ask if you want that added on top.
+**Honest limit:** `git commit --no-verify` skips the local hook. It can't stop you *lying to yourself* (a fake number in the tracker). Everything else is blocked.
+
+**Server-side lock (push-level):** the same gate logic runs in GitHub Actions on every push to `main` (`.github/workflows/gate-check.yml`, job `gate`). The branch ruleset requires that status check to pass before the push is accepted — so even a `--no-verify` local commit is rejected at the remote. A genuinely fake tracker number would still slip through (the check can't read your mind), but you can't silently skip a day and have it land on GitHub.
 
 ---
 

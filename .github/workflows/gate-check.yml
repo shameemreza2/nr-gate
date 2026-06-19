@@ -1,0 +1,17 @@
+name: Gate Check
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  gate:
+    name: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check gate discipline
+        run: bash hooks/gate-ci.sh "${{ github.event.before }}" "${{ github.sha }}"
