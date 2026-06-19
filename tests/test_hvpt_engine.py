@@ -269,3 +269,11 @@ def test_baseline_exists_ignores_day0_non_baseline(tmp_path):
     p = tmp_path / "sessions.csv"
     _write_csv(p, [{"date": "2026-07-15", "day_number": "0", "mode": "diagnostic", "accuracy_pct": "78.8"}])
     assert engine.baseline_exists(p) is False
+
+
+def test_baseline_exists_header_only_csv(tmp_path):
+    p = tmp_path / "sessions.csv"
+    with open(p, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["date", "day_number", "mode"])
+        writer.writeheader()
+    assert engine.baseline_exists(p) is False

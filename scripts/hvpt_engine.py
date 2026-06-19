@@ -160,6 +160,7 @@ def baseline_exists(log_path):
     with open(p, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
+            # DictReader always yields strings; int 0 is written to CSV and read back as "0"
             if row.get("day_number") == "0" and row.get("mode") == "baseline":
                 return True
     return False
