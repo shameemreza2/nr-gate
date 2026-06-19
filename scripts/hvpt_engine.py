@@ -150,3 +150,16 @@ def format_tracker_line(date_str, day_number, mode, scores, gates):
         f"T3:{scores['t3_pct']:.0f} T4:{scores['t4_pct']:.0f} | "
         f"T2↔T3:{scores['t2t3_pct']}% | {gate_sym} |"
     )
+
+
+def baseline_exists(log_path):
+    """Return True if the CSV already contains a day_number=0 baseline row."""
+    p = Path(log_path)
+    if not p.exists():
+        return False
+    with open(p, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row.get("day_number") == "0" and row.get("mode") == "baseline":
+                return True
+    return False

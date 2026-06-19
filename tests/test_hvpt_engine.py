@@ -238,3 +238,34 @@ def test_format_tracker_line_gate_pass_symbol():
     gates = {"unlock_gate": True, "flyday_gate": False}
     line = engine.format_tracker_line("2026-07-15", 21, "default", _sample_scores(), gates)
     assert "✓" in line
+
+
+def _write_csv(path, rows):
+    if not rows:
+        return
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def test_baseline_exists_no_csv(tmp_path):
+    assert engine.baseline_exists(tmp_path / "missing.csv") is False
+
+
+def test_baseline_exists_no_baseline_row(tmp_path):
+    p = tmp_path / "sessions.csv"
+    _write_csv(p, [{"date": "2026-07-20", "day_number": "5", "mode": "default", "accuracy_pct": "85.0"}])
+    assert engine.baseline_exists(p) is False
+
+
+def test_baseline_exists_true(tmp_path):
+    p = tmp_path / "sessions.csv"
+    _write_csv(p, [{"date": "2026-07-15", "day_number": "0", "mode": "baseline", "accuracy_pct": "78.8"}])
+    assert engine.baseline_exists(p) is True
+
+
+def test_baseline_exists_ignores_day0_non_baseline(tmp_path):
+    p = tmp_path / "sessions.csv"
+    _write_csv(p, [{"date": "2026-07-15", "day_number": "0", "mode": "diagnostic", "accuracy_pct": "78.8"}])
+    assert engine.baseline_exists(p) is False
