@@ -102,3 +102,12 @@ def score_session(responses):
             # .get() preferred over direct indexing: defaultdict would insert missing keys on access
             scores[f"cm_t{heard}t{said}"] = confusion.get((heard, said), 0)
     return scores
+
+
+def check_gates(accuracy_pct, t2t3_pct, gate_config):
+    """Return {unlock_gate, flyday_gate} booleans. Thresholds in gate_config are fractions (0.95)."""
+    unlock = (accuracy_pct >= gate_config["unlock_overall"] * 100 and
+              t2t3_pct   >= gate_config["unlock_t2t3"]   * 100)
+    flyday = (accuracy_pct >= gate_config["flyday_overall"] * 100 and
+              t2t3_pct   >= gate_config["flyday_t2t3"]   * 100)
+    return {"unlock_gate": unlock, "flyday_gate": flyday}

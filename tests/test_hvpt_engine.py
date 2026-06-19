@@ -150,3 +150,37 @@ def test_score_session_keys():
         for said in range(1, 5):
             required.add(f"cm_t{heard}t{said}")
     assert required.issubset(scores.keys())
+
+
+GATE_CFG = {
+    "unlock_overall": 0.95, "unlock_t2t3": 0.92,
+    "flyday_overall": 0.97, "flyday_t2t3": 0.95,
+}
+
+
+def test_check_gates_below_unlock():
+    g = engine.check_gates(94.9, 92.0, GATE_CFG)
+    assert g["unlock_gate"] is False
+    assert g["flyday_gate"] is False
+
+
+def test_check_gates_at_unlock_threshold():
+    g = engine.check_gates(95.0, 92.0, GATE_CFG)
+    assert g["unlock_gate"] is True
+    assert g["flyday_gate"] is False
+
+
+def test_check_gates_t2t3_below_unlock():
+    g = engine.check_gates(95.0, 91.9, GATE_CFG)
+    assert g["unlock_gate"] is False
+
+
+def test_check_gates_at_flyday_threshold():
+    g = engine.check_gates(97.0, 95.0, GATE_CFG)
+    assert g["unlock_gate"] is True
+    assert g["flyday_gate"] is True
+
+
+def test_check_gates_flyday_t2t3_below():
+    g = engine.check_gates(97.0, 94.9, GATE_CFG)
+    assert g["flyday_gate"] is False
