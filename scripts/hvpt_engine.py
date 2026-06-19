@@ -99,5 +99,6 @@ def score_session(responses):
     }
     for heard in range(1, 5):
         for said in range(1, 5):
+            # .get() preferred over direct indexing: defaultdict would insert missing keys on access
             scores[f"cm_t{heard}t{said}"] = confusion.get((heard, said), 0)
     return scores

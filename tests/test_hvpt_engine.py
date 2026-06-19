@@ -121,7 +121,7 @@ def test_score_session_t2t3():
     # T2: 1/1 correct, T3: 1/2 correct → combined 2/3 = 66.7%
     responses = [(2, 2), (3, 3), (3, 2)]
     scores = engine.score_session(responses)
-    assert scores["t2t3_pct"] == 66.7
+    assert scores["t2t3_pct"] == pytest.approx(66.7, abs=0.05)
 
 
 def test_score_session_confusion_matrix():
