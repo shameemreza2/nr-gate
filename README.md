@@ -36,6 +36,24 @@ These are the standing laws. Do them and **record them** every study day — the
 
 ---
 
+## Enforcement: the gate hook
+
+The check-in above isn't just etiquette — it's enforced by a git hook (`hooks/commit-msg`).
+
+**What it blocks:** any day-card commit (`dayNN` / `p2-dayNN`) is rejected unless `tracker.md` proves the gate —
+- that day's row has **hours filled + a ✅** in the Gate? cell, **and**
+- the **previous day is already ✅** (no skipping ahead).
+
+Slip commits (`dayNN-rN`, an honest logged miss) and ordinary commits pass straight through.
+
+**To pass a day, in order:** fill the tracker row (hours + metric + ✅) → `git add tracker.md phaseN/` → `git commit -m "p2-dayNN: …"`. If the row isn't there or isn't ✅, the commit is refused with a message saying exactly what's missing.
+
+**Install (once per clone):** `bash hooks/install.sh` (sets `core.hooksPath=hooks`). Already active in this checkout.
+
+**Honest limit:** a hook is forceful, not unbypassable — `git commit --no-verify` skips it, and nothing stops you typing a fake number into the tracker. It stops you *skipping silently*; it can't stop you *lying to yourself*. Truly unbypassable enforcement needs a server-side check (a GitHub Action + a required status check on `main`) — ask if you want that added on top.
+
+---
+
 ## Flags that make the whole plan moot
 
 If any of these trips, **stop and re-plan** — the calendar and gates as written no longer hold. They are listed worst-first.

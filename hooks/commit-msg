@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+# ---------------------------------------------------------------------------
+# Gate hook for HSK Plan 01.
+# Blocks a day-card PASS commit unless tracker.md proves the gate:
+#   - the day's row has hours filled AND a ✅ in its Gate? cell, AND
+#   - the previous day is already ✅ (no skipping ahead).
+# Slip commits (p2-dayNN-rN) and non-day commits pass through.
+#
+# This is forceful for normal use, NOT unbypassable: `git commit --no-verify`
+# skips all hooks. Using it = breaking your own gate. Don't.
+#
+# Install: run  hooks/install.sh   (sets core.hooksPath=hooks)
+# Test:    GATE_TRACKER_FILE=/path/to/fake-tracker.md hooks/commit-msg msgfile
+# ---------------------------------------------------------------------------
+set -u
+MSG_FILE="$1"
+MSG="$(head -1 "$MSG_FILE" | tr -d '\r')"
+
+# Only police day-card commits: (p2-)dayNN[-rN]
+if ! printf '%s' "$MSG" | grep -Eq '^(p2-)?day[0-9]+'; then
+  exit 0
+fi
+
+token="$(printf '%s' "$MSG" | grep -Eo '^(p2-)?day[0-9]+(-r[0-9]+)?')"
+is_p2=0; case "$token" in p2-*) is_p2=1;; esac
+day="$(printf '%s' "$token" | grep -Eo 'day[0-9]+' | grep -Eo '[0-9]+')"
+day=$((10#$day))   # normalize "07" -> 7, "00" -> 0 (base 10, no octal)
+is_slip=0; case "$token" in *-r[0-9]*) is_slip=1;; esac
+phase_name="Phase1"; [ "$is_p2" -eq 1 ] && phase_name="Phase2"
+
+# Source of truth = the tracker being committed (staged), or an override for tests.
+if [ -n "${GATE_TRACKER_FILE:-}" ]; then
+  TRACK="$(cat "$GATE_TRACKER_FILE")"
+else
+  TRACK="$(git show :tracker.md 2>/dev/null || cat tracker.md 2>/dev/null)"
+fi
+if [ -z "$TRACK" ]; then
+  echo "GATE BLOCK: tracker.md not found/staged. Stage tracker.md with your day commit." >&2
+  exit 1
+fi
+
+# Scope to the right phase section (split at the Phase 2 header).
+marker='# Phase 2 Tracker'
+if [ "$is_p2" -eq 1 ]; then
+  SECT="$(printf '%s\n' "$TRACK" | awk -v m="$marker" 'f{print} index($0,m){f=1}')"
+else
+  SECT="$(printf '%s\n' "$TRACK" | awk -v m="$marker" 'index($0,m){exit} {print}')"
+fi
+
+row_for() {
+  printf '%s\n' "$SECT" | awk -F'|' -v d="$1" '
+    { k=$2; gsub(/^[ \t]+|[ \t]+$/,"",k) }
+    k ~ /^[0-9]+$/ && (k+0)==(d+0) { print; exit }'
+}
+
+passed() {
+  r="$1"
+  printf '%s' "$r" | grep -q '✅' || return 1
+  h="$(printf '%s' "$r" | awk -F'|' '{gsub(/^[ \t]+|[ \t]+$/,"",$4); print $4}')"
+  [ -n "$h" ] || return 1
+  return 0
+}
+
+# A slip is a logged miss — allowed (it is honest record-keeping).
+if [ "$is_slip" -eq 1 ]; then
+  exit 0
+fi
+
+row="$(row_for "$day")"
+if [ -z "$row" ]; then
+  echo "GATE BLOCK: no $phase_name tracker row for day $day." >&2
+  echo "Fill the row (hours + metric + ✅) and stage tracker.md before committing a PASS." >&2
+  exit 1
+fi
+if ! passed "$row"; then
+  echo "GATE BLOCK: day $day is not logged as PASS in the $phase_name tracker." >&2
+  echo "Its row needs hours filled AND a ✅ in the Gate? cell. Then commit." >&2
+  echo "  row: $row" >&2
+  exit 1
+fi
+
+if [ "$day" -gt 0 ]; then
+  prev=$((day-1))
+  prow="$(row_for "$prev")"
+  if [ -n "$prow" ] && ! passed "$prow"; then
+    echo "GATE BLOCK: cannot pass day $day — day $prev is not ✅ yet (no skipping)." >&2
+    echo "Clear day $prev first, or log it as a slip ( ${token%-*}... use day$prev-rN )." >&2
+    exit 1
+  fi
+fi
+exit 0

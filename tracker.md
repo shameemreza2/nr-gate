@@ -2,6 +2,8 @@
 
 The one metric that predicts everything: **executed hours per week.** Fill a row when each day's gate passes (or slips). Keep it honest — a slip logged is data; a slip hidden breaks the plan.
 
+**Gate convention (enforced by `hooks/commit-msg`):** a day PASSES only when its row has **hours + the day's metric filled and the Gate? cell set to ✅**. Leave `☐` for not-done; log a miss as a slip (`dayNN-rN`). The commit hook blocks a `dayNN`/`p2-dayNN` PASS commit unless that row is ✅ **and** the previous day is ✅ (no skipping). See repo `README.md`.
+
 ## Running totals
 
 | | Target | Actual |
@@ -76,7 +78,7 @@ The one metric that predicts everything: **executed hours per week.** Fill a row
 
 # Phase 2 Tracker — exam readiness + gate log
 
-Same rule: a row filled when the day's primary gate passes (or slips). Evidence-first — mock scores, HSKK self-scores, handwriting + deck counts.
+Same rule: a row filled when the day's primary gate passes (or slips). Evidence-first — mock scores, HSKK self-scores, handwriting + deck counts. **Pass = hours + metric + ✅ in Gate? (enforced by `hooks/commit-msg`).**
 
 ## Running totals
 
