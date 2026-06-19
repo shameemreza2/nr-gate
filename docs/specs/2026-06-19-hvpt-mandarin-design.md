@@ -3,11 +3,14 @@
 **High-Variability Phonetic Training for Mandarin tone perception.**
 Date: 2026-06-19 · Repo: `D:\hsk3~5` · Target: Phase 1 (Day 0 = 15 Jul 2026 → fly day 1 Sep 2026)
 
-> **Status: spec locked 2026-06-19.**
+> **Status: spec locked 2026-06-19. Corpus decision updated 2026-06-19.**
 > Official Tone Perfect corpus request submitted to MSU (ryuc@msu.edu) — pending FileDepot delivery.
-> Build proceeds on a real-format sample; official corpus swaps in as a flat folder drop into
-> `corpus/tone_perfect/` with **zero code or spec changes**. Checkpoint: 2026-07-08.
-> See §3.3 for the decision rule and §13 R1 for the risk entry.
+> **Public access confirmed unavailable (2026-06-19):** no public mirror; only a synthetic
+> voice-changing GitHub adaptation (files tagged `（fake）` — excluded by `parse_filename`).
+> **Temporary alt corpus adopted:** `scripts/make_alt_corpus.py` — edge-tts zh-CN TTS,
+> 10 syllables × 4 tones × 4 voices = 160 MP3s (`pip install edge-tts`, then run the script).
+> Official corpus swaps in flat into `corpus/tone_perfect/` with **zero code or spec changes**.
+> Checkpoint: 2026-07-08. See §3.3 and §13 R1/R2.
 
 ---
 
@@ -63,7 +66,7 @@ To de-risk both the build and the science, audio is handled in two tracks:
 | Track | Purpose | Timing |
 |---|---|---|
 | **Official MSU request** | The real, unmodified corpus used for the actual sprint | Submit now; expected before Day 0 |
-| **Build-phase sample** | Just enough real-format files to develop and dry-run every code path | Now, during the build |
+| **Alt corpus (edge-tts TTS)** | Real Mandarin speech in Tone Perfect format — usable for training. 10 syllables × 4 tones × 4 zh-CN voices = 160 MP3s. Run `python scripts/make_alt_corpus.py` (`pip install edge-tts`). | Done 2026-06-19; replaces build-phase synthetic WAVs |
 
 **Honest constraint:** a clean public bulk mirror of all 9,840 *real* files does not clearly exist. Public repos are either partial (a handful of demo files) or synthetic "voice-changing" adaptations (files tagged `（fake）` — must be excluded). This is acceptable because the **build phase does not need the full corpus** — a few hundred real-format files exercise load/parse/sample/play/score/log identically to 9,840.
 
@@ -71,7 +74,9 @@ To de-risk both the build and the science, audio is handled in two tracks:
 
 ### 3.3 Decision rule
 
-Submit the official request **today**. **Checkpoint 2026-07-08** (one week before Day 0): if the official corpus has not arrived, escalate (email the team) and proceed Day 0 on the largest legitimate real-format sample available, swapping in the full corpus the moment it lands.
+Submit the official request **today**. **Checkpoint 2026-07-08** (one week before Day 0): if the official corpus has not arrived, escalate (email the team) and proceed Day 0 on the TTS alt corpus (§3.2), swapping in the full corpus the moment it lands.
+
+**Confirmed 2026-06-19:** `tone.lib.msu.edu` is access-restricted (no public download). The only GitHub result is a voice-changing adaptation with `（fake）`-tagged filenames — excluded by `parse_filename`. Decision: alt corpus adopted. The engine, config, runner, and tests need zero changes on the swap (folder drop only).
 
 ---
 
