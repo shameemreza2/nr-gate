@@ -118,7 +118,9 @@ def check_gates(accuracy_pct, t2t3_pct, gate_config):
 
 
 def format_csv_row(date_str, day_number, mode, n_trials, scores, gates):
-    """Return a flat dict with all CSV columns. Runner writes this to disk."""
+    """Return a flat dict with all CSV columns. Runner writes this to disk.
+    Column order matches insertion order; runner must pass fieldnames=list(row.keys())
+    to csv.DictWriter to preserve it."""
     row = {
         "date": date_str,
         "day_number": day_number,
@@ -144,7 +146,7 @@ def format_tracker_line(date_str, day_number, mode, scores, gates):
     gate_sym = "✓" if gates["unlock_gate"] else "✗"
     return (
         f"| {date_str} | Day {day_number:02d} | {mode} | {scores['accuracy_pct']}% | "
-        f"T1:{scores['t1_pct']} T2:{scores['t2_pct']} "
-        f"T3:{scores['t3_pct']} T4:{scores['t4_pct']} | "
+        f"T1:{scores['t1_pct']:.0f} T2:{scores['t2_pct']:.0f} "
+        f"T3:{scores['t3_pct']:.0f} T4:{scores['t4_pct']:.0f} | "
         f"T2↔T3:{scores['t2t3_pct']}% | {gate_sym} |"
     )
