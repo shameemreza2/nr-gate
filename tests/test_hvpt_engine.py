@@ -184,3 +184,57 @@ def test_check_gates_at_flyday_threshold():
 def test_check_gates_flyday_t2t3_below():
     g = engine.check_gates(97.0, 94.9, GATE_CFG)
     assert g["flyday_gate"] is False
+
+
+def _sample_scores():
+    return {
+        "accuracy_pct": 78.8,
+        "t1_pct": 90.0, "t2_pct": 70.0, "t3_pct": 65.0, "t4_pct": 90.0,
+        "t2t3_pct": 67.5,
+        **{f"cm_t{h}t{s}": (5 if h == s else 0) for h in range(1, 5) for s in range(1, 5)},
+    }
+
+
+def _sample_gates():
+    return {"unlock_gate": False, "flyday_gate": False}
+
+
+def test_format_csv_row_required_fields():
+    row = engine.format_csv_row("2026-07-15", 0, "baseline", 80, _sample_scores(), _sample_gates())
+    assert row["date"] == "2026-07-15"
+    assert row["day_number"] == 0
+    assert row["mode"] == "baseline"
+    assert row["total_trials"] == 80
+    assert row["accuracy_pct"] == 78.8
+    assert row["t2t3_pct"] == 67.5
+    assert row["unlock_gate"] is False
+    assert row["cm_t3t2"] == 0
+
+
+def test_format_csv_row_has_all_confusion_cells():
+    row = engine.format_csv_row("2026-07-15", 0, "baseline", 80, _sample_scores(), _sample_gates())
+    for heard in range(1, 5):
+        for said in range(1, 5):
+            assert f"cm_t{heard}t{said}" in row
+
+
+def test_format_tracker_line_format():
+    line = engine.format_tracker_line("2026-07-15", 0, "baseline", _sample_scores(), _sample_gates())
+    assert "| 2026-07-15 |" in line
+    assert "Day 00" in line
+    assert "baseline" in line
+    assert "78.8%" in line
+    assert "T2↔T3:67.5%" in line
+    assert line.startswith("|")
+    assert line.endswith("|")
+
+
+def test_format_tracker_line_gate_fail_symbol():
+    line = engine.format_tracker_line("2026-07-15", 0, "baseline", _sample_scores(), _sample_gates())
+    assert "✗" in line
+
+
+def test_format_tracker_line_gate_pass_symbol():
+    gates = {"unlock_gate": True, "flyday_gate": False}
+    line = engine.format_tracker_line("2026-07-15", 21, "default", _sample_scores(), gates)
+    assert "✓" in line

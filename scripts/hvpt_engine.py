@@ -115,3 +115,36 @@ def check_gates(accuracy_pct, t2t3_pct, gate_config):
     flyday = unlock and (accuracy_pct >= gate_config["flyday_overall"] * 100 and
                          t2t3_pct   >= gate_config["flyday_t2t3"]   * 100)
     return {"unlock_gate": unlock, "flyday_gate": flyday}
+
+
+def format_csv_row(date_str, day_number, mode, n_trials, scores, gates):
+    """Return a flat dict with all CSV columns. Runner writes this to disk."""
+    row = {
+        "date": date_str,
+        "day_number": day_number,
+        "mode": mode,
+        "total_trials": n_trials,
+        "accuracy_pct": scores["accuracy_pct"],
+        "t1_pct": scores["t1_pct"],
+        "t2_pct": scores["t2_pct"],
+        "t3_pct": scores["t3_pct"],
+        "t4_pct": scores["t4_pct"],
+        "t2t3_pct": scores["t2t3_pct"],
+        "unlock_gate": gates["unlock_gate"],
+        "flyday_gate": gates["flyday_gate"],
+    }
+    for heard in range(1, 5):
+        for said in range(1, 5):
+            row[f"cm_t{heard}t{said}"] = scores[f"cm_t{heard}t{said}"]
+    return row
+
+
+def format_tracker_line(date_str, day_number, mode, scores, gates):
+    """Return the tracker.md pipe-table row string. Runner appends this to tracker.md."""
+    gate_sym = "✓" if gates["unlock_gate"] else "✗"
+    return (
+        f"| {date_str} | Day {day_number:02d} | {mode} | {scores['accuracy_pct']}% | "
+        f"T1:{scores['t1_pct']} T2:{scores['t2_pct']} "
+        f"T3:{scores['t3_pct']} T4:{scores['t4_pct']} | "
+        f"T2↔T3:{scores['t2t3_pct']}% | {gate_sym} |"
+    )
