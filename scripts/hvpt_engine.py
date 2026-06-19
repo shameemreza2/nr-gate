@@ -105,9 +105,13 @@ def score_session(responses):
 
 
 def check_gates(accuracy_pct, t2t3_pct, gate_config):
-    """Return {unlock_gate, flyday_gate} booleans. Thresholds in gate_config are fractions (0.95)."""
+    """Return {unlock_gate, flyday_gate} booleans. Thresholds in gate_config are fractions (0.95).
+    Config fractions must multiply cleanly to integers (0.95→95.0, 0.92→92.0, 0.97→97.0);
+    fractions like 0.83→83.00000000000001 would cause off-by-epsilon errors at exact boundaries.
+    """
     unlock = (accuracy_pct >= gate_config["unlock_overall"] * 100 and
               t2t3_pct   >= gate_config["unlock_t2t3"]   * 100)
-    flyday = (accuracy_pct >= gate_config["flyday_overall"] * 100 and
-              t2t3_pct   >= gate_config["flyday_t2t3"]   * 100)
+    # flyday requires unlock first (structurally enforces flyday ⟹ unlock)
+    flyday = unlock and (accuracy_pct >= gate_config["flyday_overall"] * 100 and
+                         t2t3_pct   >= gate_config["flyday_t2t3"]   * 100)
     return {"unlock_gate": unlock, "flyday_gate": flyday}
