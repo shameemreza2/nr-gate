@@ -129,38 +129,32 @@ def append_csv(log_path, row):
         writer.writerow(row)
 
 
-def upsert_csv(log_path, new_row):
-    """Replace the existing day_number+mode row only if new accuracy is higher; append if none."""
-    log_path.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = list(new_row.keys())
-    new_acc = float(new_row["accuracy_pct"])
-
-    existing = []
-    if log_path.exists():
-        with open(log_path, newline="", encoding="utf-8") as f:
-            existing = list(csv.DictReader(f))
-
-    out = []
-    handled = False
-    for row in existing:
-        if row.get("day_number") == str(new_row["day_number"]) and row.get("mode") == new_row["mode"]:
-            old_acc = float(row.get("accuracy_pct", 0))
-            if new_acc > old_acc:
-                out.append(new_row)
-                print(f"  New best: {new_acc}% > previous {old_acc}% — log updated.")
+def flag_retake_in_csv(log_path, day_number, mode, retake_acc, retake_date):
+    """If retake scored lower than the original row, add a retake_flag to that row."""
+    if not log_path.exists():
+        return
+    with open(log_path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+        fieldnames = list(reader.fieldnames or [])
+    if "retake_flag" not in fieldnames:
+        fieldnames.append("retake_flag")
+    changed = False
+    for row in rows:
+        if row.get("day_number") == str(day_number) and row.get("mode") == mode:
+            orig_acc = float(row.get("accuracy_pct", 0))
+            if retake_acc < orig_acc:
+                row["retake_flag"] = f"{retake_date}:{retake_acc}%↓"
+                changed = True
+                print(f"  Warning: retake {retake_acc}% < anchor {orig_acc}% — flagged in log.")
             else:
-                out.append(row)
-                print(f"  Previous best {old_acc}% kept (this run: {new_acc}%).")
-            handled = True
-        else:
-            out.append(row)
-    if not handled:
-        out.append(new_row)
-
-    with open(log_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(out)
+                print(f"  Retake {retake_acc}% ≥ anchor {orig_acc}% — no regression, CSV unchanged.")
+            break
+    if changed:
+        with open(log_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(rows)
 
 
 def append_tracker(tracker_path, line):
@@ -177,7 +171,7 @@ def main():
     parser.add_argument("--day", type=int, default=None,
                         help="Sprint day number (0–47)")
     parser.add_argument("--retake", action="store_true",
-                        help="Bypass baseline guard; keep only the higher score in the log.")
+                        help="Retake a session: scores shown, CSV unchanged unless retake < anchor.")
     parser.add_argument("--clear", action="store_true",
                         help="Delete the session log and exit.")
     args = parser.parse_args()
@@ -210,12 +204,15 @@ def main():
         print("  Official corpus: https://tone.lib.msu.edu/")
         sys.exit(1)
 
-    # Baseline guard — hard stop by default; bypassed only with --retake
-    if mode == "baseline" and engine.baseline_exists(log_path) and not args.retake:
-        print("ERROR: baseline already anchored (day_number=0 row exists).")
-        print("  Re-anchoring destroys your Day-0 reference. Use --mode default instead.")
-        print("  To retake and keep only your best score: add --retake")
-        sys.exit(1)
+    # Baseline guard — hard stop by default; soft warning with --retake
+    if mode == "baseline" and engine.baseline_exists(log_path):
+        if not args.retake:
+            print("ERROR: baseline already anchored (day_number=0 row exists).")
+            print("  Re-anchoring destroys your Day-0 reference. Use --mode default instead.")
+            print("  To retake for practice (scores shown, anchor preserved): add --retake")
+            sys.exit(1)
+        print("Warning: baseline already anchored — Day-0 anchor is preserved in the log.")
+        print("  This run is for practice. Score will be shown; CSV only updated if you regress.")
 
     # pygame init — hard stop on failure
     try:
@@ -254,7 +251,7 @@ def main():
 
     try:
         if args.retake:
-            upsert_csv(log_path, csv_row)
+            flag_retake_in_csv(log_path, day_number, mode, scores["accuracy_pct"], today)
         else:
             append_csv(log_path, csv_row)
             print(f"  Logged → {log_path}")
