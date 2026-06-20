@@ -1,0 +1,36 @@
+#separator:tab
+#html:true
+#tags column:3
+#deck:Telecom Seed Deck
+OFDM (Orthogonal Frequency-Division Multiplexing)	<b>正交频分复用</b><br><br>LTE and 5G NR both use OFDM in the downlink to divide the channel into orthogonal subcarriers.	telecom RF
+subcarrier spacing (SCS)	<b>子载波间隔</b><br><br>5G NR supports multiple SCS values (15, 30, 60, 120, 240 kHz) to serve different deployment scenarios.	telecom RF
+SINR (Signal-to-Interference-plus-Noise Ratio)	<b>信干噪比</b><br><br>A UE reports SINR to the gNB to guide modulation and coding scheme selection.	telecom RF
+path loss	<b>路径损耗</b><br><br>Free-space path loss increases with the square of distance and the square of carrier frequency.	telecom RF
+fading	<b>衰落</b><br><br>Multipath fading causes rapid fluctuations in received signal power in urban environments.	telecom RF
+eNB (Evolved Node B)	<b>演进型基站</b><br><br>The eNB is the LTE base station that handles radio resource management and connects to the EPC via the S1 interface.	telecom LTE
+EPC (Evolved Packet Core)	<b>演进分组核心网</b><br><br>The EPC consists of the MME, SGW, PGW, and HSS, forming the control and user planes of LTE.	telecom LTE
+MME (Mobility Management Entity)	<b>移动性管理实体</b><br><br>The MME handles UE attach, authentication, and handover signalling in the LTE control plane.	telecom LTE
+S1 interface	<b>S1接口</b><br><br>The S1 interface connects the eNB to the EPC: S1-MME carries control plane signalling, S1-U carries user data.	telecom LTE
+X2 interface	<b>X2接口</b><br><br>The X2 interface between adjacent eNBs enables direct handover signalling without routing through the EPC.	telecom LTE
+gNB (Next Generation Node B)	<b>5G基站</b><br><br>The gNB is the 5G NR base station; it connects to the 5GC via the NG interface and to other gNBs via Xn.	telecom 5G
+5GC (5G Core)	<b>5G核心网</b><br><br>The 5GC uses a service-based architecture (SBA) with network functions such as AMF, SMF, and UPF.	telecom 5G
+SA — Standalone (5G)	<b>独立组网</b><br><br>In SA mode, 5G NR connects directly to the 5GC without relying on an LTE anchor.	telecom 5G
+NSA — Non-Standalone (5G)	<b>非独立组网</b><br><br>In NSA mode (Option 3x), the LTE eNB provides the control plane anchor while NR adds capacity in dual connectivity.	telecom 5G
+AMF (Access and Mobility Management Function)	<b>接入和移动性管理功能</b><br><br>The AMF replaces the LTE MME, handling registration, connection management, and mobility in the 5GC.	telecom 5G
+NB-IoT (Narrowband IoT)	<b>窄带物联网</b><br><br>NB-IoT operates in a 180 kHz bandwidth and is deployed in-band, guard-band, or standalone within LTE spectrum.	telecom IoT
+eMTC (enhanced Machine-Type Communication / LTE-M)	<b>增强型机器类通信</b><br><br>eMTC supports voice and mobility, making it suitable for wearables and asset trackers alongside NB-IoT.	telecom IoT
+PSM (Power Saving Mode)	<b>省电模式</b><br><br>PSM allows an IoT device to enter a deep-sleep state for hours or days, extending battery life to several years.	telecom IoT
+PDCP (Packet Data Convergence Protocol)	<b>分组数据汇聚协议</b><br><br>PDCP performs IP header compression, ciphering, and integrity protection in both LTE and 5G NR.	telecom Protocol
+RLC (Radio Link Control)	<b>无线链路控制</b><br><br>RLC provides segmentation, reassembly, and ARQ retransmission between the UE and the base station.	telecom Protocol
+MAC — Medium Access Control (telecom)	<b>媒体访问控制</b><br><br>The MAC layer schedules uplink and downlink transmissions and performs HARQ retransmissions.	telecom Protocol
+fronthaul	<b>前传</b><br><br>In C-RAN, fronthaul connects the BBU pool to the RRH over fibre or microwave, carrying IQ data via CPRI or eCPRI.	telecom Architecture
+midhaul	<b>中传</b><br><br>In 5G disaggregated RAN, midhaul connects the DU to the CU, carrying F1 interface traffic.	telecom Architecture
+backhaul	<b>回传</b><br><br>Backhaul connects the base station site to the core network, typically over fibre, microwave, or millimetre-wave links.	telecom Architecture
+throughput	<b>吞吐量</b><br><br>Peak downlink throughput is a key marketing metric; sustained average throughput is more relevant to user experience.	telecom KPI
+latency	<b>时延</b><br><br>5G NR targets 1 ms user-plane latency for URLLC use cases, compared to ~10 ms for LTE.	telecom KPI
+RRC (Radio Resource Control)	<b>无线资源控制</b><br><br>RRC state (IDLE / INACTIVE / CONNECTED) determines a UE's power consumption and data-access speed.	telecom KPI
+基站 (jīzhàn)	<b>base station</b><br><br>深圳华为总部附近有大量5G基站密集部署。	telecom 业务词
+运营商 (yùnyíngshāng)	<b>operator / carrier</b><br><br>中国三大运营商是中国移动、中国联通和中国电信。	telecom 业务词
+频段 (pínduàn)	<b>spectrum / frequency band</b><br><br>5G毫米波频段在中国尚未大规模商用。	telecom 业务词
+芯片 (xīnpiàn)	<b>chip / chipset</b><br><br>华为海思麒麟芯片曾是国内5G手机的主要选择。	telecom 业务词
+网络覆盖 (wǎngluò fùgài)	<b>network coverage</b><br><br>运营商在农村地区加大网络覆盖投入以缩小数字鸿沟。	telecom 业务词
