@@ -1,84 +1,81 @@
-# HSK Plan 01
+# nr-gate
 
-A gated, evidence-first study plan that takes a zero-Chinese, Bangla-L1 learner to an **HSK 3 written + HSKK 初级 (speaking) credential as fast as honestly possible** — because a telecom internship in Shenzhen is the financial exit, and earlier beats later.
+基于提交记录的门控学习日志。每个阶段包含每日任务卡，任务通过后提交一次——提交记录即为执行小时数的日志。
 
-It runs in two phases. Each is an *engine*: a folder of daily checklists, each with **one hard gate**, where a day advances only when its gate passes, and **one git commit per passed day** becomes the executed-hours log — the single metric that predicts whether the plan lands.
+两个阶段共用同一引擎：一张日卡，一个强制门控，通过后才推进，git 历史是唯一的执行证明。
 
 ---
 
-## Repo map
+## 目录结构
 
-| Path | What it is |
+| 路径 | 说明 |
 |---|---|
-| `phase1/` | **Pre-departure sprint** (Day 0 = 15 Jul 2026 → fly 1 Sep 2026). Tone-first: tones to ≥97% + full HSK 3 vocabulary (1,000 words) + 655 recognition characters. `README.md` = engine + 48-day map; `day-NN.md` = daily cards. |
-| `phase2/` | **In-China exam sprint** (Day 0 ≈ 7 Sep 2026 → exam Sat 7 Nov 2026). HSK 3 (2.0) written + HSKK 初级. `README.md` = engine + 62-day map; `day-NN.md` = daily cards. |
-| `tracker.md` | The executed-hours + gate log for both phases. **The one file that must never lie.** |
-| `scripts/`, `tests/` | HVPT tone-trainer + HSK deck builder (extracts the official word/character lists from the syllabus PDF). |
-| `graphify-out/` | Knowledge graph of the whole plan (`graph.html` to browse) + the verified Phase 2 exam research (`.phase2_research_raw.json`). |
-| `hsk5_*.md` | Parent feasibility report + the slower v2 year-plan this accelerated track sits inside. |
-| `新版HSK考试大纲1219.pdf` | The official syllabus (pub. 2025-11) — the source of every word/character count. |
+| `phase1/` | **第一阶段**（48天）。声调优先：声调正确率 ≥97% + 词汇约1,075词 + 识字655字。`README.md` = 引擎说明及48天计划图；`day-NN.md` = 每日任务卡。 |
+| `phase2/` | **第二阶段**（62天）。笔试 + 口语。`README.md` = 引擎说明及62天计划图；`day-NN.md` = 每日任务卡。 |
+| `tracker.md` | 两个阶段的执行小时数及门控日志。**唯一不得造假的文件。** |
+| `scripts/`, `tests/` | 声调训练器及词汇卡片生成工具。 |
+| `graphify-out/` | 计划知识图谱（`graph.html` 可浏览）及考试信息研究记录。 |
+| `hooks/` | 门控钩子（`commit-msg`）及安装脚本。 |
 
-Start at `phase1/README.md` or `phase2/README.md`.
-
----
-
-## The daily check-in (non-negotiable)
-
-These are the standing laws. Do them and **record them** every study day — the log *is* the plan.
-
-1. **One commit per passed day.** When a day's hard gate passes, fill the `tracker.md` row and commit. The message is the log: `dayNN: <gate result> | <hours> | <vocab/mock/hw>`. A day with no commit didn't happen.
-2. **SRS floor — never zero.** ≥20 min of spaced review (vocabulary + a tone spot-check) *every single day* — deload days, travel days, exam-eve, ever. This is the load-bearing wall (see flag #1).
-3. **Evidence-first — log the measured number, not a feeling.** Tone-pair ID %, mock score (with section split), handwriting count, deck count. A number you didn't measure does not exist.
-4. **Gate discipline — master before moving on.** Advance only when the day's gate passes. **Slip rule:** if it misses, the next calendar day *repeats the same gate and adds nothing new* (`dayNN-r1`, `-r2`, …). Plan-day ≠ calendar-day.
-5. **Production discipline (anti-fossilisation).** Every new word/HSKK answer/handwritten character is recorded or written and checked against a model at least once.
-6. **Weekly audit (Sundays).** Deload + one mock + tone audit (+ handwriting error review in Phase 2). Half load, no new material.
-7. **Phase 2 only — register early and confirm the format.** Pre-create the chinesetest.cn account *before flying*; register the moment you've settled; and on **Day 28 (≈5 Oct) confirm 2.0 vs 3.0 at the venue before paying** (see flag #6).
+从 `phase1/README.md` 或 `phase2/README.md` 开始阅读。
 
 ---
 
-## Enforcement: the gate hook
+## 每日打卡规则（不可协商）
 
-The check-in above isn't just etiquette — it's enforced by a git hook (`hooks/commit-msg`).
-
-**What it blocks:** any day-card commit (`dayNN` / `p2-dayNN`) is rejected unless `tracker.md` proves the gate —
-- that day's row has **hours filled + a ✅** in the Gate? cell, **and**
-- the **previous day is already ✅** (no skipping ahead).
-
-Slip commits (`dayNN-rN`, an honest logged miss) and ordinary commits pass straight through.
-
-**To pass a day, in order:** fill the tracker row (hours + metric + ✅) → `git add tracker.md phaseN/` → `git commit -m "p2-dayNN: …"`. If the row isn't there or isn't ✅, the commit is refused with a message saying exactly what's missing.
-
-**Install (once per clone):** `bash hooks/install.sh` (sets `core.hooksPath=hooks`). Already active in this checkout.
-
-**Honest limit:** `git commit --no-verify` skips the local hook. It can't stop you *lying to yourself* (a fake number in the tracker). Everything else is blocked.
-
-**Server-side lock (push-level):** the same gate logic runs in GitHub Actions on every push to `main` (`.github/workflows/gate-check.yml`, job `gate`). The branch ruleset requires that status check to pass before the push is accepted — so even a `--no-verify` local commit is rejected at the remote. A genuinely fake tracker number would still slip through (the check can't read your mind), but you can't silently skip a day and have it land on GitHub.
+1. **每天一次提交。** 当日门控通过后填写 `tracker.md` 并提交。提交信息即为日志，格式：`dayNN: <门控结果> | <小时> | <指标>`。无提交 = 无效。
+2. **SRS下限——永不为零。** 每日至少20分钟间隔复习（词汇 + 声调抽查）——减量日、旅途日、考前日均不例外。
+3. **数据优先——记录实测数值，而非感受。** 声调对识别率%、模拟分数（含各部分）、手写字数、词卡数。未测量的数字不存在。
+4. **门控纪律——达标后才推进。** 仅当当日门控通过时方可推进。**滑坡规则：** 未达标则次日重复同一门控，不添加新内容（`dayNN-r1`, `-r2`, …）。计划日≠日历日。
+5. **产出纪律（防化石化）。** 每个新词/口语答案/手写字须至少记录或书写一次，并与范本核对。
+6. **每周审计（周日）。** 减量 + 一次模拟 + 声调审计（第二阶段另加手写错误复盘）。半量，不引入新内容。
+7. **仅限第二阶段——尽早注册并确认题型。** 出发前预建考试账户；抵达后立即注册；**第28天（约10月5日）到考点确认2.0/3.0再付款**（见标志#6）。
 
 ---
 
-## Flags that make the whole plan moot
+## 强制执行：门控钩子
 
-If any of these trips, **stop and re-plan** — the calendar and gates as written no longer hold. They are listed worst-first.
+上述打卡规则由 git 钩子（`hooks/commit-msg`）强制执行。
 
-| # | Flag | Why it breaks the plan | What to do |
+**拦截内容：** 任何每日任务卡提交（`dayNN` / `p2-dayNN`）在 `tracker.md` 未满足门控条件时均被拒绝——
+- 当日行须填写**小时数 + Gate?列填✅**，**且**
+- **前一天已为✅**（不允许跳过）。
+
+滑坡提交（`dayNN-rN`，诚实记录的未达标日）和普通提交直接通过。
+
+**通过一天的流程（依序）：** 填写 tracker 行（小时数 + 指标 + ✅）→ `git add tracker.md phaseN/` → `git commit -m "p2-dayNN: …"`。若行不存在或未填✅，提交将被拒绝并说明缺少什么。
+
+**安装（每次克隆后执行一次）：** `bash hooks/install.sh`（设置 `core.hooksPath=hooks`）。本检出已激活。
+
+**本地限制：** `git commit --no-verify` 可绕过本地钩子，但无法通过服务端检查。
+
+**服务端锁（推送级别）：** 相同门控逻辑在每次向 `main` 分支推送时于 GitHub Actions 中运行（`.github/workflows/gate-check.yml`，任务名 `gate`）。分支规则集要求该状态检查通过后方可接受推送——即使本地使用 `--no-verify`，推送也会在远端被拒绝。
+
+---
+
+## 导致整体计划失效的标志
+
+如以下任何情况触发，**停止并重新规划**——当前日历和门控设置不再有效。按严重程度从高到低排列。
+
+| # | 标志 | 为何导致计划失效 | 应对措施 |
 |---|---|---|---|
-| 1 | **SRS floor breaks** (zero review for a stretch) | The review backlog avalanches and retention collapses. The feasibility report states it outright: *the plan only breaks if the SRS floor breaks.* | Never let it hit zero. If broken >2–3 days, re-baseline vocabulary before adding anything new. |
-| 2 | **Tone gate never clears 95%** | Phase 1 gates all vocab scaling on ≥95% tone-pair ID. If tones plateau below that for weeks, the unlock never opens, the 1,000-word delivery fails, and **Phase 2's entire starting-state assumption is false.** | Do not fake the gate. If tones stall, the whole timeline must be recomputed — tones are day-gated, not crammable. |
-| 3 | **Phase 1 under-delivers** (arrive without ~1,000 vocab / 655 recognition / tones ≥97%) | Phase 2's "short sprint" premise is that the hard part is already done. If it isn't, Phase 2 becomes a from-scratch build and the Nov 7 target is fiction. | Measure the *real* handoff numbers on arrival; recalibrate Stage A bars or slip the exam. |
-| 4 | **Start/fly/arrival dates move** (Day 0 ≠ 15 Jul; departure ≠ ~1 Sep) | Every gate is date-anchored off these. A shifted start cascades through both phases. | Recompute both calendars from the new anchor; the gate ladder stays, the dates move. |
-| 5 | **Capacity collapses** (financial emergency, or the part-time job eats below the 2 h/day floor for weeks) | Gates stall, the exam slips indefinitely, and the credential timeline — the whole point — evaporates. | If hours can't hold the floor, cut scope to exam-only (drop telecom/abstracts) or push the sitting. Don't pretend. |
-| 6 | **The HSK 3.0 switchover lands at the venue** | Phase 2 is built **2.0-first**. If 深圳大学 administers 3.0 by registration, the 2.0-tuned bars and lighter writing are wrong — 3.0 demands the full 150 书写字 + a different speaking paper. | Confirm the format on **Day 28 before paying**. If 3.0: re-aim **Dec 13** and extend the over-prep stage. This is the single biggest external unknown. |
-| 7 | **Registration deadline missed** | No registration = no exam that cycle, regardless of readiness. IBT closes ~10 days before (Nov 7 → deadline 28 Oct). | Pre-create the account before flying; register the moment you're settled; watch the deadline in the Day-51 card. |
-| 8 | **The "why" changes** (internship no longer the exit, or funding removes the pressure) | The entire acceleration — earliest-possible sitting, telecom/abstracts in parallel — is justified by the internship being the financial exit. Remove that, and the slower parent v2 year-plan is the better track. | Re-decide priorities. This repo is the **fast** track, not the only one. |
-| 9 | **The verified facts go stale** (a new official notice changes HSK 3 structure, dates, or counts) | The plan rests on syllabus counts + 2.0 format facts verified 2026-06-19. An official change invalidates the bars. | Re-verify on chinesetest.cn at registration; the research snapshot is in `graphify-out/.phase2_research_raw.json`. |
+| 1 | **SRS下限中断**（连续数日零复习） | 复习积压雪崩，记忆保留率崩溃。计划的唯一断点即在于此。 | 永不让其归零。若已中断>2–3天，在添加新内容前先重建词汇基线。 |
+| 2 | **声调门控始终低于95%** | 第一阶段全部词汇扩展以≥95%声调对识别率为解锁条件。若声调数周停滞，解锁永不打开，1,000词目标无法完成，**第二阶段的起始假设即为错误。** | 不得造假门控数据。若声调停滞，整体时间表须重算——声调受门控约束，无法突击。 |
+| 3 | **第一阶段交付不足**（抵达时词汇/识字/声调未达目标） | 第二阶段"短冲刺"的前提是难点已完成。若未完成，第二阶段变为从零开始，目标日期即为虚构。 | 抵达时测量*实际*交付数字；重新校准A阶段基准或推迟考试。 |
+| 4 | **开始/结束日期变动** | 每个门控以这些日期为锚点。起始日期偏移将级联影响两个阶段。 | 以新锚点重新计算两个阶段日历；门控阶梯保持，日期移动。 |
+| 5 | **执行能力崩溃**（连续数周每日不足下限小时数） | 门控停滞，考试无限期推迟，证书时间线蒸发。 | 若无法维持下限，削减范围至仅备考（放弃专业词汇/阅读项目）或推迟考期。不得自欺。 |
+| 6 | **考点实施3.0版本** | 第二阶段基于**2.0优先**。若考点在注册时采用3.0，2.0调优的基准和较少的书写要求均告错误——3.0要求完整150书写字+不同口语试卷。 | **付款前第28天到考点确认题型。** 若为3.0：目标调整至**12月13日**并延长过度准备阶段。此为最大外部未知变量。 |
+| 7 | **错过注册截止日期** | 无注册 = 该期无法参考，无论备考程度。IBT截止约在考前10天（11月7日考试→截止10月28日）。 | 出发前预建账户；抵达后立即注册；关注Day-51任务卡中的截止日期。 |
+| 8 | **目标变更** | 整体加速方案建立在特定目标之上。目标移除则更慢的替代计划为更优选择。 | 重新决定优先级。此仓库为**快速**方案，非唯一方案。 |
+| 9 | **已验证信息过时**（新官方通知改变考试结构、日期或字数） | 计划基于2026-06-19核实的大纲字数+2.0题型信息。官方变更将使基准失效。 | 注册时在chinesetest.cn重新核实；研究快照见 `graphify-out/.phase2_research_raw.json`。 |
 
 ---
 
-## How to read a day
+## 如何阅读每日任务卡
 
-1. Open `phaseN/day-NN.md`. There is **one hard gate** and a block plan.
-2. Do the work. Hit the gate. Log the measured result in `tracker.md`.
-3. **Pass** → commit, move on. **Miss** → repeat the gate tomorrow, add nothing new (`-r1`).
-4. Sundays are deload + audit. Keep the SRS floor regardless.
+1. 打开 `phaseN/day-NN.md`。其中有**一个强制门控**和一个模块计划。
+2. 完成任务。达到门控要求。在 `tracker.md` 中记录实测结果。
+3. **通过** → 提交，继续推进。**未通过** → 明天重复同一门控，不添加新内容（`-r1`）。
+4. 周日为减量 + 审计日。无论如何保持SRS下限。
 
-The fly date and the exam date never move on their own — the *gates* decide when you're ready, and the credential never ships under-prepared.
+结束日期和考试日期不会自行移动——**门控**决定何时准备就绪，证书不会在准备不足的情况下出炉。

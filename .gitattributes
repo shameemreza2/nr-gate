@@ -1,2 +1,11 @@
 * text=auto eol=lf
 *.md text eol=lf
+
+# git archive / GitHub "Download ZIP" — exclude study content.
+# git clone still fetches everything; this only affects archive-based downloads.
+phase1/                      export-ignore
+phase2/                      export-ignore
+tracker.md                   export-ignore
+graphify-out/                export-ignore
+hsk5_*.md                    export-ignore
+新版HSK考试大纲1219.pdf       export-ignore

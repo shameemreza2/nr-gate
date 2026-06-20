@@ -1,215 +1,211 @@
-# Phase 1 — Day 0 → Fly Day: Tone Foundation + HSK 3 Vocabulary
+# 第一阶段 — 声调基础 + HSK 3 词汇冲刺
 
-**The sprint that gets you on the plane with your HSK 3 word + character base already built.**
-Day 0 = **15 Jul 2026 (Wed)** · Fly day = **1 Sep 2026 (Tue)** · **48 day-cards** (Day 0 → Day 47).
+**在抵达前建立 HSK 3 词汇与识字基础。**
+Day 0 = **2026年7月15日（周三）** · 结束日 = **2026年9月1日（周二）** · **48张日卡**（Day 0 → Day 47）。
 
-This folder is the *engine*. Each `day-NN.md` is one execution checklist with **one hard gate**. You do not advance until that day's gate passes. Git history (one commit per passed day) becomes your executed-hours log — the single variable that predicts everything in the parent feasibility report.
-
-> Plan files are plain English on purpose — you read them daily.
+本文件夹为*引擎*。每张 `day-NN.md` 是一份含**一个强制门控**的执行清单。未通过该日门控则不推进。git 提交历史（每通过一天提交一次）即为执行小时数日志——父级可行性报告所列的唯一关键预测变量。
 
 ---
 
-### Official HSK counts — verified firsthand from the syllabus
+### 官方 HSK 字数 — 直接从大纲核实
 
-Source: **`新版HSK考试大纲1219.pdf`** = *中文水平考试 HSK 考试大纲*, 中外语言交流合作中心, **published 2025-11, effective 2026-07** — the exact exam you will sit. Parsed directly from the 词汇大纲 / 汉字大纲 lists (continuous 序号, 等级-tagged). **[R]**
+来源：**`新版HSK考试大纲1219.pdf`** = *中文水平考试 HSK 考试大纲*，中外语言交流合作中心，**2025年11月出版，2026年7月起生效**。直接从词汇大纲/汉字大纲列表解析（连续序号，等级标注）。**[R]**
 
-| Level | Cumulative words | Cumulative 认读字 (recognition) | 书写字 (handwriting) |
+| 等级 | 累计词汇量 | 累计认读字 | 书写字 |
 |---|---|---|---|
-| HSK 1 | **300** | 246 | none |
-| HSK 2 | **500** | 371 | none |
-| **HSK 3** | **1,000** | **655** | +150 (handwriting begins) |
+| HSK 1 | **300** | 246 | 无 |
+| HSK 2 | **500** | 371 | 无 |
+| **HSK 3** | **1,000** | **655** | +150（书写起始） |
 | HSK 4 | 2,000 | 1,096 | +150 |
 | HSK 5 | 3,600 | 1,527 | +150 |
 | HSK 6 | 5,400 | 1,940 | +150 |
 | HSK 7–9 | 11,000 | 3,088 | +500 |
 
-> Corrects an earlier draft that said "HSK 2 ≈ 1,272 words" (that was the 2021 *standard* GF0025-2021, **not** this exam syllabus) and a memory note that guessed 160/360/880/… (also wrong). These verified figures match the parent `hsk5_speaking_telecom_plan_v2.md`, which already had them right.
+> 修正了早期草稿中"HSK 2 ≈ 1,272词"的错误（那是2021年标准GF0025-2021，**非**本考试大纲）。以上经核实的数字与父级报告一致。
 
 ---
 
-## 1. Locked parameters
+## 1. 固定参数
 
-| Param | Value | Source |
-|---|---|---|
-| Day 0 | 15 Jul 2026 (Wed) | hard constraint (parent plan v2) |
-| Fly day | 1 Sep 2026 (Tue) → Phase 1 = **48 days** | your confirm |
-| Work status | **Jobless / full-time**, ~6 h/day sustainable | your confirm |
-| Daily budget | target **6 h**, cap 6.5 h, floor 4 h (chore days) → **~250–280 h total** | derived |
-| **Hard tone target (fly day)** | **tone-pair ID ≥ 97%**, T2↔T3 ≥ 95% | your call |
-| **Vocab-scaling UNLOCK** | tone-pair ID **≥ 95%** + T2↔T3 ≥ 92% (target ~Day 21, gate-controlled) | your call ("decouple at 95%") |
-| **Vocab target (fly day)** | **~1,075 words = full HSK 3 vocabulary (1,000) + ~75 into HSK 4** · floor ~850 (HSK 3 ~85%) · stretch toward HSK 4 | counts above + feasibility §4 |
-| Character scope | **recognition + IME typing only → ~655 认读字 (the full HSK 3 set) ride along.** Handwriting (书写) deferred to Phase 2. | recognition-first, sanctioned |
+| 参数 | 值 |
+|---|---|
+| Day 0 | 2026年7月15日（周三） |
+| 结束日 | 2026年9月1日（周二）→ 第一阶段 = **48天** |
+| 每日时长 | 目标 **6小时**，上限6.5小时，下限4小时 → **总计约250–280小时** |
+| **声调硬目标（结束日）** | **声调对识别率 ≥ 97%**，T2↔T3 ≥ 95% |
+| **词汇扩展解锁条件** | 声调对识别率 **≥ 95%** + T2↔T3 ≥ 92%（目标约 Day 21，受门控约束） |
+| **词汇目标（结束日）** | **约1,075词 = 完整 HSK 3 词汇（1,000）+ 约75个 HSK 4 词**；下限约850（HSK 3 ~85%） |
+| 汉字范围 | **认读 + 输入法输入 → 约655认读字（完整 HSK 3 识字集）同步掌握。**书写（书写字）推迟至第二阶段。 |
 
-**What Phase 1 actually delivers:** by fly day you hold **HSK 3's entire vocabulary and recognition-character set**, plus tones at ≥97%. That front-loads the hardest part of the December HSK 3 goal *before you land*. Phase 2 then only has to add HSK 3 **exam technique, the 150 handwriting characters, and 口语 (speaking)** — far more credible than building HSK 3 from scratch in-country.
-
----
-
-## 2. Why these numbers (the feasibility verdict, short version)
-
-You asked me to prove two claims before committing. The evidence (parent feasibility report + tone-acquisition SLA literature):
-
-- **High-variability tone training (Wang et al. 1999, JASA):** non-tonal-L1 adults went ~69% → ~90% tone ID in ~8 sessions / ~2 weeks, retained and generalised. **[R]**
-- **90% → 97% is a long, aptitude-dependent tail**, slower for you because **Tone 2 is the documented hardest category for Bangla-L1 learners**. 97% is not a guaranteed 48-day outcome. **[E ← R]**
-- **Tones are spacing/consolidation-limited, not crammable.** So being jobless does NOT speed the tone gate — it's day-gated, not hour-gated. **[D ← R]**
-- **Durable vocab intake ≈ 20–40 new words/day**; past ~60/day it's cram-and-forget. **Jobless full-time helps vocab** (it absorbs the ballooning review load), with a retention ceiling — not linear compression. **[E/D]**
-
-**Verdict on "strict tones-first to 97%, then sprint":** rejected as a *vocab blocker* — a 97% gate that might never clear could eat the whole window. Fossilisation protection arrives at ~90–95% perception + production discipline, not 97%.
-**Verdict on "jobless → can sprint the vocab":** half-right — necessary for the high end, only because it carries review load, and only if vocab is allowed to start (hence the 95% unlock, not 97%).
-
-**Your final calls:** unlock at **95%** (safer tones, ~Day 21), jobless full-time. → realistic landing **~1,075 words (full HSK 3 vocab) + ≥95–97% tones**.
+**第一阶段实际交付内容：** 结束时掌握 **HSK 3 全部词汇和认读字集**，声调达 ≥97%。这使 HSK 3 目标中最难的部分在抵达前完成。第二阶段只需新增：**考试技巧、150个书写字、口语（HSKK 初级）**——比从零开始可信得多。
 
 ---
 
-## 3. Standing laws (never broken)
+## 2. 数字依据（可行性结论简版）
 
-1. **Tone gate is supreme.** The day's tone-ID target is the hard gate. Miss it → repeat the gate tomorrow, add nothing new (the **slip rule**, §7). Tones never wait for vocab; vocab waits for tones.
-2. **SRS floor = 20 min/day, never zero.** Not on deload days, not on travel days, not ever.
-3. **No vocab *scaling* before the 95% unlock.** A small **HSK 1 floor (≤300 words = all of HSK 1)**, every word tone-checked, is allowed in Stage A; scaling HSK 2 → HSK 3 only after unlock.
-4. **Production discipline (anti-fossilisation).** Every new vocab card is recorded and shadowed against native audio at least once. Weekly tone audit (Sundays).
-5. **Recognition + IME only.** No handwriting in Phase 1 (HSK 1–2 require none; HSK 3's 150 书写字 are a Phase-2 task).
-6. **Bangla-L1 corrections baked in:** over-weight **T2↔T3**; explicit minimal-pair work on **zh/ch/sh/r vs j/q/x vs z/c/s**; isolate **ü** (lǜ / nǚ).
-7. **One commit per passed day.** The commit message IS your log (§8).
+- **高变量声调训练（Wang et al. 1999, JASA）：** 非声调母语成人约8次训练/约2周后，声调识别率从约69%提升至约90%，并可保持与泛化。**[R]**
+- **90% → 97% 是漫长的、依赖资质的尾段**，T2 是已记录的最难声调类别，97% 不是48天内的保证结果。**[E ← R]**
+- **声调受间隔限制，不可突击。** 全天时间不等于声调更快——它受日控，不受小时控。**[D ← R]**
+- **持久词汇摄入约 20–40 新词/天**；超过约60词/天即为应试记忆，遗忘快速。**[E/D]**
+
+**结论 "声调优先至97%再冲刺"**：作为*词汇阻断器*被否决——97%门控若始终未通过则可能耗尽整个窗口。保护化石化在约90–95%感知+产出规律时到位，不需要97%。
+
+**最终决定：** 在 **95%解锁**（更安全的声调，约Day 21）。预计着陆状态：**约1,075词（完整 HSK 3 词汇）+ ≥95–97% 声调**。
 
 ---
 
-## 4. Two-stage structure
+## 3. 常规定律（永不违反）
 
-| Stage | Days | Tones | Vocab | Goal |
+1. **声调门控至上。** 当日声调识别率目标为强制门控。未达标 → 明天重复同一门控，不添加新内容（**滑坡规则**，§7）。声调不等词汇；词汇等声调。
+2. **SRS下限 = 20分钟/天，永不为零。** 减量日、旅途日均不例外。
+3. **95%解锁前不进行词汇扩展。** A阶段允许保持小量 **HSK 1 词库（≤300词，全部经声调核查）**；扩展 HSK 2 → HSK 3 仅在解锁后进行。
+4. **产出规律（防化石化）。** 每张新词卡至少一次录音并与母语人士音频对比。每周周日声调审计。
+5. **认读 + 输入法输入。** 第一阶段不进行手写（HSK 1–2无书写要求；HSK 3 的150书写字为第二阶段任务）。
+6. **重点纠正项：** 强化 T2↔T3 最小对比练习；正音 zh/ch/sh/r vs j/q/x vs z/c/s；分离 ü（lǜ / nǚ）。
+7. **每通过一天一次提交。** 提交信息即为日志（§8）。
+
+---
+
+## 4. 两阶段结构
+
+| 阶段 | 天数 | 声调 | 词汇 | 目标 |
 |---|---|---|---|---|
-| **A — Tone build** | Day 0 – ~21 | the whole job: pinyin → single-tone → tone pairs → **≥95%** | **HSK 1 floor, ≤300 words**, tone-checked | clear the unlock gate |
-| **UNLOCK** | ~Day 21 | pair ID ≥95% + T2↔T3 ≥92% | — | open vocab scaling |
-| **B — Vocab sprint** | ~Day 22 – 47 | maintain + push to **≥97%**; start connected-speech production | scale **HSK 2 → HSK 3 (500 → 1,000)**, spill toward HSK 4 | full HSK 3 vocabulary |
+| **A — 声调建立** | Day 0 – ~21 | 全力：拼音 → 单声调 → 声调对 → **≥95%** | **HSK 1 词库，≤300词**，声调核查 | 通过解锁门控 |
+| **解锁** | ~Day 21 | 对识别率 ≥95% + T2↔T3 ≥92% | — | 开放词汇扩展 |
+| **B — 词汇冲刺** | ~Day 22 – 47 | 维持 + 推至 **≥97%**；开始连续语音产出 | 扩展 **HSK 2 → HSK 3（500 → 1,000）**，溢出至 HSK 4 | 完整 HSK 3 词汇 |
 
-Unlock day is *gate-controlled*: the calendar says ~Day 21, but if tones lag, the unlock slides right and the vocab target auto-shrinks (§7).
+解锁日受门控约束：日历显示约 Day 21，若声调滞后则解锁右移，词汇目标自动缩减（§7）。
 
 ---
 
-## 5. Tone-gate ladder (the spine)
+## 5. 声调门控阶梯（主干）
 
-Metric = **tone-pair ID accuracy** on a fresh ≥40-item, multi-speaker test (single-tone 4-way in Week 1). Build the test from your HVPT source; never reuse trained items.
+指标 = 全新 ≥40 题、多说话人测试的**声调对识别率**（第1周为单声调4选1测试）。从 HVPT 语料库构建测试；不复用已训练素材。
 
-| End of | Day | Overall gate | T2↔T3 gate | Added that week |
+| 结束周 | 天数 | 整体门控 | T2↔T3 门控 | 本周新增 |
 |---|---|---|---|---|
-| Week 1 | 6 | single-tone ID **≥85%** | — | all pinyin decoded; ü solid; 4 tones produced |
-| Week 2 | 13 | pair ID **≥85%** | ≥78% | tone pairs HVPT; T3 sandhi intro |
-| Week 3 | 20 | pair ID **≥92%** | ≥88% | multi-speaker; disyllabic-word tones |
-| **Unlock** | **21** | **pair ID ≥95%** | **≥92%** | **→ vocab scaling opens** |
-| Weeks 4–6 | 22–41 | push **96 → 97%** | 93 → 95% | connected-speech production tones |
-| Week 7 | 42–47 | hold **≥97%** | ≥95% | exam-style tone stability under speed |
+| 第1周 | 6 | 单声调识别 **≥85%** | — | 全拼音解码；ü 稳固；4个声调产出 |
+| 第2周 | 13 | 声调对识别 **≥85%** | ≥78% | 声调对 HVPT；T3 变调入门 |
+| 第3周 | 20 | 声调对识别 **≥92%** | ≥88% | 多说话人；双音节词声调 |
+| **解锁** | **21** | **声调对识别 ≥95%** | **≥92%** | **→ 词汇扩展开放** |
+| 第4–6周 | 22–41 | 推进 **96 → 97%** | 93 → 95% | 连续语音产出声调 |
+| 第7周 | 42–47 | 维持 **≥97%** | ≥95% | 速度下考试级声调稳定性 |
 
 ---
 
-## 6. Vocab / character ramp
+## 6. 词汇/汉字增长曲线
 
-HSK 1 floor (Stage A) is slow, every word tone-checked. Scaling (Stage B) draws from the official HSK 2 then HSK 3 word lists in the syllabus PDF. Per-day cumulative targets are in the **map (§10)**.
+A阶段（HSK 1 词库）缓慢积累，每词经声调核查。B阶段从大纲 PDF 中的官方 HSK 2 和 HSK 3 词汇表扩展。每日累计目标见**计划图（§10）**。
 
-Trajectory: ~75 (wk1) → ~195 (wk2) → **300 = HSK 1 complete (Day 20)** → ~460 (wk4) → **~530 = HSK 2 complete (~Day 29)** → ~670 (wk5) → ~910 (wk6) → **1,000 = HSK 3 vocab complete (~Day 44)** → **~1,075 by fly day** (≈75 into HSK 4). Recognition characters ride along to **~655 (the full HSK 3 认读字 set)**.
-
----
-
-## 7. Gate / advance / slip mechanics ("master before moving on")
-
-- **Plan-day ≠ calendar-day.** A day-card advances only when its hard gate passes.
-- **Pass:** log it, commit, move on. **Slip (gate missed):** next calendar day **repeats the same gate block, adds no new material**. Log as `dayNN-r1`, `-r2`, …
-- **Tone slips are the main risk** (the ladder is steep). The budget absorbs ~3–4.
-- **Auto-shrink:** every slip pushes the unlock and the fly-day vocab target down by ~1 day's words (~35). Record the running adjusted target in `tracker.md`. The fly date never moves — Phase 2 inherits the remainder.
+轨迹：约75（第1周）→ 约195（第2周）→ **300 = HSK 1 完成（Day 20）** → **约530 = HSK 2 完成（约Day 29）** → **1,000 = HSK 3 词汇完成（约Day 44）** → **约1,075（结束日）**（溢出约75个 HSK 4 词）。认读字同步达 **约655（完整 HSK 3 识字集）**。
 
 ---
 
-## 8. Git / commit protocol
+## 7. 门控/推进/滑坡机制（"达标后才推进"）
 
-One commit when a day's gate passes:
+- **计划日 ≠ 日历日。** 日卡仅在强制门控通过时推进。
+- **通过：** 记录，提交，继续。**滑坡（门控未达标）：** 次日重复同一门控区块，不添加新内容。记录为 `dayNN-r1`、`-r2`……
+- **声调滑坡是主要风险**（阶梯陡峭）。预算约吸收 3–4 次。
+- **自动缩减：** 每次滑坡将解锁日和结束日词汇目标下调约35词。在 `tracker.md` 中记录运行中的调整目标。结束日不移动——第二阶段继承剩余内容。
+
+---
+
+## 8. Git / 提交规范
+
+每天门控通过时提交一次：
 
 ```
 git -C "D:\hsk3~5" add phase1/ tracker.md
-git -C "D:\hsk3~5" commit -m "dayNN: <gate result> | <hours> | vocab <cum>"
-# e.g.  day13: pair-ID 86% PASS | 6.0h | vocab 195
-# slip: day13-r1: pair-ID 81% (target 85) | 5.5h | vocab 195 HOLD
+git -C "D:\hsk3~5" commit -m "dayNN: <门控结果> | <小时> | vocab <累计>"
+# 例：day13: pair-ID 86% PASS | 6.0h | vocab 195
+# 滑坡：day13-r1: pair-ID 81%（目标85）| 5.5h | vocab 195 HOLD
 ```
 
-`git -C "D:\hsk3~5" log --oneline` is then your hour + gate history — the metric the feasibility report names as the only real predictor.
+`git -C "D:\hsk3~5" log --oneline` 即为小时数+门控历史记录——唯一真实预测指标。
 
 ---
 
-## 9. Day-0 setup (do this first, counts as study)
+## 9. Day-0 准备（计为学习时间）
 
-Install **Pleco** (paid add-ons worth it) + **Anki**. Build/import the **official HSK 1 → HSK 3 deck from the syllabus PDF word lists** (HSK 1 = 300, HSK 2 = +200, HSK 3 = +500). Set up your **HVPT tone-perception source** (high-variability, multi-speaker). Bookmark the PDF + chinesetest.cn. Fix the daily 6-h block. **Record yourself reading 10 pinyin syllables** — baseline artifact.
+安装 **Pleco**（付费插件值得）+ **Anki**。从大纲 PDF 词汇表构建/导入**官方 HSK 1 → HSK 3 词卡**（HSK 1 = 300，HSK 2 = +200，HSK 3 = +500）。设置 **HVPT 声调感知素材**（高变量、多说话人）。标记 PDF + chinesetest.cn。固定每日时间块。**录制朗读10个拼音音节**——基线录音。
 
-## 10. Full 48-day map
+---
 
-S = stage (A / U=unlock / B). Vocab = cumulative new-word target. Sun = deload (mock + review, half load, no new material). ★ = HSK level boundary crossed.
+## 10. 完整48天计划图
 
-| Day | Date | Wk | S | Hard gate (tone unless noted) | Vocab | Focus |
+S = 阶段（A / U=解锁 / B）。词汇 = 累计新词目标。周日 = 减量（模拟+复习，半量，不引入新内容）。★ = 跨越 HSK 等级边界。
+
+| Day | 日期 | 周 | S | 声调强制门控 | 词汇 | 重点 |
 |---|---|---|---|---|---|---|
-| 0 | Wed 15 Jul | 1 | A | setup done + 4 tones produced on 5 syllables | 0 | §9 setup; pinyin survey; 4 tones |
-| 1 | Thu 16 Jul | 1 | A | single-tone ID ≥70% | 10 | initials b p m f d t n l |
-| 2 | Fri 17 Jul | 1 | A | single-tone ID ≥75% | 25 | g k h, j q x |
-| 3 | Sat 18 Jul | 1 | A | ID ≥78% + retroflex/dental pairs ≥70% | 40 | zh ch sh r, z c s |
-| 4 | Sun 19 Jul | 1 | A | pinyin dictation 20 syllables ≥80% | 40 | deload: wk1 review + mock |
-| 5 | Mon 20 Jul | 1 | A | ID ≥80% + ü produced | 55 | finals; ü isolation (lǜ/nǚ) |
-| 6 | Tue 21 Jul | 1 | A | **single-tone ID ≥85% + pinyin complete** | 75 | compound finals |
-| 7 | Wed 22 Jul | 2 | A | pair ID ≥70% | 95 | tone pairs intro |
-| 8 | Thu 23 Jul | 2 | A | pair ID ≥74% + T2↔T3 ≥60% | 115 | T2 vs T3 focus |
-| 9 | Fri 24 Jul | 2 | A | pair ID ≥77% + T2↔T3 ≥65% | 135 | T2 vs T1 focus |
-| 10 | Sat 25 Jul | 2 | A | pair ID ≥80% + T2↔T3 ≥68% | 155 | multi-speaker pairs |
-| 11 | Sun 26 Jul | 2 | A | pair ID ≥80% sustained | 155 | deload: mock + review |
-| 12 | Mon 27 Jul | 2 | A | pair ID ≥83% + T2↔T3 ≥72% | 175 | T3 sandhi (3-3→2-3) |
-| 13 | Tue 28 Jul | 2 | A | **pair ID ≥85% + T2↔T3 ≥78%** | 195 | wk2 gate |
-| 14 | Wed 29 Jul | 3 | A | pair ID ≥86% + T2↔T3 ≥80% | 215 | new speakers |
-| 15 | Thu 30 Jul | 3 | A | pair ID ≥88% + T2↔T3 ≥82% | 235 | disyllabic-word tones |
-| 16 | Fri 31 Jul | 3 | A | pair ID ≥89% + T2↔T3 ≥84% | 255 | disyllabic + speed |
-| 17 | Sat 1 Aug | 3 | A | pair ID ≥90% + T2↔T3 ≥86% | 275 | mixed speakers |
-| 18 | Sun 2 Aug | 3 | A | pair ID ≥90% sustained | 275 | deload: mock + review |
-| 19 | Mon 3 Aug | 3 | A | pair ID ≥91% + T2↔T3 ≥87% | 290 | pre-unlock push |
-| 20 | Tue 4 Aug | 3 | A | **pair ID ≥92% + T2↔T3 ≥88%** | 300 ★ | wk3 gate; **HSK 1 vocab complete** |
-| 21 | Wed 5 Aug | 4 | **U** | **UNLOCK: pair ID ≥95% + T2↔T3 ≥92%** | 300 | unlock; build HSK 2→3 scaling decks |
-| 22 | Thu 6 Aug | 4 | B | tones ≥95% held + 30 new retained ≥85% | 330 | sprint start; grammar 是/有/在 |
-| 23 | Fri 7 Aug | 4 | B | tones ≥95% + 30 new | 360 | measure words 个/位/张 |
-| 24 | Sat 8 Aug | 4 | B | tones ≥95% + 30 new | 390 | 的; questions 吗/什么 |
-| 25 | Sun 9 Aug | 4 | B | deload mock: pair ID ≥95% sustained | 390 | deload: tone audit + review |
-| 26 | Mon 10 Aug | 4 | B | tones ≥95% + 35 new | 425 | 了 (aspect/change) |
-| 27 | Tue 11 Aug | 4 | B | tones ≥96% + 35 new | 460 | 想/要/会/能 |
-| 28 | Wed 12 Aug | 5 | B | tones ≥96% + 35 new | 495 | time + dates |
-| 29 | Thu 13 Aug | 5 | B | tones ≥96% + 35 new | 530 ★ | locations; **HSK 2 vocab complete** |
-| 30 | Fri 14 Aug | 5 | B | tones ≥96% + 35 new | 565 | 在…呢 / progressive |
-| 31 | Sat 15 Aug | 5 | B | tones ≥96% + 35 new | 600 | comparison 比 |
-| 32 | Sun 16 Aug | 5 | B | deload mock: pair ID ≥96% | 600 | deload: tone audit + review |
-| 33 | Mon 17 Aug | 5 | B | tones ≥97% target + 35 new | 635 | 过 (experience) |
-| 34 | Tue 18 Aug | 5 | B | tones ≥97% + 35 new | 670 | resultative verbs intro |
-| 35 | Wed 19 Aug | 6 | B | tones ≥97% + 40 new | 710 | 把 intro (recognition) |
-| 36 | Thu 20 Aug | 6 | B | tones ≥97% + 40 new | 750 | connected-speech production |
-| 37 | Fri 21 Aug | 6 | B | tones ≥97% + 40 new | 790 | self-intro draft (Phase-2 seed) |
-| 38 | Sat 22 Aug | 6 | B | tones ≥97% + 40 new | 830 | listening at HSK-3 speed |
-| 39 | Sun 23 Aug | 6 | B | deload mock: full HSK-2 listening | 830 | deload: tone audit + review |
-| 40 | Mon 24 Aug | 6 | B | tones ≥97% + T2↔T3 ≥95% + 40 new | 870 | review weak chars |
-| 41 | Tue 25 Aug | 6 | B | tones ≥97% + 35 new | 910 | wk6 consolidation |
-| 42 | Wed 26 Aug | 7 | B | tones ≥97% + 35 new + HSK-3 mock §1 | 945 | HSK-3 listening+reading mock |
-| 43 | Thu 27 Aug | 7 | B | tones ≥97% + 35 new + misses cleared | 980 | HSK-3 mock §2 |
-| 44 | Fri 28 Aug | 7 | B | tones ≥97% + 35 new | 1015 ★ | **HSK 3 vocab complete (crosses 1,000)**; weak-item drilling |
-| 45 | Sat 29 Aug | 7 | B | tones ≥97% + 30 new + full HSK-3 mock | 1045 | full HSK-3 listening+reading mock |
-| 46 | Sun 30 Aug | 7 | B | deload: pair ID ≥97% + self-intro fluent | 1045 | deload: tone audit + pack |
-| 47 | Mon 31 Aug | 7 | B | **fly-readiness: tones ≥97%, vocab ≥1,000 (HSK 3), self-intro 60s** | 1075 | final review; logistics |
-| — | Tue 1 Sep | — | — | **✈ FLY** | — | Phase 2 begins in China |
+| 0 | 周三 7月15 | 1 | A | 设置完成 + 5个音节上4个声调产出 | 0 | §9 准备；拼音总览；4个声调 |
+| 1 | 周四 7月16 | 1 | A | 单声调识别 ≥70% | 10 | 声母 b p m f d t n l |
+| 2 | 周五 7月17 | 1 | A | 单声调识别 ≥75% | 25 | g k h, j q x |
+| 3 | 周六 7月18 | 1 | A | 识别 ≥78% + 翘舌/齿音对 ≥70% | 40 | zh ch sh r, z c s |
+| 4 | 周日 7月19 | 1 | A | 拼音听写20个音节 ≥80% | 40 | 减量：第1周复习+模拟 |
+| 5 | 周一 7月20 | 1 | A | 识别 ≥80% + ü 产出 | 55 | 韵母；ü 分离（lǜ/nǚ） |
+| 6 | 周二 7月21 | 1 | A | **单声调识别 ≥85% + 拼音完成** | 75 | 复合韵母 |
+| 7 | 周三 7月22 | 2 | A | 声调对识别 ≥70% | 95 | 声调对入门 |
+| 8 | 周四 7月23 | 2 | A | 声调对识别 ≥74% + T2↔T3 ≥60% | 115 | T2 vs T3 专攻 |
+| 9 | 周五 7月24 | 2 | A | 声调对识别 ≥77% + T2↔T3 ≥65% | 135 | T2 vs T1 专攻 |
+| 10 | 周六 7月25 | 2 | A | 声调对识别 ≥80% + T2↔T3 ≥68% | 155 | 多说话人声调对 |
+| 11 | 周日 7月26 | 2 | A | 声调对识别 ≥80% 稳定 | 155 | 减量：模拟+复习 |
+| 12 | 周一 7月27 | 2 | A | 声调对识别 ≥83% + T2↔T3 ≥72% | 175 | T3 变调（3-3→2-3） |
+| 13 | 周二 7月28 | 2 | A | **声调对识别 ≥85% + T2↔T3 ≥78%** | 195 | 第2周门控 |
+| 14 | 周三 7月29 | 3 | A | 声调对识别 ≥86% + T2↔T3 ≥80% | 215 | 新说话人 |
+| 15 | 周四 7月30 | 3 | A | 声调对识别 ≥88% + T2↔T3 ≥82% | 235 | 双音节词声调 |
+| 16 | 周五 7月31 | 3 | A | 声调对识别 ≥89% + T2↔T3 ≥84% | 255 | 双音节+速度 |
+| 17 | 周六 8月1 | 3 | A | 声调对识别 ≥90% + T2↔T3 ≥86% | 275 | 混合说话人 |
+| 18 | 周日 8月2 | 3 | A | 声调对识别 ≥90% 稳定 | 275 | 减量：模拟+复习 |
+| 19 | 周一 8月3 | 3 | A | 声调对识别 ≥91% + T2↔T3 ≥87% | 290 | 解锁前冲刺 |
+| 20 | 周二 8月4 | 3 | A | **声调对识别 ≥92% + T2↔T3 ≥88%** | 300 ★ | 第3周门控；**HSK 1 词汇完成** |
+| 21 | 周三 8月5 | 4 | **U** | **解锁：声调对识别 ≥95% + T2↔T3 ≥92%** | 300 | 解锁；构建 HSK 2→3 扩展词卡 |
+| 22 | 周四 8月6 | 4 | B | 声调 ≥95% 维持 + 30新词保留 ≥85% | 330 | 冲刺开始；语法 是/有/在 |
+| 23 | 周五 8月7 | 4 | B | 声调 ≥95% + 30新词 | 360 | 量词 个/位/张 |
+| 24 | 周六 8月8 | 4 | B | 声调 ≥95% + 30新词 | 390 | 的；疑问词 吗/什么 |
+| 25 | 周日 8月9 | 4 | B | 减量模拟：声调对识别 ≥95% 稳定 | 390 | 减量：声调审计+复习 |
+| 26 | 周一 8月10 | 4 | B | 声调 ≥95% + 35新词 | 425 | 了（体貌/变化） |
+| 27 | 周二 8月11 | 4 | B | 声调 ≥96% + 35新词 | 460 | 想/要/会/能 |
+| 28 | 周三 8月12 | 5 | B | 声调 ≥96% + 35新词 | 495 | 时间+日期 |
+| 29 | 周四 8月13 | 5 | B | 声调 ≥96% + 35新词 | 530 ★ | 位置；**HSK 2 词汇完成** |
+| 30 | 周五 8月14 | 5 | B | 声调 ≥96% + 35新词 | 565 | 在…呢 / 进行体 |
+| 31 | 周六 8月15 | 5 | B | 声调 ≥96% + 35新词 | 600 | 比较 比 |
+| 32 | 周日 8月16 | 5 | B | 减量模拟：声调对识别 ≥96% | 600 | 减量：声调审计+复习 |
+| 33 | 周一 8月17 | 5 | B | 声调 ≥97% 目标 + 35新词 | 635 | 过（经历） |
+| 34 | 周二 8月18 | 5 | B | 声调 ≥97% + 35新词 | 670 | 结果补语入门 |
+| 35 | 周三 8月19 | 6 | B | 声调 ≥97% + 40新词 | 710 | 把 入门（认读） |
+| 36 | 周四 8月20 | 6 | B | 声调 ≥97% + 40新词 | 750 | 连续语音产出 |
+| 37 | 周五 8月21 | 6 | B | 声调 ≥97% + 40新词 | 790 | 自我介绍草稿（第二阶段种子） |
+| 38 | 周六 8月22 | 6 | B | 声调 ≥97% + 40新词 | 830 | HSK 3 速度听力 |
+| 39 | 周日 8月23 | 6 | B | 减量模拟：完整 HSK 2 级听力 | 830 | 减量：声调审计+复习 |
+| 40 | 周一 8月24 | 6 | B | 声调 ≥97% + T2↔T3 ≥95% + 40新词 | 870 | 弱项汉字复习 |
+| 41 | 周二 8月25 | 6 | B | 声调 ≥97% + 35新词 | 910 | 第6周巩固 |
+| 42 | 周三 8月26 | 7 | B | 声调 ≥97% + 35新词 + HSK 3 模拟第1节 | 945 | HSK 3 听力+阅读模拟 |
+| 43 | 周四 8月27 | 7 | B | 声调 ≥97% + 35新词 + 错误清除 | 980 | HSK 3 模拟第2节 |
+| 44 | 周五 8月28 | 7 | B | 声调 ≥97% + 35新词 | 1015 ★ | **HSK 3 词汇完成**；弱项钻研 |
+| 45 | 周六 8月29 | 7 | B | 声调 ≥97% + 30新词 + 完整 HSK 3 模拟 | 1045 | 完整 HSK 3 听力+阅读模拟 |
+| 46 | 周日 8月30 | 7 | B | 减量：声调对识别 ≥97% + 自我介绍流利 | 1045 | 减量：声调审计+整理行李 |
+| 47 | 周一 8月31 | 7 | B | **出发就绪：声调 ≥97%，词汇 ≥1,000（HSK 3），自我介绍60秒** | 1075 | 最终复习；行程安排 |
+| — | 周二 9月1 | — | — | **✈ 出发** | — | 第二阶段在国内开始 |
 
 ---
 
-## 11. Daily template (~6 h, jobless)
+## 11. 每日模板（约6小时）
 
-| Block | Stage A | Stage B |
+| 模块 | A阶段 | B阶段 |
 |---|---|---|
-| Tone perception (HVPT) | 0:45 | 0:30 (maintenance) |
-| Production: record vs native, log worst errors | 0:45 | 0:30 |
-| Pinyin (A) / Grammar pattern (B) | 0:30 | 0:40 |
-| **SRS vocab + char (new + reviews)** | 1:15 | **2:30** (the big block) |
-| Listening (graded) | 0:45 | 0:45 |
-| Reading (pinyin → characters) | 0:30 | 0:35 |
-| Log + git commit | 0:20 | 0:20 |
-| **≈ total** | **~5:30** | **~6:10** |
+| 声调感知（HVPT） | 0:45 | 0:30（维持） |
+| 产出：录音与母语对比，记录最差错误 | 0:45 | 0:30 |
+| 拼音（A阶段）/ 语法模式（B阶段） | 0:30 | 0:40 |
+| **SRS词汇+汉字（新词+复习）** | 1:15 | **2:30**（主要模块） |
+| 听力（分级） | 0:45 | 0:45 |
+| 阅读（拼音→汉字） | 0:30 | 0:35 |
+| 记录+git提交 | 0:20 | 0:20 |
+| **≈ 合计** | **~5:30** | **~6:10** |
 
-Sundays = deload: SRS floor + one mock + weekly tone audit only (~3 h).
+周日 = 减量：SRS下限+一次模拟+每周声调审计（约3小时）。
 
 ---
 
-## 12. What Phase 2 will cover (you instruct later)
+## 12. 第二阶段覆盖内容（另行说明）
 
-In-China push to **HSK 3 written + HSK 3 口语 (speaking) + telecom deck + Chinese-abstract skimming by Dec 2026**, plus supervisor connection and the OFDM project. Because Phase 1 already delivers HSK 3's **vocabulary (1,000) + recognition characters (655)**, Phase 2 reduces to: **(a)** HSK 3 exam technique + the **150 handwriting characters (书写字)** the written test requires, **(b)** 口语 fluency, **(c)** telecom deck + abstracts. Phase 2 inherits whatever vocab/tone remainder Phase 1 leaves. The parent report still flags the December date as aggressive — but front-loading HSK 3 vocab pre-fly is exactly what makes it reachable.
+在国内推进 **HSK 3 笔试 + HSKK 初级（口语）+ 专业词卡 + 中文摘要阅读**。第一阶段已完成 HSK 3 的**词汇（1,000）+ 认读字（655）**，第二阶段仅需新增：**(a)** HSK 3 考试技巧 + **150书写字**，**(b)** HSKK 口语流利度，**(c)** 专业词卡+摘要阅读。第二阶段继承第一阶段剩余的词汇/声调内容。

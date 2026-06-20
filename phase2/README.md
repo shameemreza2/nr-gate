@@ -1,257 +1,254 @@
-# Phase 2 — In-China Sprint: Pass HSK 3 + HSKK 初级, As Early As Possible
+# 第二阶段 — 在华冲刺：HSK 3 笔试 + HSKK 初级
 
-**The phase that converts Phase 1's hidden vocabulary + tone base into two paper credentials, then a supervisor pitch — fast, because the internship is the exit.**
-Day 0 = **Mon 7 Sep 2026** (arrive 1 Sep + ~5 settle days) · Primary exam target = **Sat 7 Nov 2026** · **gate-driven** (the calendar bends to mock scores, the credential does not).
+**将第一阶段积累的词汇与声调基础转化为两份书面证书。**
+Day 0 = **2026年9月7日（周一）**（9月1日抵达 + 约5天安置）· 主要考试目标 = **2026年11月7日（周六）** · **门控驱动**（日历服从模拟分数，证书不服从）。
 
-This folder is the *engine*, same as Phase 1. Each `day-NN.md` is one execution checklist with **one hard primary gate** plus standing floors. You do not advance the spine until that gate passes. Git history (one commit per passed day) is your executed-hours log.
-
-> Plan files are plain English on purpose — you read them daily.
+本文件夹为*引擎*，与第一阶段相同。每张 `day-NN.md` 是一份含**一个强制主门控**及常规下限的执行清单。主干未通过则不推进。git 提交历史（每通过一天提交一次）为执行小时数日志。
 
 ---
 
-### What Phase 1 hands Phase 2 (the starting state)
+### 第一阶段交接第二阶段（起始状态）
 
-By fly day (1 Sep 2026) Phase 1 delivers: **full HSK 3 vocabulary (1,000 words)**, **655 recognition characters**, **tones ≥97% (T2↔T3 ≥95%)**. So Phase 2 starts with **zero new-vocabulary pressure** — the 1,000-word base already exceeds everything HSK 3 written and HSKK 初级 demand. That single fact is why Phase 2 can be short, and why the telecom deck + abstracts can run in parallel instead of fighting for SRS load.
+9月1日出发时第一阶段交付：**完整 HSK 3 词汇（1,000词）**、**655认读字**、**声调 ≥97%（T2↔T3 ≥95%）**。第二阶段从**零新词汇压力**开始——1,000词基础已超过 HSK 3 笔试和 HSKK 初级的全部要求。这正是第二阶段能够短促，以及专业词卡+摘要阅读能够并行而不争抢SRS负载的原因。
 
-**What Phase 2 must still build:** (a) **exam technique** for the 2.0 written + speaking under the clock, (b) **handwriting production from zero** (Phase 1 was recognition + IME only — she has never hand-written these characters), (c) **spoken delivery fluency** for HSKK 初级, and (d) the internship differentiators — **telecom seed deck + Chinese-abstract skimming**.
-
----
-
-### Verified exam facts — researched & adversarially checked 2026-06-19  **[R]**
-
-Sources: chinesetest.cn official notices/calendar, hskonline (SuperTest mirror), global-exam, chinaeducenter, mandarinzone, goeastmandarin. Raw research saved at `graphify-out/.phase2_research_raw.json`.
-
-1. **The 2026 exam is the OLD HSK 2.0, not the new 3.0.** chinesetest.cn states plainly: HSK 3.0 ran a one-off global **trial** on 31 Jan 2026; **"2026 regular exam dates still run version 2.0"**; the real 3.0 switchover is **"另行通知" (announced separately — still unconfirmed, possibly 2027)**. The widely repeated "3.0 effective July 2026" is the **syllabus** publication date (考试大纲, pub. 2025-11), **NOT** the exam-administration switchover. **You sit 2.0.**
-
-2. **HSK 3 (2.0) written format:** 80 questions / ~90 min / **300 pts / pass = 180 (60%)**, three sections each scored to 100:
-   - **听力 Listening** — 40 questions (4 parts).
-   - **阅读 Reading** — 30 questions (3 parts).
-   - **书写 Writing** — 10 questions: Part 1 = arrange jumbled words into a sentence (5); Part 2 = **write the correct character from pinyin** (5). Handwriting **is** required, but the 2.0 scope is small, and you only need 180/300 overall — a weak writing section survives on strong listening + reading.
-
-3. **There is no fixed "150 书写字" list in 2.0.** The 150-character handwriting list is a **3.0** feature. In 2.0 the fill-in characters are drawn from the HSK 3 vocabulary you already recognise. *(We still grind the full official 150 — see the hedge below.)*
-
-4. **Speaking = HSKK 初级 (Beginner)** — the operative 2026 speaking test (not "HSK 3 口语", which is a 3.0 construct). 3 parts / 27 items / **~20 min (incl. 7 min prep) / 100 pts / pass = 60**, recorded into a microphone. Lexical floor ≈ **200 words**; you arrive with **1,000**. The binding constraint is **delivery fluency under the clock**, not vocabulary. Parts: 1) 听后重复 listen-and-repeat (15 items / 6 min); 2) 听后回答 listen-and-answer (10 / 4 min); 3) 回答问题 answer printed questions, ≥5 sentences each (2 / 3 min).
-
-5. **Dates & registration (Shenzhen, at 深圳大学 国际交流学院).** HSK 1-6 **and** HSKK 初级 run on the **same days**: **2026-09-13 (Sun), 10-17 (Sat), 11-07 (Sat), 12-13 (Sun).** Internet-based (IBT, at-center) registration closes **~10 days** before; paper-based (PBT) **~27 days** before. Register online at chinesetest.cn. Fees ≈ **350 RMB (HSK 3)** + **~200 RMB (HSKK 初级)** — confirm at checkout.
-
-6. **Earliest realistic sitting** for a 1 Sep arrival: **Oct 17** (IBT deadline Oct 7) is the first *comfortable* date; **Sep 13** (IBT deadline Sep 3) is technically open but needs the account pre-created before flying; **Nov 7** (IBT deadline Oct 28) is the chosen primary; **Dec 13** is the slip fallback.
+**第二阶段仍需构建的内容：** (a) **计时考试技巧**（2.0笔试+口语），(b) **手写产出**（第一阶段仅认读+输入法，书写为零），(c) **HSKK 初级口语流利度**，(d) **专业词卡+中文摘要速读**。
 
 ---
 
-### The format hedge (why we still over-prepare)  **[D]**
+### 已核实的考试信息 — 2026-06-19 调研并对抗验证 **[R]**
 
-The 3.0 switchover date is officially unannounced. There is a small but real chance the **深圳大学** centre is running 3.0 by the time we register (~Oct). 3.0 written demands the **150 书写字 handwriting** and a heavier 书写 section; 3.0 speaking is a different paper. So the plan is built **2.0-first, 3.0-insured**:
+来源：chinesetest.cn 官方公告/日历，hskonline（SuperTest镜像），global-exam，chinaeducenter，mandarinzone，goeastmandarin。原始调研存于 `graphify-out/.phase2_research_raw.json`。
 
-- **Cover 2.0 perfectly first** (the floor — guarantees a pass on the format that is actually available now).
-- **Then grind the full official 150 书写字 + sentence/short-passage writing** as over-preparation. Building handwriting to 3.0 standard automatically covers the lighter 2.0 demand.
-- **At registration (~Day 28, Oct 5), confirm the venue's actual format.** If it is **2.0 → sit Nov 7** (or pull forward to Oct 17 if mocks already clear and a cheap reschedule exists). If it is **3.0 → re-aim Dec 13** and extend the over-prep stage with 3.0-specific drills (the 150 list + 3.0 speaking sample).
+1. **2026年考试为旧版 HSK 2.0，非新版3.0。** chinesetest.cn 明确声明：HSK 3.0 于2026年1月31日进行了一次全球**试点**；**"2026年常规考试日期仍沿用2.0版本"**；3.0真正切换将**"另行通知（尚未确认，可能2027年）"**。广泛流传的"3.0自2026年7月起生效"为大纲**出版**日期（考试大纲，2025年11月出版），**非**考试管理切换日期。**参加的是2.0版本。**
 
-The official **HSK 3 150 书写字 list is extractable from the syllabus PDF already in the repo** (`新版HSK考试大纲1219.pdf`, the same file Phase 1 parsed via `scripts/build_decks.py`).
+2. **HSK 3（2.0）笔试格式：** 80题 / 约90分钟 / **300分 / 合格线=180分（60%）**，三个部分各100分：
+   - **听力** — 40题（4个部分）。
+   - **阅读** — 30题（3个部分）。
+   - **书写** — 10题：第1部分=将乱序词语组成句子（5题）；第2部分=**根据拼音写出正确汉字**（5题）。书写确有要求，但2.0范围较小，且整体只需180/300——强劲的听力+阅读可弥补较弱的书写。
 
----
+3. **2.0版本无固定"150书写字"列表。** 150字手写列表为**3.0**特性。2.0版本的填字字符来自已认识的 HSK 3 词汇。*（本计划仍训练完整官方150字——原因见下文对冲说明。）*
 
-## 1. Locked parameters
+4. **口语 = HSKK 初级（初级）** — 2026年口语考试（非"HSK 3 口语"，那是3.0的构成）。3部分 / 27题 / **约20分钟（含7分钟准备）/ 100分 / 合格线=60分**，录入麦克风。词汇下限约**200词**；第二阶段起点为**1,000词**。约束条件是**计时下的口语流利度**，而非词汇量。三个部分：1）听后重复（15题/6分钟）；2）听后回答（10题/4分钟）；3）回答问题，每题≥5句（2题/3分钟）。
 
-| Param | Value | Source |
-|---|---|---|
-| Day 0 | **Mon 7 Sep 2026** (arrive 1 Sep + ~5 settle days) | derived |
-| Primary exam target | **Sat 7 Nov 2026** — HSK 3 (2.0) written + HSKK 初级, same day | your call |
-| Pull-forward option | **Sat 17 Oct 2026** if mocks clear by ~Oct 5 **and** reschedule is cheap | research |
-| Slip fallback | **Sun 13 Dec 2026** (and the mandatory target **if the venue is on 3.0**) | your call |
-| Work status | **part-time job + grad classes**, hours **not yet fixed** | your confirm |
-| Daily budget | **floor 2 h/day**, flex to ~4 h. Gate-driven, never hour-promised | your call |
-| Pass bars (design, set above official) | **written full mock ≥ 240/300** (official 180) · **HSKK mock ≥ 80/100** (official 60) | safety margin |
-| Handwriting target | 2.0-light first; then **full official 150 书写字 + sentence writing** (3.0 insurance) | your call |
-| Parallel tracks | **telecom seed deck (~200 terms)** + **Chinese-abstract skimming** — ride flex hours, never displace the 2.0 spine | your call |
+5. **日期与注册（深圳，深圳大学国际交流学院）。** HSK 1–6 **及** HSKK 初级同天举行：**2026-09-13（周日）、10-17（周六）、11-07（周六）、12-13（周日）。** 网络化考试（IBT，在考点）注册截止约考前**10天**；纸笔考试（PBT）截止约考前**27天**。在chinesetest.cn在线注册。费用约 **350元（HSK 3）** + **约200元（HSKK 初级）**——结账时确认。
+
+6. **最早可行考期**（9月1日抵达）：**10月17日**（IBT截止10月7日）为第一个*舒适*日期；**9月13日**（IBT截止9月3日）技术上可行但需在出发前预建账户；**11月7日**（IBT截止10月28日）为选定主要目标；**12月13日**为备用滑坡目标。
 
 ---
 
-## 2. Standing laws (never broken)
+### 题型对冲说明（为何仍过度准备） **[D]**
 
-1. **2.0 is the floor; the credential is the goal.** The day's primary gate is hard. Miss it → repeat the gate tomorrow, add nothing new (slip rule, §7), logged `dayNN-r1`.
-2. **Maintenance floor never zero.** SRS (vocabulary reviews + a tone spot-check ≥97%) every single day — travel days, deload days, ever. Phase 1's gains decay if unfed.
-3. **2.0 perfect before 150-grind.** Do not pour hours into the full 150 书写字 over-prep until the 2.0 written mock clears the design bar. Insurance comes after the floor is solid.
-4. **Parallel tracks yield to the spine.** Telecom deck + abstracts run on **flex hours only**. On a floor (2 h) day, the spine (maintenance + 2.0 exam + handwriting) wins; telecom/abstracts wait.
-5. **Production discipline.** Every HSKK answer and every new handwritten character is recorded / written-and-checked against a model at least once. Weekly audit on Sundays (tone audit + handwriting error review).
-6. **Evidence-first.** Mock scores, HSKK self-scores, handwriting counts, and deck counts are logged in `tracker.md`. A number you did not measure does not exist.
-7. **One commit per passed day.** The commit message IS your log (§9).
-8. **Confirm the format before you pay.** At registration, verify 2.0 vs 3.0 at the venue and branch the plan (§7).
+3.0切换日期官方未公布。考点在注册时已切换至3.0的可能性虽小但真实存在。3.0笔试要求**150书写字手写**及更重的书写部分；3.0口语为不同试卷。因此计划采用**2.0优先，3.0保险**策略：
+
+- **首先完美覆盖2.0**（基准线——保证在当前实际可用题型上通过）。
+- **然后训练完整官方150书写字+句子写作**作为过度准备。将手写练至3.0标准自动覆盖较轻的2.0要求。
+- **注册时（约第28天，10月5日）到考点确认实际题型。** 若为**2.0→坐11月7日考试**（或若模拟已达标且改期便宜则提前至10月17日）。若为**3.0→重新瞄准12月13日**，延长过度准备阶段（150字列表+3.0口语样题）。
+
+官方 **HSK 3 150书写字列表可从已存于仓库的大纲PDF中提取**（`新版HSK考试大纲1219.pdf`，与第一阶段 `scripts/build_decks.py` 解析同一文件）。
 
 ---
 
-## 3. The four tracks
+## 1. 固定参数
 
-| # | Track | Priority | Load | Goal |
+| 参数 | 值 |
+|---|---|
+| Day 0 | **2026年9月7日（周一）**（9月1日抵达+约5天安置） |
+| 主要考试目标 | **2026年11月7日（周六）** — HSK 3（2.0）笔试 + HSKK 初级，同一天 |
+| 提前选项 | **2026年10月17日（周六）**，若模拟约10月5日前已达标且改期便宜 |
+| 滑坡备用 | **2026年12月13日（周日）**（考点若为3.0则为必选目标） |
+| 每日时长 | **下限2小时/天**，弹性至约4小时。门控驱动，非按小时承诺 |
+| 合格设计标准（高于官方） | **笔试完整模拟 ≥ 240/300**（官方180）· **HSKK 模拟 ≥ 80/100**（官方60） |
+| 书写目标 | 先覆盖2.0轻量级；然后**完整官方150书写字+句子写作**（3.0保险） |
+| 并行轨道 | **专业词卡（约200词）** + **中文摘要速读** — 仅占弹性时间，绝不替换2.0主干 |
+
+---
+
+## 2. 常规定律（永不违反）
+
+1. **2.0为基准；证书为目标。** 当日主门控为强制门控。未达标 → 明天重复同一门控，不添加新内容（滑坡规则，§7），记录为 `dayNN-r1`。
+2. **维护下限永不为零。** SRS（词汇复习+声调抽查 ≥97%）每天——旅途日、减量日均不例外。第一阶段成果若不维护则衰退。
+3. **150字训练在2.0完美覆盖后进行。** 在2.0笔试模拟达到设计标准前，不大量投入完整150书写字过度准备。保险在基准线稳固后才来。
+4. **并行轨道服从主干。** 专业词卡+摘要阅读仅占**弹性时间**。在下限（2小时）日，主干（维护+2.0考试+手写）优先；专业词卡/摘要等待。
+5. **产出规律。** 每个 HSKK 答案和每个新手写字至少记录/书写一次并与范本核对。每周周日审计（声调审计+手写错误复盘）。
+6. **数据优先。** 模拟分数、HSKK 自评分、手写字数和词卡数记录于 `tracker.md`。未测量的数字不存在。
+7. **每通过一天一次提交。** 提交信息即为日志（§9）。
+8. **付款前确认题型。** 注册时到考点核实2.0 vs 3.0，并据此分叉计划（§7）。
+
+---
+
+## 3. 四个轨道
+
+| # | 轨道 | 优先级 | 负载 | 目标 |
 |---|---|---|---|---|
-| 1 | **2.0 exam mastery** (听力 + 阅读 + light 书写 + HSKK 初级) | **Spine** | daily, floor-protected | comfortable pass on the available format |
-| 2 | **Handwriting → 150 书写字 + sentence writing** | Over-prep (after 2.0 secured) | daily block, grows in Stage B | 3.0 insurance + HIT coursework value |
-| 3 | **Telecom seed deck (~200 terms)** | Parallel | flex hours | supervisor pitch + reading, pitch-ready early |
-| 4 | **Chinese-abstract skimming** | Parallel (maintenance) | ~10–15 min, flex | ~80% gist of CNKI/IEEE-CN abstracts |
+| 1 | **2.0考试精通**（听力+阅读+轻量书写+HSKK 初级） | **主干** | 每日，下限保护 | 在可用题型上舒适通过 |
+| 2 | **手写 → 150书写字+句子写作** | 过度准备（2.0稳固后） | 每日模块，在B阶段增长 | 3.0保险+学业价值 |
+| 3 | **专业词卡（约200词）** | 并行 | 弹性时间 | 读写专业文献，尽早pitch就绪 |
+| 4 | **中文摘要速读** | 并行（维护） | 约10–15分钟，弹性 | CNKI/IEEE-CN摘要约80%大意理解 |
 
-Plus the **maintenance floor** (SRS vocab + tone spot-check) underneath all four, every day.
+以上四个轨道之下还有**维护下限**（SRS词汇+声调抽查），每天运行。
 
 ---
 
-## 4. Stage structure
+## 4. 阶段结构
 
-| Stage | Days | Window | Spine focus | Hard gate to clear the stage |
+| 阶段 | 天数 | 窗口 | 主干重点 | 通过本阶段的强制门控 |
 |---|---|---|---|---|
-| **S — Settle / Register** | 0 | Sep 7 | account, register, **confirm 2.0 vs 3.0**, baseline diagnostic, materials | registered + center/format confirmed + SRS unbroken + baseline mock logged |
-| **A — 2.0 Lock** | 1–20 | wk 1–3 | drive 2.0 written + HSKK to comfortable-pass mocks; handwriting 2.0-light; deck build starts | **full 2.0 mock ≥ 240/300 + HSKK ≥ 80/100 sustained** |
-| **B — 150 Over-prep + Hold** | 21–41 | wk 4–6 | grind full 150 书写字 + sentence writing; hold 2.0 mocks warm; deck → 200 + pitch | **150 written first-pass + 2.0 mocks held ≥ 245**; format decision made (~Day 28) |
-| **C — Peak / Sit** | 42–61 | wk 7–9 | full timed mocks, weak-item clear, HSKK rehearsal, logistics | **mock ≥ 250 held + HSKK ≥ 80 → SIT Nov 7** |
-| **D — Post-exam** | 62+ | Nov 8 → | results wait, internship applications, pitch delivery, Phase 3 handoff | results in; pitch delivered |
+| **S — 安置/注册** | 0 | 9月7日 | 创建账户，注册，**确认2.0 vs 3.0**，基线诊断，备齐材料 | 已注册+考点/题型已确认+SRS不断+基线模拟已记录 |
+| **A — 2.0锁定** | 1–20 | 第1–3周 | 2.0笔试+HSKK驱动至舒适通过模拟；轻量2.0手写；开始词卡构建 | **2.0完整模拟 ≥ 240/300 + HSKK ≥ 80/100 稳定** |
+| **B — 150过度准备+维持** | 21–41 | 第4–6周 | 训练完整150书写字+句子写作；维持2.0模拟温度；词卡→200+pitch | **150字第一遍完成 + 2.0模拟维持 ≥ 245**；题型决定已做（约第28天） |
+| **C — 冲顶/应考** | 42–61 | 第7–9周 | 完整计时模拟，弱项清除，HSKK排练，后勤 | **模拟 ≥ 250 维持 + HSKK ≥ 80 → 11月7日应考** |
+| **D — 考后** | 62+ | 11月8日→ | 等待成绩，申请，pitch交付，第三阶段交接 | 成绩出；pitch已交付 |
 
-If the venue is on **3.0**, Stage B/C extend and the target moves to **Dec 13** (§7).
+若考点为**3.0**，B/C阶段延长，目标移至**12月13日**（§7）。
 
 ---
 
-## 5. Gate ladder (the rising bars)
+## 5. 门控阶梯（递升标准）
 
-Mocks are fresh, timed, full-length, never-reused items. Self-score HSKK against the official 评分说明 rubric.
+模拟为全新、计时、完整题目，不复用。HSKK 自评对照官方评分说明评分标准。
 
-| End of | Day | Written full mock | HSKK mock | Handwriting (cum.) | Telecom deck (cum.) |
+| 结束 | Day | 笔试完整模拟 | HSKK 模拟 | 手写（累计） | 专业词卡（累计） |
 |---|---|---|---|---|---|
-| Wk 1 | 6 | **baseline** diagnostic (measure only) | familiarise 3 parts | stroke-order + ~15 chars | setup + ~30 terms |
-| Wk 2 | 13 | ≥ 200 | Part-1 repeat clean | ~30 chars | ~70 |
-| Wk 3 | 20 | ≥ 215 | **≥ 70** | ~55 chars (2.0 covered) | ~110 |
-| Wk 4 | 27 | ≥ 230 | **≥ 75** | ~95 chars | ~160 |
-| Wk 5 | 34 | **≥ 240 → "2.0 secured"** | **≥ 80** | ~130 chars | **200 (done)** + pitch draft |
-| Wk 6 | 41 | ≥ 245 hold | ≥ 80 hold | **150 (first pass)** + sentences | pitch polish |
-| Wk 7 | 48 | ≥ 250 hold | ≥ 80 hold | 150 consolidation + speed | maintenance |
-| Wk 8 | 55 | ≥ 250 hold | ≥ 80 hold | short-passage writing (3.0) | maintenance |
-| Wk 9 | 61 | **SIT** | **SIT** | hold | — |
+| 第1周 | 6 | **基线**诊断（仅测量） | 熟悉3个部分 | 笔顺+约15字 | 设置+约30词 |
+| 第2周 | 13 | ≥ 200 | 第1部分流利重复 | 约30字 | 约70 |
+| 第3周 | 20 | ≥ 215 | **≥ 70** | 约55字（2.0已覆盖） | 约110 |
+| 第4周 | 27 | ≥ 230 | **≥ 75** | 约95字 | 约160 |
+| 第5周 | 34 | **≥ 240 → "2.0稳固"** | **≥ 80** | 约130字 | **200（完成）**+pitch草稿 |
+| 第6周 | 41 | ≥ 245 维持 | ≥ 80 维持 | **150字（第一遍）**+句子 | pitch润色 |
+| 第7周 | 48 | ≥ 250 维持 | ≥ 80 维持 | 150字巩固+速度 | 维护 |
+| 第8周 | 55 | ≥ 250 维持 | ≥ 80 维持 | 短篇写作（3.0） | 维护 |
+| 第9周 | 61 | **应考** | **应考** | 维持 | — |
 
 ---
 
-## 6. Full day map (Day 0 → exam)
+## 6. 完整日程图（Day 0 → 考试）
 
-S = stage. **Primary gate** is the hard advance condition (tone-of-the-day equivalent). Standing floors (SRS maintenance; production discipline) apply every day and are not repeated. Sun = deload (weekly mock + audit, half load). ★ = milestone. Parallel = telecom/abstracts on flex hours.
+S = 阶段。**主门控**为强制推进条件。常规下限（SRS维护；产出规律）每天执行，不重复列出。周日 = 减量（每周模拟+审计，半量）。★ = 里程碑。并行 = 专业词卡/摘要占弹性时间。
 
-| Day | Date | Wk | S | Primary gate | Parallel / notes |
+| Day | 日期 | 周 | S | 主门控 | 并行/备注 |
 |---|---|---|---|---|---|
-| 0 | Mon 7 Sep | 1 | S | setup done: chinesetest.cn account, **register HSK3+HSKK for Nov 7**, confirm 2.0/3.0 at 深圳大学, baseline full 2.0 mock logged | install/import decks; handwriting toolkit; SRS continuity check |
-| 1 | Tue 8 Sep | 1 | A | reading Part 1–2 technique; timing baseline | deck sources set up |
-| 2 | Wed 9 Sep | 1 | A | listening Part 1–2 technique; timing baseline | deck → 20 |
-| 3 | Thu 10 Sep | 1 | A | writing Part 2: handwrite first ~15 high-freq chars from pinyin | — |
-| 4 | Fri 11 Sep | 1 | A | HSKK Part 1 听后重复 — repeat clean at speed | deck → 30 |
-| 5 | Sat 12 Sep | 1 | A | reading Part 3 + writing Part 1 (word order) | abstracts: 4-slot intro |
-| 6 | Sun 13 Sep | 1 | A | **deload: baseline diagnostic mock logged** (measure, no bar) | weekly tone audit |
-| 7 | Mon 14 Sep | 2 | A | handwriting → ~25 chars | deck → 50 |
-| 8 | Tue 15 Sep | 2 | A | reading speed: full reading section under time | — |
-| 9 | Wed 16 Sep | 2 | A | listening Part 3–4 technique | deck → 60 |
-| 10 | Thu 17 Sep | 2 | A | writing: full 书写 section drill | — |
-| 11 | Fri 18 Sep | 2 | A | HSKK Part 2 听后回答 | deck → 70 |
-| 12 | Sat 19 Sep | 2 | A | mixed section mocks | abstracts: 25 frame phrases |
-| 13 | Sun 20 Sep | 2 | A | **deload: full mock ≥ 200** | weekly audit |
-| 14 | Mon 21 Sep | 3 | A | handwriting → ~40 | deck → 85 |
-| 15 | Tue 22 Sep | 3 | A | reading traps + speed | — |
-| 16 | Wed 23 Sep | 3 | A | listening at speed | deck → 95 |
-| 17 | Thu 24 Sep | 3 | A | writing section clean | — |
-| 18 | Fri 25 Sep | 3 | A | HSKK Part 3 回答问题 (≥5 sentences) | deck → 110 |
-| 19 | Sat 26 Sep | 3 | A | full timed written mock | abstracts: 1/day skim |
-| 20 | Sun 27 Sep | 3 | A | **deload: mock ≥ 215 + HSKK ≥ 70** ★ | weekly audit |
-| 21 | Mon 28 Sep | 4 | B | handwriting → ~60 (2.0 fully covered; begin 150 over-prep) | deck → 130 |
-| 22 | Tue 29 Sep | 4 | B | reading hold | — |
-| 23 | Wed 30 Sep | 4 | B | listening hold | deck → 145 |
-| 24 | Thu 1 Oct | 4 | B | writing + new chars | — |
-| 25 | Fri 2 Oct | 4 | B | HSKK full run-through | deck → 160 |
-| 26 | Sat 3 Oct | 4 | B | full written mock | abstracts skim |
-| 27 | Sun 4 Oct | 4 | B | **deload: mock ≥ 230 + HSKK ≥ 75** | weekly audit |
-| 28 | Mon 5 Oct | 5 | B | **REGISTRATION/FORMAT DECISION: confirm 2.0 vs 3.0; lock Nov 7 (2.0) or re-aim Dec 13 (3.0)**; handwriting → ~95 | pull-forward-to-Oct-17 check |
-| 29 | Tue 6 Oct | 5 | B | reading hold | — |
-| 30 | Wed 7 Oct | 5 | B | listening hold *(Oct-17 IBT reg deadline — last call for pull-forward)* | deck → 175 |
-| 31 | Thu 8 Oct | 5 | B | writing + chars | — |
-| 32 | Fri 9 Oct | 5 | B | HSKK hold ≥ 78 | deck → 190 |
-| 33 | Sat 10 Oct | 5 | B | full written mock | abstracts skim |
-| 34 | Sun 11 Oct | 5 | B | **deload: mock ≥ 240 "2.0 SECURED" + HSKK ≥ 80** ★ | weekly audit |
-| 35 | Mon 12 Oct | 6 | B | handwriting → ~130 | deck → 200 ★ |
-| 36 | Tue 13 Oct | 6 | B | reading hold | pitch draft |
-| 37 | Wed 14 Oct | 6 | B | listening hold | — |
-| 38 | Thu 15 Oct | 6 | B | sentence writing (reorder + dictation) | pitch draft |
-| 39 | Fri 16 Oct | 6 | B | HSKK hold | — |
-| 40 | Sat 17 Oct | 6 | B | full mock *(= pull-forward EXAM date if chosen)* | abstracts skim |
-| 41 | Sun 18 Oct | 6 | B | **deload: 150 first-pass done + mock ≥ 245** ★ | weekly audit |
-| 42 | Mon 19 Oct | 7 | C | handwriting 150 consolidation + speed | pitch polish |
-| 43 | Tue 20 Oct | 7 | C | full timed written mock | — |
-| 44 | Wed 21 Oct | 7 | C | listening + reading weak-item clear | — |
-| 45 | Thu 22 Oct | 7 | C | writing speed + accuracy | — |
-| 46 | Fri 23 Oct | 7 | C | HSKK timed full run ≥ 80 | — |
-| 47 | Sat 24 Oct | 7 | C | full written mock | abstracts maintenance |
-| 48 | Sun 25 Oct | 7 | C | **deload: mock ≥ 250 held** | weekly audit |
-| 49 | Mon 26 Oct | 8 | C | weak-item drilling | — |
-| 50 | Tue 27 Oct | 8 | C | full timed written mock | — |
-| 51 | Wed 28 Oct | 8 | C | confirm registration final *(Nov 7 IBT reg deadline)*; listening clear | — |
-| 52 | Thu 29 Oct | 8 | C | writing + short-passage (3.0 insurance) | — |
-| 53 | Fri 30 Oct | 8 | C | HSKK full run ≥ 80 | — |
-| 54 | Sat 31 Oct | 8 | C | full mock under exam conditions | — |
-| 55 | Sun 1 Nov | 8 | C | **deload: mock ≥ 250 held + HSKK ≥ 80** | weekly audit |
-| 56 | Mon 2 Nov | 9 | C | weak-item clear + timing polish | — |
-| 57 | Tue 3 Nov | 9 | C | full timed written mock (final calibration) | — |
-| 58 | Wed 4 Nov | 9 | C | HSKK final rehearsal | — |
-| 59 | Thu 5 Nov | 9 | C | light review + error log sweep | — |
-| 60 | Fri 6 Nov | 9 | C | **rest + logistics**: ticket (准考证) printed, ID, route to venue, materials | low load |
-| 61 | **Sat 7 Nov** | 9 | C | **✎ EXAM: HSK 3 (2.0) written + HSKK 初级** | — |
-| — | Sun 8 Nov → | — | D | results wait (~2–4 wk); internship applications; pitch delivery; Phase 3 | telecom/abstracts maintenance |
+| 0 | 周一 9月7 | 1 | S | 设置完成：chinesetest.cn账户，**注册HSK3+HSKK至11月7日**，在深圳大学确认2.0/3.0，基线完整2.0模拟已记录 | 安装/导入词卡；手写工具包；SRS连续性检查 |
+| 1 | 周二 9月8 | 1 | A | 阅读第1–2部分技巧；计时基线 | 设置词卡来源 |
+| 2 | 周三 9月9 | 1 | A | 听力第1–2部分技巧；计时基线 | 词卡→20 |
+| 3 | 周四 9月10 | 1 | A | 书写第2部分：从拼音手写约15个高频字 | — |
+| 4 | 周五 9月11 | 1 | A | HSKK 第1部分 听后重复——流利重复 | 词卡→30 |
+| 5 | 周六 9月12 | 1 | A | 阅读第3部分+书写第1部分（词序） | 摘要：4格框架入门 |
+| 6 | 周日 9月13 | 1 | A | **减量：基线诊断模拟已记录**（测量，无标准） | 每周声调审计 |
+| 7 | 周一 9月14 | 2 | A | 手写→约25字 | 词卡→50 |
+| 8 | 周二 9月15 | 2 | A | 阅读速度：整个阅读部分计时 | — |
+| 9 | 周三 9月16 | 2 | A | 听力第3–4部分技巧 | 词卡→60 |
+| 10 | 周四 9月17 | 2 | A | 书写：完整书写部分训练 | — |
+| 11 | 周五 9月18 | 2 | A | HSKK 第2部分 听后回答 | 词卡→70 |
+| 12 | 周六 9月19 | 2 | A | 混合部分模拟 | 摘要：25个框架句型 |
+| 13 | 周日 9月20 | 2 | A | **减量：完整模拟 ≥ 200** | 每周审计 |
+| 14 | 周一 9月21 | 3 | A | 手写→约40字 | 词卡→85 |
+| 15 | 周二 9月22 | 3 | A | 阅读陷阱+速度 | — |
+| 16 | 周三 9月23 | 3 | A | 听力速度 | 词卡→95 |
+| 17 | 周四 9月24 | 3 | A | 书写部分清晰 | — |
+| 18 | 周五 9月25 | 3 | A | HSKK 第3部分 回答问题（≥5句） | 词卡→110 |
+| 19 | 周六 9月26 | 3 | A | 完整计时笔试模拟 | 摘要：每天1篇速读 |
+| 20 | 周日 9月27 | 3 | A | **减量：模拟 ≥ 215 + HSKK ≥ 70** ★ | 每周审计 |
+| 21 | 周一 9月28 | 4 | B | 手写→约60字（2.0完全覆盖；开始150过度准备） | 词卡→130 |
+| 22 | 周二 9月29 | 4 | B | 阅读维持 | — |
+| 23 | 周三 9月30 | 4 | B | 听力维持 | 词卡→145 |
+| 24 | 周四 10月1 | 4 | B | 书写+新字 | — |
+| 25 | 周五 10月2 | 4 | B | HSKK 完整演练 | 词卡→160 |
+| 26 | 周六 10月3 | 4 | B | 完整笔试模拟 | 摘要速读 |
+| 27 | 周日 10月4 | 4 | B | **减量：模拟 ≥ 230 + HSKK ≥ 75** | 每周审计 |
+| 28 | 周一 10月5 | 5 | B | **注册/题型决定：确认2.0 vs 3.0；锁定11月7日（2.0）或重新瞄准12月13日（3.0）**；手写→约95字 | 提前至10月17日的检查 |
+| 29 | 周二 10月6 | 5 | B | 阅读维持 | — |
+| 30 | 周三 10月7 | 5 | B | 听力维持（10月17日IBT注册截止——提前最后机会） | 词卡→175 |
+| 31 | 周四 10月8 | 5 | B | 书写+字符 | — |
+| 32 | 周五 10月9 | 5 | B | HSKK 维持 ≥ 78 | 词卡→190 |
+| 33 | 周六 10月10 | 5 | B | 完整笔试模拟 | 摘要速读 |
+| 34 | 周日 10月11 | 5 | B | **减量：模拟 ≥ 240 "2.0稳固" + HSKK ≥ 80** ★ | 每周审计 |
+| 35 | 周一 10月12 | 6 | B | 手写→约130字 | 词卡→200 ★ |
+| 36 | 周二 10月13 | 6 | B | 阅读维持 | pitch草稿 |
+| 37 | 周三 10月14 | 6 | B | 听力维持 | — |
+| 38 | 周四 10月15 | 6 | B | 句子写作（词序+听写） | pitch草稿 |
+| 39 | 周五 10月16 | 6 | B | HSKK 维持 | — |
+| 40 | 周六 10月17 | 6 | B | 完整模拟（= 若选择提前则为考试日） | 摘要速读 |
+| 41 | 周日 10月18 | 6 | B | **减量：150字第一遍完成 + 模拟 ≥ 245** ★ | 每周审计 |
+| 42 | 周一 10月19 | 7 | C | 150字巩固+速度 | pitch润色 |
+| 43 | 周二 10月20 | 7 | C | 完整计时笔试模拟 | — |
+| 44 | 周三 10月21 | 7 | C | 听力+阅读弱项清除 | — |
+| 45 | 周四 10月22 | 7 | C | 书写速度+准确度 | — |
+| 46 | 周五 10月23 | 7 | C | HSKK 计时完整演练 ≥ 80 | — |
+| 47 | 周六 10月24 | 7 | C | 完整笔试模拟 | 摘要维护 |
+| 48 | 周日 10月25 | 7 | C | **减量：模拟 ≥ 250 维持** | 每周审计 |
+| 49 | 周一 10月26 | 8 | C | 弱项钻研 | — |
+| 50 | 周二 10月27 | 8 | C | 完整计时笔试模拟 | — |
+| 51 | 周三 10月28 | 8 | C | 确认注册最终（**11月7日IBT注册截止**）；听力清除 | — |
+| 52 | 周四 10月29 | 8 | C | 书写+短篇写作（3.0保险） | — |
+| 53 | 周五 10月30 | 8 | C | HSKK 完整演练 ≥ 80 | — |
+| 54 | 周六 10月31 | 8 | C | 考试条件下完整模拟 | — |
+| 55 | 周日 11月1 | 8 | C | **减量：模拟 ≥ 250 维持 + HSKK ≥ 80** | 每周审计 |
+| 56 | 周一 11月2 | 9 | C | 弱项清除+计时润色 | — |
+| 57 | 周二 11月3 | 9 | C | 完整计时笔试模拟（最终校准） | — |
+| 58 | 周三 11月4 | 9 | C | HSKK 最终排练 | — |
+| 59 | 周四 11月5 | 9 | C | 轻量复习+错题日志扫描 | — |
+| 60 | 周五 11月6 | 9 | C | **休息+后勤**：准考证打印，证件，考场路线，材料 | 低负荷 |
+| 61 | **周六 11月7** | 9 | C | **✎ 考试：HSK 3（2.0）笔试 + HSKK 初级** | — |
+| — | 周日 11月8日→ | — | D | 等待成绩（约2–4周）；申请；pitch交付；第三阶段 | 专业词卡/摘要维护 |
 
 ---
 
-## 7. Advance / slip / pull-forward / format-branch mechanics
+## 7. 推进/滑坡/提前/题型分叉机制
 
-- **Plan-day ≠ calendar-day.** A day-card advances only when its primary gate passes. SRS floor runs regardless.
-- **Pass:** log it, commit, move on. **Slip:** next calendar day repeats the same gate, adds no new material, logged `dayNN-r1`, `-r2`, …
-- **Parallel tracks float.** If hours are thin, telecom/abstracts pause (logged) — they never cause a spine slip.
-- **Format decision (~Day 28, hard):** confirm 2.0 vs 3.0 at 深圳大学.
-  - **2.0 →** hold Nov 7. If the Day-34 "2.0 secured" gate clears early **and** a cheap reschedule exists, optionally pull forward to **Oct 17** (register by Oct 7).
-  - **3.0 →** re-aim **Dec 13**; Stage B/C extend with the 150-list to mastery + the official 3.0 speaking sample. The ~5 extra weeks absorb the heavier load.
-- **Slip fallback:** if mocks are not at bar by late Stage C, slide the sitting Nov 7 → **Dec 13**. The credential never ships under-prepared.
+- **计划日 ≠ 日历日。** 日卡仅在主门控通过时推进。SRS下限无论如何运行。
+- **通过：** 记录，提交，继续。**滑坡：** 次日重复同一门控，不添加新内容，记录为 `dayNN-r1`、`-r2`……
+- **并行轨道浮动。** 若时间不足，专业词卡/摘要暂停（记录）——它们绝不导致主干滑坡。
+- **题型决定（约第28天，硬性）：** 在深圳大学确认2.0 vs 3.0。
+  - **2.0 →** 维持11月7日。若第34天"2.0稳固"门控已提前达标**且**改期便宜，可选择提前至**10月17日**（10月7日前注册）。
+  - **3.0 →** 重新瞄准**12月13日**；B/C阶段延长，150字列表至精通+官方3.0口语样题。约5个额外周吸收更重负载。
+- **滑坡备用：** 若模拟在C阶段后期未达标，将考试从11月7日滑至**12月13日**。证书不在准备不足时出炉。
 
 ---
 
-## 8. Daily templates
+## 8. 每日模板
 
-**Floor day (~2 h — spine only, protect this):**
-- 0:25 — SRS maintenance: vocabulary reviews + tone spot-check ≥97% *(never zero)*
-- 0:40 — Handwriting: new/under-review characters, written-and-checked
-- 0:35 — Primary skill of the day (listening / reading / writing / HSKK, per map)
-- 0:15 — Log + git commit
+**下限日（约2小时——仅主干，保护此项）：**
+- 0:25 — SRS维护：词汇复习+声调抽查 ≥97%（*永不为零*）
+- 0:40 — 手写：新字/复习中的字，书写并核对
+- 0:35 — 当日主技能（听力/阅读/书写/HSKK，按计划图）
+- 0:15 — 记录+git提交
 ≈ **1:55**
 
-**Flex day (~3.5–4 h — adds the parallel tracks + a mock):**
-- everything above, plus
-- 0:45 — Second exam skill or a timed section/full mock
-- 0:30 — Telecom deck (10–15 new terms, looked up + SRS)
-- 0:15 — Abstract skim (1–2 abstracts, 4-slot labelling)
-- 0:20 — Production: record HSKK answers / extra handwriting vs model
+**弹性日（约3.5–4小时——加入并行轨道+模拟）：**
+- 以上所有内容，加：
+- 0:45 — 第二考试技能或计时部分/完整模拟
+- 0:30 — 专业词卡（10–15个新词，查找+SRS）
+- 0:15 — 摘要速读（1–2篇摘要，4格标注）
+- 0:20 — 产出：录制HSKK答案/额外手写与范本对比
 
-**Sunday deload (~1.5–2 h):** SRS floor + one weekly mock + weekly audit (tone audit + handwriting error review). No new material.
+**周日减量（约1.5–2小时）：** SRS下限+每周一次模拟+每周审计（声调审计+手写错误复盘）。不引入新内容。
 
 ---
 
-## 9. Git / commit protocol
+## 9. Git / 提交规范
 
-One commit when a day's primary gate passes:
+每天主门控通过时提交一次：
 
 ```
 git -C "D:\hsk3~5" add phase2/ tracker.md
-git -C "D:\hsk3~5" commit -m "p2-dayNN: <gate result> | <hours> | mock <score> hw <cum>"
-# e.g.  p2-day20: mock 218 PASS + HSKK 72 | 2.5h | hw 55
-# slip: p2-day20-r1: mock 205 (target 215) | 2.0h | hw 55 HOLD
+git -C "D:\hsk3~5" commit -m "p2-dayNN: <门控结果> | <小时> | mock <分数> hw <累计>"
+# 例：p2-day20: mock 218 PASS + HSKK 72 | 2.5h | hw 55
+# 滑坡：p2-day20-r1: mock 205（目标215）| 2.0h | hw 55 HOLD
 ```
 
-`git -C "D:\hsk3~5" log --oneline` is your executed-hours + gate history.
+`git -C "D:\hsk3~5" log --oneline` 即为执行小时数+门控历史记录。
 
 ---
 
-## 10. Registration logistics (do early, de-risk)
+## 10. 注册后勤（尽早处理，降低风险）
 
-- **Pre-create the chinesetest.cn account before flying** if possible — keeps the Sep 13 / Oct 17 early options alive and removes day-1 chaos.
-- Centre: **深圳大学 国际交流学院** (Nanshan, 南海大道3688号; ciec@szu.edu.cn / 0755-86937695). Confirm it offers your chosen date **and** which format (2.0/3.0).
-- Register **HSK 3** and **HSKK 初级** (same day). Watch deadlines: **IBT ~10 days before, PBT ~27 days before**. Nov 7 IBT deadline = **Oct 28**; Oct 17 IBT deadline = **Oct 7**.
-- Steps: account + email verify → upload photo → choose level/format/date/centre → personal details → pay (online/transfer) → print 准考证.
+- **出发前尽可能预建 chinesetest.cn 账户** — 保留9月13日/10月17日提前选项，消除第一天混乱。
+- 考点：**深圳大学国际交流学院**（南山区，南海大道3688号；ciec@szu.edu.cn / 0755-86937695）。确认提供所选日期**及**题型（2.0/3.0）。
+- 同时注册 **HSK 3** 和 **HSKK 初级**（同一天）。注意截止日期：**IBT约考前10天，PBT约考前27天**。11月7日IBT截止 = **10月28日**；10月17日IBT截止 = **10月7日**。
+- 步骤：创建账户+邮箱验证→上传照片→选择等级/题型/日期/考点→填写个人信息→付款（网上/转账）→打印准考证。
 
 ---
 
-## 11. What Phase 3 covers (you instruct later)
+## 11. 第三阶段覆盖内容（另行说明）
 
-After the HSK 3 + HSKK 初级 credentials land: telecom deck → supervisor pitch delivered; abstract-skimming to working speed; the **OFDM project** (separate repo, already outlined); and the longer climb toward **HSK 4 / HSK 4 口语** on the parent v2 plan's employability checkpoint timeline. The accelerated internship track and the slow year-plan converge here.
+HSK 3 + HSKK 初级证书到位后：专业词卡→pitch交付；摘要速读至工作速度；**OFDM项目**（独立仓库，已有大纲）；以及沿父级v2计划向 **HSK 4 / HSK 4 口语**的更长攀升。
