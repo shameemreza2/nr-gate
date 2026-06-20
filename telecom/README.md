@@ -1,7 +1,7 @@
-# Telecom Seed Deck — private draft
+# Telecom Deck — private draft
 
-Target: **200 terms** covering LTE/5G/IoT + Shenzhen internship context.
-Built during Phase 2 flex hours (≈ Day 0–35, parallel to 2.0 main track).
+Target: **700 terms** across three levels covering LTE/5G/IoT + Shenzhen internship context.
+Built during Phase 2 flex hours (≈ Day 0–55), parallel to the HSK3 main track.
 
 This branch is **private** (repo: `telecom-seed`). The public plan references the
 deck count in `tracker.md` but contains none of the actual content.
@@ -10,44 +10,47 @@ deck count in `tracker.md` but contains none of the actual content.
 
 ## Files
 
-| File | What it is |
-|---|---|
-| `deck.md` | The 200-term table — EN term, 中文, category, usage note. Fill as you go. |
-| `interview-prep.md` | Interview question bank + self-test protocol for the Shenzhen internship pitch. |
+| File | Deck name | Cards | When to start |
+|---|---|---|---|
+| `anki-import.txt` | Telecom Seed Deck | 200 | Phase 2 Day 0 |
+| `anki-intermediate.txt` | Telecom Intermediate | 250 | Phase 2 Day 36 (after seed done) |
+| `anki-advanced.txt` | Telecom Advanced | 250 | Phase 2 Day 49 (after intermediate done) |
+| `deck.md` | Reference table (seed terms only) | 200 | — |
+| `interview-prep.md` | Interview Q&A + self-test protocol | — | Week 2+ |
 
 ---
 
-## Deck build rules
+## Pacing plan
 
-1. **One term = one row** in `deck.md`. Fill all four columns before logging it as done.
-2. **Category first** — work a full category block before jumping to the next, so SRS review clusters by topic.
-3. **Chinese column is mandatory.** If you don't know the Chinese term yet, mark it `?` and flag for lookup — don't leave it blank.
-4. **Usage note = one sentence showing the term in a real context** (from a datasheet, paper abstract, or spec). Not a dictionary definition.
-5. Log the running count in `tracker.md` (Phase 2 `Deck cum` column) each day you add terms.
+| Milestone | Target day | Date | Deck cum |
+|---|---|---|---|
+| Seed deck done | Day 35 | Mon 12 Oct | 200 |
+| Intermediate done | Day 48 | Sun 25 Oct | 450 |
+| Advanced done | Day 61+ | post-exam | 700 |
+
+**Exam-week rule:** freeze new telecom cards from Day 55 (Sun 1 Nov) onward.
+If advanced is not finished by Day 55, pick up after the Nov 7 exam.
+The goal is to cover all three levels — advanced is only deferred, not skipped.
+
+Daily pace during flex time: ~20 new cards/day + Anki SRS review of the existing deck.
 
 ---
 
-## Category targets (200 total)
+## Level summary
 
-| Category | Target | Done |
-|---|---|---|
-| RF / Radio fundamentals | 25 | 0 |
-| LTE / 4G core | 30 | 0 |
-| 5G NR / SA / NSA | 35 | 0 |
-| IoT / NB-IoT / eMTC | 25 | 0 |
-| Protocol stack (L1–L3) | 25 | 0 |
-| Network architecture | 20 | 0 |
-| Operations / KPIs | 20 | 0 |
-| Chinese telecom terms (业务词) | 20 | 0 |
-| **Total** | **200** | **0** |
+| Level | File | Categories | Focus |
+|---|---|---|---|
+| Seed | `anki-import.txt` | RF, LTE, 5G, IoT, Protocol, Architecture, KPI, 业务词 | Foundation vocabulary for any telecom interview |
+| Intermediate | `anki-intermediate.txt` | Advanced LTE, 5G NR advanced, Transport/sync, OSS/BSS, Security, Testing, QoS, HetNet, 中文 intermediate, Business | Depth for technical discussions and system design questions |
+| Advanced | `anki-advanced.txt` | O-RAN/RIC, 5G-Advanced Rel-17/18, Network AI/ML, V2X/sidelink, Private networks, IIoT, 6G/IMT-2030, Signal processing, Advanced 中文 | Research-level topics for senior interviews and paper reading |
 
 ---
 
 ## How to commit a batch
 
 ```
-git add telecom/deck.md tracker.md
-git commit -m "telecom: +N terms (category) | deck cum X"
+git add telecom/ tracker.md
+git commit -m "telecom: +N terms (level/category) | deck cum X"
 git push telecom telecom-draft
 ```
 

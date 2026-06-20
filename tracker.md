@@ -89,7 +89,7 @@ Same rule: a row filled when the day's primary gate passes (or slips). Evidence-
 | Written full mock (latest) | ≥250/300 (pass 180) | — |
 | HSKK mock (latest) | ≥80/100 (pass 60) | — |
 | Handwriting chars (cum) | 150 (official 书写字) | 0 |
-| Telecom deck (cum) | 200 | 0 |
+| Telecom deck (cum) | 700 (seed 200 → intm 450 → adv 700; stop at exam week) | 0 |
 | Format confirmed (2.0/3.0)? | by ~Day 28 (Oct 5) | — |
 | Registered? | by Oct 28 (Nov 7 IBT) | no |
 | Exam result | HSK3 ≥180 + HSKK ≥60 | — |
@@ -135,8 +135,8 @@ Same rule: a row filled when the day's primary gate passes (or slips). Evidence-
 | 32 | Fri 9 Oct | | | ≥78 | | | ☐ | |
 | 33 | Sat 10 Oct | | | | | | ☐ | full mock |
 | 34 | Sun 11 Oct | | ≥240 | ≥80 | ~130 | | ☐ | deload ★ 2.0 SECURED |
-| 35 | Mon 12 Oct | | | | | 200 | ☐ | ★ deck done |
-| 36 | Tue 13 Oct | | | | | | ☐ | pitch draft |
+| 35 | Mon 12 Oct | | | | | 200 | ☐ | ★ seed deck done |
+| 36 | Tue 13 Oct | | | | | | ☐ | pitch draft; start intermediate deck |
 | 37 | Wed 14 Oct | | | | | | ☐ | |
 | 38 | Thu 15 Oct | | | | | | ☐ | sentence writing |
 | 39 | Fri 16 Oct | | | | | | ☐ | |
@@ -148,15 +148,15 @@ Same rule: a row filled when the day's primary gate passes (or slips). Evidence-
 | 45 | Thu 22 Oct | | | | | | ☐ | |
 | 46 | Fri 23 Oct | | | ≥80 | | | ☐ | HSKK timed |
 | 47 | Sat 24 Oct | | | | | | ☐ | full mock |
-| 48 | Sun 25 Oct | | ≥250 | | | | ☐ | deload |
-| 49 | Mon 26 Oct | | | | | | ☐ | |
+| 48 | Sun 25 Oct | | ≥250 | | | 450 | ☐ | deload; ★ intermediate deck done |
+| 49 | Mon 26 Oct | | | | | | ☐ | start advanced deck (if no exam conflict) |
 | 50 | Tue 27 Oct | | | | | | ☐ | full timed mock |
 | 51 | Wed 28 Oct | | | | | | ☐ | **Nov-7 IBT reg deadline** |
 | 52 | Thu 29 Oct | | | | | | ☐ | short-passage (3.0) |
 | 53 | Fri 30 Oct | | | ≥80 | | | ☐ | |
 | 54 | Sat 31 Oct | | | | | | ☐ | exam-conditions mock |
-| 55 | Sun 1 Nov | | ≥250 | ≥80 | | | ☐ | deload |
-| 56 | Mon 2 Nov | | | | | | ☐ | |
+| 55 | Sun 1 Nov | | ≥250 | ≥80 | | | ☐ | deload; ★ exam week — freeze telecom deck here |
+| 56 | Mon 2 Nov | | | | | | ☐ | HSK focus only |
 | 57 | Tue 3 Nov | | | | | | ☐ | final calibration mock |
 | 58 | Wed 4 Nov | | | | | | ☐ | HSKK final rehearsal |
 | 59 | Thu 5 Nov | | | | | | ☐ | error-log sweep |
