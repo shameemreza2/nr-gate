@@ -1,0 +1,232 @@
+#separator:tab
+#html:true
+#tags column:3
+#deck:Telecom Intermediate
+A3 event	<b>A3事件</b><br><br>Handover measurement event triggered when a neighbour RSRP exceeds the serving cell RSRP by a configured offset for a time-to-trigger duration.	telecom intermediate LTE-procedures
+A1 event	<b>A1事件</b><br><br>Serving cell quality above threshold; typically used to turn off inter-frequency measurements and save UE battery.	telecom intermediate LTE-procedures
+A2 event	<b>A2事件</b><br><br>Serving cell quality below threshold; triggers inter-frequency or inter-RAT measurement activation.	telecom intermediate LTE-procedures
+A4 event	<b>A4事件</b><br><br>Neighbour cell quality above threshold; used in load-balancing scenarios to offload UEs before the serving cell degrades.	telecom intermediate LTE-procedures
+A5 event	<b>A5事件</b><br><br>Serving cell below threshold1 AND neighbour cell above threshold2; the standard trigger for inter-frequency handover in LTE.	telecom intermediate LTE-procedures
+B1 event	<b>B1事件</b><br><br>Inter-RAT neighbour cell above threshold; used to trigger LTE-to-NR handover in 5G NSA EN-DC scenarios.	telecom intermediate LTE-procedures
+B2 event	<b>B2事件</b><br><br>Serving cell below threshold1 AND inter-RAT neighbour above threshold2; triggers handover to another RAT such as NR or Wi-Fi.	telecom intermediate LTE-procedures
+CSFB (Circuit Switched Fallback)	<b>电路域回落</b><br><br>Procedure that redirects an LTE UE to 2G/3G for a voice call when VoLTE is not supported; causes a 2–3 s call-setup delay.	telecom intermediate LTE-procedures
+eSRVCC (enhanced Single Radio Voice Call Continuity)	<b>增强型单无线语音呼叫连续性</b><br><br>Enables handover of a VoLTE call from LTE to 2G/3G mid-call with minimal interruption, preserving IMS session continuity.	telecom intermediate LTE-procedures
+CoMP (Coordinated Multi-Point)	<b>协作多点</b><br><br>Technique where multiple cells coordinate transmission or reception to improve cell-edge throughput and reduce inter-cell interference.	telecom intermediate LTE-procedures
+eICIC (enhanced Inter-Cell Interference Coordination)	<b>增强型小区间干扰协调</b><br><br>Uses Almost Blank Subframes (ABS) in the macro cell to protect pico cell UEs from macro interference in HetNet deployments.	telecom intermediate LTE-procedures
+ABS (Almost Blank Subframe)	<b>几乎空白子帧</b><br><br>An LTE subframe where the macro cell reduces transmission power, creating a quieter window for small cell UEs to measure and receive data.	telecom intermediate LTE-procedures
+NAICS (Network-Assisted Interference Cancellation and Suppression)	<b>网络辅助干扰消除与抑制</b><br><br>LTE feature where the network provides parameters to help UEs cancel co-channel interference from neighbouring cells.	telecom intermediate LTE-procedures
+LAA (Licensed Assisted Access)	<b>授权辅助接入</b><br><br>Extends LTE carrier aggregation to the unlicensed 5 GHz band using LBT, supplementing licensed throughput for indoor use cases.	telecom intermediate LTE-procedures
+TAU (Tracking Area Update)	<b>跟踪区更新</b><br><br>Procedure a UE performs in idle mode when moving into a new tracking area, informing the MME of its new location.	telecom intermediate LTE-procedures
+Service Request	<b>服务请求</b><br><br>Procedure by which an idle UE establishes a signalling connection to the network, triggered by uplink data or a paging message.	telecom intermediate LTE-procedures
+SRB (Signalling Radio Bearer)	<b>信令无线承载</b><br><br>Radio bearer used for RRC and NAS signalling; SRB1 carries RRC messages before security, SRB2 carries NAS messages after.	telecom intermediate LTE-procedures
+DRB (Data Radio Bearer)	<b>数据无线承载</b><br><br>Radio bearer used for user-plane data; each DRB maps to one EPS/PDU session bearer with defined QoS.	telecom intermediate LTE-procedures
+RRC Connection Setup	<b>RRC连接建立</b><br><br>Procedure that establishes the RRC connection between the UE and eNB/gNB, transitioning the UE from idle to connected state.	telecom intermediate LTE-procedures
+RRC Release	<b>RRC连接释放</b><br><br>Procedure that releases the UE from connected state back to idle or inactive (NR), freeing radio resources and reducing interference.	telecom intermediate LTE-procedures
+RRC Reconfiguration	<b>RRC重配置</b><br><br>Procedure used to modify bearer configurations, measurement settings, security parameters, or add/remove secondary cells.	telecom intermediate LTE-procedures
+SCell (Secondary Cell)	<b>辅小区</b><br><br>A cell added via carrier aggregation to supplement the PCell; it can be activated or deactivated dynamically to save UE power.	telecom intermediate LTE-procedures
+PCell (Primary Cell)	<b>主小区</b><br><br>The main serving cell that handles RRC signalling and HARQ feedback; the UE must always have exactly one PCell.	telecom intermediate LTE-procedures
+measurement gap	<b>测量间隔</b><br><br>A time period where the UE stops normal communication to tune its receiver to inter-frequency or inter-RAT measurements.	telecom intermediate LTE-procedures
+RLF (Radio Link Failure)	<b>无线链路失败</b><br><br>Declared when the UE cannot maintain the radio connection (T310 timer expires); triggers an RRC Re-establishment attempt.	telecom intermediate LTE-procedures
+RRC Re-establishment	<b>RRC重建立</b><br><br>Procedure to recover the RRC connection after a radio link failure or handover failure, using the target cell if available.	telecom intermediate LTE-procedures
+cell reselection	<b>小区重选</b><br><br>Idle mode procedure where the UE evaluates neighbouring cells against ranking criteria and camps on the best available cell.	telecom intermediate LTE-procedures
+RNTP (Relative Narrowband Tx Power)	<b>相对窄带发射功率</b><br><br>X2 indicator in LTE that informs neighbour cells about resource blocks where high power is used, enabling coordinated ICIC.	telecom intermediate LTE-procedures
+spectrum refarming	<b>频谱重耕</b><br><br>Reallocation of spectrum bands previously used for 2G/3G to LTE or 5G NR; common for 900 MHz and 1800 MHz bands.	telecom intermediate LTE-procedures
+RACH preamble	<b>随机接入前导</b><br><br>A Zadoff-Chu sequence transmitted by the UE on the PRACH to initiate random access; the eNB/gNB detects it and responds with a RAR.	telecom intermediate LTE-procedures
+PUCCH (Physical Uplink Control Channel)	<b>物理上行控制信道</b><br><br>Carries UCI (HARQ-ACK, scheduling requests, CSI reports) from the UE when no PUSCH is scheduled.	telecom intermediate 5G-NR-advanced
+UCI (Uplink Control Information)	<b>上行控制信息</b><br><br>Includes HARQ-ACK feedback, scheduling requests, and CSI reports; transmitted on PUCCH or piggybacked on PUSCH.	telecom intermediate 5G-NR-advanced
+SR (Scheduling Request)	<b>调度请求</b><br><br>Sent by the UE on PUCCH to request uplink resources when it has data in the buffer but no grant has been allocated.	telecom intermediate 5G-NR-advanced
+DMRS (Demodulation Reference Signal)	<b>解调参考信号</b><br><br>Transmitted with the data on the same resource elements; used by the receiver to estimate the channel and demodulate PDSCH/PUSCH.	telecom intermediate 5G-NR-advanced
+PT-RS (Phase Tracking Reference Signal)	<b>相位跟踪参考信号</b><br><br>Used in mmWave (FR2) deployments to compensate for oscillator phase noise; sparse in frequency but dense in time.	telecom intermediate 5G-NR-advanced
+PBCH (Physical Broadcast Channel)	<b>物理广播信道</b><br><br>Carries the MIB (Master Information Block) within the SSB, providing parameters for initial cell access and SIB1 scheduling.	telecom intermediate 5G-NR-advanced
+MIB (Master Information Block)	<b>主信息块</b><br><br>Contains essential parameters (SFN, subcarrier offset, PDCCH configuration) needed for the UE to acquire SIB1 and camp on a 5G NR cell.	telecom intermediate 5G-NR-advanced
+SIB1 (System Information Block 1)	<b>系统信息块1</b><br><br>Contains cell access parameters, scheduling of other SIBs, and barring/restriction information; broadcast by the gNB on the PDSCH.	telecom intermediate 5G-NR-advanced
+PRACH (Physical Random Access Channel)	<b>物理随机接入信道</b><br><br>Used for the initial random access procedure; the UE transmits a Zadoff-Chu preamble on PRACH resources configured in SIB1.	telecom intermediate 5G-NR-advanced
+SUL (Supplementary Uplink)	<b>补充上行链路</b><br><br>An additional low-band uplink (e.g. 700 MHz) paired with a higher-band NR carrier, improving uplink coverage for cell-edge UEs.	telecom intermediate 5G-NR-advanced
+SDL (Supplementary Downlink)	<b>补充下行链路</b><br><br>An additional downlink-only band used to add downlink capacity via NR carrier aggregation, with no corresponding uplink.	telecom intermediate 5G-NR-advanced
+cross-carrier scheduling	<b>跨载波调度</b><br><br>Allows the PDCCH on one NR carrier to schedule data on another, enabling UEs with limited bandwidth to be served from a secondary carrier.	telecom intermediate 5G-NR-advanced
+SU-MIMO (Single-User MIMO)	<b>单用户MIMO</b><br><br>All spatial layers in the MIMO transmission are directed to a single UE, maximising that UE's peak throughput.	telecom intermediate 5G-NR-advanced
+MU-MIMO (Multi-User MIMO)	<b>多用户MIMO</b><br><br>Spatial layers are split between multiple UEs in the same time-frequency resource, increasing cell capacity through spatial reuse.	telecom intermediate 5G-NR-advanced
+codebook-based precoding	<b>基于码本的预编码</b><br><br>The UE selects and reports a precoding matrix from a predefined codebook (PMI); the gNB uses it for downlink precoding.	telecom intermediate 5G-NR-advanced
+non-codebook-based precoding	<b>非码本预编码</b><br><br>Used in TDD systems where the gNB estimates the DL channel from SRS measurements and selects precoding without explicit UE feedback.	telecom intermediate 5G-NR-advanced
+Type I CSI	<b>I类CSI</b><br><br>Single-panel codebook CSI feedback using a quantised precoding matrix; lower overhead, suitable for moderate spatial multiplexing scenarios.	telecom intermediate 5G-NR-advanced
+Type II CSI	<b>II类CSI</b><br><br>Enhanced CSI using a linear combination of basis vectors; higher accuracy for MU-MIMO precoding but with significantly higher overhead.	telecom intermediate 5G-NR-advanced
+DL-TDOA (Downlink Time Difference of Arrival)	<b>下行到达时间差</b><br><br>NR positioning method where the UE measures RSTD between PRS signals from multiple gNBs to compute its 2D/3D location.	telecom intermediate 5G-NR-advanced
+PRS (Positioning Reference Signal)	<b>定位参考信号</b><br><br>Reference signal in NR designed for positioning; transmitted on DL by the gNB and measured by the UE to compute range or angle.	telecom intermediate 5G-NR-advanced
+PDSCH mapping Type A/B	<b>PDSCH映射类型A/B</b><br><br>Type A maps PDSCH from symbol 0 (slot-based); Type B allows flexible start symbol and duration for low-latency mini-slot scheduling.	telecom intermediate 5G-NR-advanced
+mini-slot	<b>迷你时隙</b><br><br>A transmission unit shorter than a full slot (as few as 2 or 4 OFDM symbols), enabling sub-millisecond scheduling for URLLC.	telecom intermediate 5G-NR-advanced
+configured grant	<b>配置授权</b><br><br>Pre-configured periodic uplink grant that allows the UE to transmit without waiting for a dynamic PDCCH grant, reducing URLLC latency.	telecom intermediate 5G-NR-advanced
+SPS (Semi-Persistent Scheduling)	<b>半持久调度</b><br><br>Periodic downlink resource allocation that pre-assigns resources, reducing PDCCH overhead for traffic with regular inter-arrival times like VoIP.	telecom intermediate 5G-NR-advanced
+CORESET (Control Resource Set)	<b>控制资源集</b><br><br>A set of resource blocks and OFDM symbols where the UE searches for PDCCH candidates; replaces the fixed PCFICH/PDCCH design of LTE.	telecom intermediate 5G-NR-advanced
+search space	<b>搜索空间</b><br><br>The set of PDCCH candidates a UE monitors in a given CORESET within a monitoring period; can be UE-specific or common.	telecom intermediate 5G-NR-advanced
+TCI state (Transmission Configuration Indicator)	<b>传输配置指示状态</b><br><br>Associates a reference signal with a beam direction, enabling the gNB to indicate which beam to use for PDSCH or PDCCH reception.	telecom intermediate 5G-NR-advanced
+DFT-s-OFDM	<b>离散傅里叶变换扩展OFDM</b><br><br>NR uplink waveform that applies a DFT before OFDM modulation, reducing PAPR and improving uplink coverage for power-limited UEs.	telecom intermediate 5G-NR-advanced
+NR initial access	<b>NR初始接入</b><br><br>The process of SSB-based cell search, MIB/SIB1 decoding, RACH, and RRC connection setup performed when a UE first connects to a 5G NR cell.	telecom intermediate 5G-NR-advanced
+uplink timing synchronisation	<b>上行定时同步</b><br><br>Achieved via timing advance; all UEs must pre-advance their uplink transmissions so signals arrive at the gNB within the cyclic prefix.	telecom intermediate 5G-NR-advanced
+MPLS (Multiprotocol Label Switching)	<b>多协议标签交换</b><br><br>Packet forwarding using short path labels rather than IP lookups, enabling traffic engineering and VPNs in mobile backhaul networks.	telecom intermediate transport
+PTP (Precision Time Protocol / IEEE 1588v2)	<b>精确时间协议</b><br><br>Sub-microsecond clock synchronisation protocol that distributes phase and time-of-day from a grandmaster clock to base stations over the transport network.	telecom intermediate transport
+SyncE (Synchronous Ethernet / G.8262)	<b>同步以太网</b><br><br>Distributes a frequency reference over Ethernet links by locking the PHY clock; used alongside PTP for frequency synchronisation of base stations.	telecom intermediate transport
+grandmaster clock	<b>主时钟</b><br><br>The highest-accuracy clock in a PTP hierarchy, typically GPS-disciplined; all boundary and slave clocks synchronise to it.	telecom intermediate transport
+boundary clock	<b>边界时钟</b><br><br>A PTP node that synchronises to an upstream master and acts as a master to downstream slaves, regenerating and distributing timing.	telecom intermediate transport
+G.8273.2	<b>G.8273.2标准</b><br><br>ITU-T standard specifying timing accuracy for telecom boundary/slave clocks: class A ±100 ns, class B ±70 ns; required for 5G TDD deployment.	telecom intermediate transport
+G.8275.1	<b>G.8275.1标准</b><br><br>ITU-T PTP profile requiring full on-path timing support; every node participates in PTP forwarding for phase/time distribution to 5G base stations.	telecom intermediate transport
+G.8275.2	<b>G.8275.2标准</b><br><br>ITU-T PTP profile for partial timing support (APTS), where not all transport nodes forward PTP; supplemented by SyncE for frequency.	telecom intermediate transport
+DWDM (Dense Wavelength Division Multiplexing)	<b>密集波分复用</b><br><br>Multiplexes multiple optical signals on different wavelengths over a single fibre, enabling very high-capacity core and backhaul transport.	telecom intermediate transport
+OTN (Optical Transport Network)	<b>光传输网络</b><br><br>ITU-T G.709 framework for transporting client signals (Ethernet, SDH) over optical networks with forward error correction and OAM.	telecom intermediate transport
+Ethernet OAM (802.1ag / Y.1731)	<b>以太网运维管理</b><br><br>Tools for connectivity fault management (CFM), performance monitoring (PM), and fault notification in carrier Ethernet transport networks.	telecom intermediate transport
+MPLS-TP (MPLS Transport Profile)	<b>MPLS传输子集</b><br><br>A subset of MPLS with OAM and protection switching features similar to SDH; designed for connection-oriented transport without IP routing.	telecom intermediate transport
+ESMC (Ethernet Synchronisation Messaging Channel)	<b>以太网同步消息信道</b><br><br>Carries Synchronisation Status Messages (SSM) in SyncE to convey clock quality level between network nodes.	telecom intermediate transport
+eCPRI latency budget	<b>eCPRI时延预算</b><br><br>The one-way latency allowed on the Open Fronthaul; O-RAN and 3GPP specify ≤100 μs for TDD operation, constraining fibre/ring topology.	telecom intermediate transport
+fronthaul compression	<b>前传压缩</b><br><br>Techniques (block floating point, μ-law) that reduce eCPRI bandwidth from hundreds of Gbps (uncompressed) to tens of Gbps per radio.	telecom intermediate transport
+functional split option	<b>功能分割选项</b><br><br>3GPP and O-RAN define several RAN functional split points (Option 2–8) determining where the CU/DU boundary falls in the protocol stack.	telecom intermediate transport
+phase alignment	<b>相位对齐</b><br><br>Required for TDD base stations; timing misalignment above ±1.5 μs between adjacent cells causes uplink interference and must be corrected.	telecom intermediate transport
+PON (Passive Optical Network)	<b>无源光网络</b><br><br>Point-to-multipoint fibre technology (GPON, XGS-PON) increasingly used for 5G fronthaul and last-mile backhaul with low cost and high capacity.	telecom intermediate transport
+VLAN (Virtual LAN)	<b>虚拟局域网</b><br><br>Layer 2 segmentation used in mobile backhaul to separate control, user, synchronisation, and management plane traffic on shared Ethernet links.	telecom intermediate transport
+QinQ (IEEE 802.1ad)	<b>双层VLAN</b><br><br>Stacking of two VLAN tags (S-VLAN outer, C-VLAN inner), allowing operators to tunnel customer VLANs across a provider transport network.	telecom intermediate transport
+timing over packet (ToP)	<b>分组传输定时</b><br><br>Generic term for transmitting frequency, phase, and time-of-day over packet networks using PTP; essential for 5G TDD synchronisation.	telecom intermediate transport
+link budget (transport)	<b>传输链路预算</b><br><br>Calculation of the maximum allowable path loss between two transport nodes, accounting for transmit power, fibre loss, connector loss, and receiver sensitivity.	telecom intermediate transport
+BITS (Building Integrated Timing Supply)	<b>楼内综合定时供给</b><br><br>A timing reference system distributing a 2 MHz or 10 MHz frequency reference to co-located telecom equipment within a building or exchange.	telecom intermediate transport
+OSS (Operations Support System)	<b>运营支撑系统</b><br><br>Software systems used by telecom operators for network management, provisioning, fault management, and performance monitoring.	telecom intermediate OSS-BSS
+BSS (Business Support System)	<b>业务支撑系统</b><br><br>Systems handling customer-facing functions: billing, CRM, order management, and product catalogue; interfaces with OSS for service fulfilment.	telecom intermediate OSS-BSS
+EMS (Element Management System)	<b>网元管理系统</b><br><br>Software that manages a single vendor's network elements, providing FCAPS functions and exposing data via a northbound interface to the NMS.	telecom intermediate OSS-BSS
+NMS (Network Management System)	<b>网络管理系统</b><br><br>Higher-level system managing multiple EMS domains, providing end-to-end network visibility and cross-domain coordination.	telecom intermediate OSS-BSS
+FCAPS	<b>FCAPS管理框架</b><br><br>ITU-T five-category management framework: Fault, Configuration, Accounting, Performance, and Security management.	telecom intermediate OSS-BSS
+PM (Performance Management)	<b>性能管理</b><br><br>Collection and analysis of performance counters from network elements at regular intervals to assess KPIs and identify degradation trends.	telecom intermediate OSS-BSS
+FM (Fault Management)	<b>故障管理</b><br><br>Detection, correlation, and resolution of network faults and alarms; includes alarm suppression and root cause analysis.	telecom intermediate OSS-BSS
+NETCONF (Network Configuration Protocol)	<b>网络配置协议</b><br><br>IETF protocol (RFC 6241) for managing network device configuration using XML-encoded YANG data models, transported over SSH.	telecom intermediate OSS-BSS
+RESTCONF	<b>RESTCONF协议</b><br><br>IETF protocol (RFC 8040) providing a REST-like HTTP interface to YANG-modelled data; simpler to consume than NETCONF for web-based tools.	telecom intermediate OSS-BSS
+YANG (Yet Another Next Generation)	<b>YANG数据建模语言</b><br><br>Data modelling language (RFC 7950) used to define the structure of network configuration and state data for NETCONF and RESTCONF.	telecom intermediate OSS-BSS
+ANR (Automatic Neighbour Relation)	<b>自动邻区关系</b><br><br>SON function that automatically discovers and configures neighbour cell relations from UE measurement reports, replacing manual neighbour list management.	telecom intermediate OSS-BSS
+MRO (Mobility Robustness Optimisation)	<b>移动健壮性优化</b><br><br>SON function that automatically adjusts handover parameters to reduce handover failures, radio link failures, and ping-pong effects.	telecom intermediate OSS-BSS
+MDT (Minimisation of Drive Tests)	<b>最小化路测</b><br><br>3GPP feature where UEs collect and report radio measurements in idle and connected mode, enabling virtual drive tests from the core network.	telecom intermediate OSS-BSS
+CCO (Coverage and Capacity Optimisation)	<b>覆盖与容量优化</b><br><br>SON function that adjusts antenna tilt and power to balance coverage and capacity across the network.	telecom intermediate OSS-BSS
+ES (Energy Saving) — SON	<b>节能</b><br><br>SON function that switches off lightly loaded cells or reduces transmission power during low-traffic periods to reduce energy consumption.	telecom intermediate OSS-BSS
+alarm correlation	<b>告警关联</b><br><br>Analysis technique that groups related alarms to identify root causes, reducing operator alarm fatigue in large-scale networks.	telecom intermediate OSS-BSS
+PM counter	<b>性能计数器</b><br><br>A raw metric collected from network elements at regular intervals (e.g. 15 min); the basis for KPI calculation in OSS performance management.	telecom intermediate OSS-BSS
+NBI (Northbound Interface)	<b>北向接口</b><br><br>The interface by which an EMS or NMS exposes network management capabilities to higher-level systems or customer portals.	telecom intermediate OSS-BSS
+TCA (Threshold Crossing Alert)	<b>门限越限告警</b><br><br>An alarm generated when a PM counter exceeds a configured threshold, indicating a potential performance problem.	telecom intermediate OSS-BSS
+network inventory	<b>网络资产</b><br><br>A database of all network elements, their configurations, software versions, and physical site information; the foundation of configuration management.	telecom intermediate OSS-BSS
+change management	<b>变更管理</b><br><br>Process of planning, approving, and executing configuration changes in the live network with rollback capability to minimise service impact.	telecom intermediate OSS-BSS
+AKA (Authentication and Key Agreement)	<b>认证与密钥协商</b><br><br>3GPP authentication protocol where the USIM and network mutually authenticate and derive a set of session keys (CK/IK).	telecom intermediate security
+SUPI (Subscription Permanent Identifier)	<b>用户永久标识符</b><br><br>The permanent subscription identifier in 5G (equivalent to IMSI in LTE); never transmitted in clear text over the air.	telecom intermediate security
+SUCI (Subscription Concealed Identifier)	<b>用户隐藏标识符</b><br><br>A privacy-preserving, public-key-encrypted version of SUPI used during initial registration to prevent SUPI exposure over the air.	telecom intermediate security
+SEAF (Security Anchor Function)	<b>安全锚点功能</b><br><br>5G function co-located in the AMF that derives and manages access and mobility security keys passed from the AUSF.	telecom intermediate security
+AUSF (Authentication Server Function)	<b>认证服务器功能</b><br><br>5G core function that performs AKA authentication with the UE via the SUPI/SUCI mechanism and derives keys for the SEAF.	telecom intermediate security
+UDR (Unified Data Repository)	<b>统一数据存储库</b><br><br>Stores subscriber data, policy data, and application data; the backend database accessed by UDM, PCF, and NEF in the 5GC.	telecom intermediate security
+NAS security	<b>NAS安全</b><br><br>Ciphering and integrity protection of NAS messages between UE and AMF, using NEA (ciphering) and NIA (integrity) algorithms.	telecom intermediate security
+AS security	<b>AS安全</b><br><br>Ciphering and integrity protection of RRC signalling and user-plane traffic between UE and gNB/eNB, using NEA and NIA algorithms.	telecom intermediate security
+NEA (NR Encryption Algorithm)	<b>NR加密算法</b><br><br>Ciphering algorithms in 5G: NEA0 (null), NEA1 (SNOW 3G), NEA2 (AES-CTR), NEA3 (ZUC-256); negotiated during security mode command.	telecom intermediate security
+NIA (NR Integrity Algorithm)	<b>NR完整性算法</b><br><br>Integrity protection algorithms in 5G: NIA0 (null), NIA1 (SNOW 3G), NIA2 (AES-CMAC), NIA3 (ZUC-256).	telecom intermediate security
+NEF (Network Exposure Function)	<b>网络开放功能</b><br><br>5GC function that exposes network capabilities (location, QoS, event subscription) to authorised third-party applications via standardised APIs.	telecom intermediate security
+GUTI (Globally Unique Temporary Identifier)	<b>全球唯一临时标识</b><br><br>Temporary identifier assigned to a UE by the AMF/MME to avoid transmitting IMSI/SUPI over the air during location updates and paging.	telecom intermediate security
+key hierarchy	<b>密钥层次结构</b><br><br>The structured derivation chain from master key K through CK/IK → KAUSF → KSEAF → KAMF → KgNB → session keys; each level scoped to a specific function.	telecom intermediate security
+5G-AKA	<b>5G-AKA认证</b><br><br>Primary 5G authentication method based on EAP-AKA'; uses SUCI to conceal SUPI and enables home network authentication of the serving network.	telecom intermediate security
+security context	<b>安全上下文</b><br><br>The set of security parameters (keys, algorithm IDs, NAS COUNT) maintained by UE and network for a connection; transferred during handover.	telecom intermediate security
+lawful interception	<b>合法监听</b><br><br>Legally mandated capability allowing law enforcement to intercept communications with proper authorisation; standardised in ETSI TS 101 331.	telecom intermediate security
+replay protection	<b>重放保护</b><br><br>Use of sequence numbers (NAS COUNT, PDCP COUNT) and MACs in NAS/AS protocols to prevent attackers from replaying captured messages.	telecom intermediate security
+network exposure	<b>网络开放</b><br><br>The ability of the 5GC to expose capabilities (location, QoS on demand, event notification) to authorised third-party application servers via NEF.	telecom intermediate security
+drive test	<b>路测</b><br><br>Collection of radio measurements (RSRP, RSRQ, SINR, throughput) while driving along routes in a vehicle to assess network coverage and quality.	telecom intermediate testing
+CQT (Call Quality Test)	<b>通话质量测试</b><br><br>Stationary radio tests at specific locations (shopping malls, office buildings) to assess signal quality and service performance at fixed points.	telecom intermediate testing
+MR (Measurement Report)	<b>测量报告</b><br><br>Reports sent by connected UEs to the serving cell, containing RSRP/RSRQ of serving and neighbour cells; used for handover decisions and MDT.	telecom intermediate testing
+TEMS Investigation	<b>TEMS路测软件</b><br><br>A widely used commercial drive test software by Ascom; collects and decodes radio measurements and protocol logs from multiple RATs simultaneously.	telecom intermediate testing
+Nemo Outdoor	<b>Nemo路测软件</b><br><br>Drive test software by Keysight (formerly NetHawk); popular for multi-technology DT and KPI reporting in operator deployments worldwide.	telecom intermediate testing
+QXDM (Qualcomm eXtensible Diagnostic Monitor)	<b>QXDM调试工具</b><br><br>Qualcomm diagnostic tool for logging detailed modem messages and L1/L2/L3 protocol traces from Qualcomm-chipset devices.	telecom intermediate testing
+protocol analyser	<b>协议分析仪</b><br><br>Tool that captures and decodes signalling messages on network interfaces (S1-MME, X2, Xn, N2, N11); used for troubleshooting attach failures and handover issues.	telecom intermediate testing
+Wireshark	<b>Wireshark网络分析工具</b><br><br>Open-source packet analyser used to capture and decode IP-based network traffic, including GTP, SCTP, SIP, and HTTP/2 in telecom networks.	telecom intermediate testing
+signalling trace	<b>信令跟踪</b><br><br>Capture of all signalling messages for a specific UE call; the primary diagnostic tool for troubleshooting attach failures, bearer setup, and handover.	telecom intermediate testing
+conformance testing	<b>一致性测试</b><br><br>Testing a device or network element against 3GPP specifications to verify it conforms to the standard before commercial launch.	telecom intermediate testing
+field trial	<b>现场试验</b><br><br>Testing of new equipment or features in a live network environment before commercial rollout; validates KPIs and interoperability.	telecom intermediate testing
+IPERF	<b>IPERF网络测速工具</b><br><br>Open-source tool for measuring TCP/UDP throughput between two endpoints; widely used for air interface and backhaul performance testing.	telecom intermediate testing
+spectrum analyser	<b>频谱分析仪</b><br><br>Instrument measuring signal power across a frequency range; used to detect interference, verify spectrum occupancy, and characterise spurious emissions.	telecom intermediate testing
+propagation model	<b>传播模型</b><br><br>Mathematical model (Okumura-Hata, COST-231, 3GPP CDL) used to predict radio signal attenuation for coverage planning and link budget calculations.	telecom intermediate testing
+link budget	<b>链路预算</b><br><br>Calculation of maximum allowable path loss between transmitter and receiver, accounting for antenna gains, cable losses, and receiver sensitivity.	telecom intermediate testing
+PIM (Passive Intermodulation)	<b>无源互调</b><br><br>IM distortion generated by passive components (connectors, cables, antennas) at high power; causes uplink interference and degrades receiver sensitivity.	telecom intermediate testing
+VSWR (Voltage Standing Wave Ratio)	<b>电压驻波比</b><br><br>Measure of impedance mismatch at the antenna port; VSWR &gt; 1.5 indicates significant reflected power, reducing efficiency and risking equipment damage.	telecom intermediate testing
+channel sounder	<b>信道探测仪</b><br><br>Measurement system that characterises the radio channel (delay spread, angle spread, Doppler) at a location; used for propagation model development.	telecom intermediate testing
+benchmark test	<b>基准测试</b><br><br>Comparing two systems or configurations under identical conditions to evaluate relative performance; results must clearly state measurement methodology.	telecom intermediate testing
+inter-modulation (IM)	<b>互调</b><br><br>Distortion product from non-linearity in RF components when multiple signals are present; can produce spurious signals that cause interference.	telecom intermediate testing
+performance trace	<b>性能跟踪</b><br><br>Detailed call-level logs from the RAN used to diagnose specific UE or bearer performance issues; more granular than PM counter data.	telecom intermediate testing
+5QI (5G QoS Identifier)	<b>5G QoS标识符</b><br><br>Replaces LTE QCI; associates a QoS flow with standardised characteristics: resource type, priority, delay budget, error rate, and averaging window.	telecom intermediate QoS
+GBR (Guaranteed Bit Rate)	<b>保证比特率</b><br><br>QoS parameter for flows requiring a minimum data rate guarantee (e.g. VoIP, video calls); network must always provide at least this rate.	telecom intermediate QoS
+non-GBR	<b>非保证比特率</b><br><br>QoS class for flows that do not require a guaranteed rate; includes most internet data services delivered on a best-effort basis.	telecom intermediate QoS
+AMBR (Aggregate Maximum Bit Rate)	<b>聚合最大比特率</b><br><br>Limits the total throughput of all non-GBR flows for a UE (UE-AMBR) or per PDU session (Session-AMBR); enforced by the UPF/PGW.	telecom intermediate QoS
+MFBR (Maximum Flow Bit Rate)	<b>最大流比特率</b><br><br>The maximum bit rate for a GBR flow in 5G; equivalent to the Maximum Bit Rate (MBR) concept in LTE; enforced by the UPF.	telecom intermediate QoS
+GFBR (Guaranteed Flow Bit Rate)	<b>保证流比特率</b><br><br>The minimum guaranteed bit rate for a GBR flow in 5G; the network must always allocate sufficient resources to meet this rate.	telecom intermediate QoS
+ARP (Allocation and Retention Priority)	<b>分配与保留优先级</b><br><br>Determines whether a bearer/flow can be established or must preempt others when resources are scarce; defined by priority level, preemption capability, and vulnerability.	telecom intermediate QoS
+QoS flow	<b>QoS流</b><br><br>The finest granularity of QoS differentiation in 5G; all packets in a QoS flow receive the same per-hop forwarding treatment in the UPF.	telecom intermediate QoS
+QFI (QoS Flow Identifier)	<b>QoS流标识符</b><br><br>A value (1–63) identifying a QoS flow within a PDU session; marked in the GTP-U extension header between gNB and UPF.	telecom intermediate QoS
+RQoS (Reflective QoS)	<b>反射QoS</b><br><br>5G feature where the UE mirrors the downlink QoS flow marking to the uplink, eliminating the need for explicit uplink QoS signalling rules.	telecom intermediate QoS
+DSCP (Differentiated Services Code Point)	<b>差分服务代码点</b><br><br>A 6-bit IP header field marking packets for QoS treatment in the transport network; mapped from 5QI at the UPF/PGW boundary.	telecom intermediate QoS
+traffic policing	<b>流量监管</b><br><br>Enforcement of rate limits by discarding or re-marking excess packets at a measurement point; does not buffer traffic.	telecom intermediate QoS
+traffic shaping	<b>流量整形</b><br><br>Buffering excess traffic and transmitting it at the allowed rate, smoothing bursts and avoiding downstream congestion.	telecom intermediate QoS
+preemption	<b>抢占</b><br><br>Mechanism that allows a higher-priority bearer/flow to release resources held by a lower-priority one when the network is congested.	telecom intermediate QoS
+SLA (Service Level Agreement)	<b>服务等级协议</b><br><br>Contract specifying performance guarantees (latency, availability, throughput, packet loss) between operator and enterprise customer.	telecom intermediate QoS
+QCI 1	<b>QCI 1</b><br><br>Standardised LTE QoS class for conversational voice (VoIP): priority 2, delay budget 100 ms, packet error rate 10⁻²; the highest-priority non-GBR-equivalent class.	telecom intermediate QoS
+network slice SLA	<b>网络切片SLA</b><br><br>Per-slice service level agreement specifying guaranteed performance characteristics (latency, throughput, isolation) for a given network slice tenant.	telecom intermediate QoS
+UPF QoS enforcement	<b>UPF QoS执行</b><br><br>The UPF applies packet detection rules (PDR) and forwarding action rules (FAR) to enforce rate limiting, marking, and gating on user-plane flows.	telecom intermediate QoS
+per-flow QoS	<b>每流QoS</b><br><br>5G approach applying QoS at the individual flow level, replacing LTE's per-bearer approach; enables finer-grained service differentiation.	telecom intermediate QoS
+HetNet (Heterogeneous Network)	<b>异构网络</b><br><br>A network combining macro cells, pico cells, femto cells, and relays of different power levels to improve capacity and fill coverage gaps.	telecom intermediate HetNet
+picocell	<b>微微蜂窝</b><br><br>A low-power operator-deployed small cell (tens of metres coverage) for indoor hotspots or dense outdoor areas; connects to the core via backhaul.	telecom intermediate HetNet
+femtocell	<b>毫微微蜂窝</b><br><br>A very low-power consumer-premises small cell connecting over broadband; 3GPP terms it HeNB (Home eNB); shares spectrum with the macro layer.	telecom intermediate HetNet
+HeNB (Home eNB)	<b>家用基站</b><br><br>3GPP term for an LTE femtocell; connects to the EPC via an IPsec tunnel over broadband through the SeGW (Security Gateway).	telecom intermediate HetNet
+small cell	<b>小基站</b><br><br>Generic term for low-power base stations (picocell, femtocell, microcell); deployed by operators to boost capacity or fill indoor coverage gaps.	telecom intermediate HetNet
+DAS (Distributed Antenna System)	<b>分布式天线系统</b><br><br>Multiple antennas connected to a central unit via fibre or coaxial cable, distributing RF coverage uniformly within large buildings or venues.	telecom intermediate HetNet
+in-building solution (IBS)	<b>室内覆盖方案</b><br><br>Collective term for systems (DAS, small cells, repeaters) used to provide adequate cellular coverage and capacity inside buildings.	telecom intermediate HetNet
+repeater	<b>直放站</b><br><br>A device that receives, amplifies, and retransmits a cellular signal to extend coverage into shadowed areas; introduces delay and amplified noise.	telecom intermediate HetNet
+microcell	<b>微蜂窝</b><br><br>A small cell with a coverage radius of hundreds of metres, deployed on lamp posts or building facades in dense urban areas.	telecom intermediate HetNet
+cell splitting	<b>小区分裂</b><br><br>Network densification technique dividing a large cell into smaller ones to increase frequency reuse and capacity per unit area.	telecom intermediate HetNet
+shadow fading	<b>阴影衰落</b><br><br>Large-scale signal variation caused by obstacles (buildings, hills) blocking the radio path; modelled as a log-normal random variable.	telecom intermediate HetNet
+pilot pollution	<b>导频污染</b><br><br>Condition where a UE receives multiple strong pilot/reference signals from different cells without a dominant one; causes poor SINR and handover failures.	telecom intermediate HetNet
+UE category	<b>UE类别</b><br><br>3GPP classification of UE capabilities (e.g. Cat 4, Cat 16, Cat M1); defines maximum data rate, MIMO layers, and supported bandwidth.	telecom intermediate HetNet
+RET (Remote Electrical Tilt)	<b>远程电下倾</b><br><br>Mechanism to adjust antenna electrical tilt remotely via AISG command, allowing coverage optimisation without dispatching a tower crew.	telecom intermediate HetNet
+AISG (Antenna Interface Standards Group)	<b>天线接口标准组</b><br><br>Standard for remote control of antenna functions (electrical tilt, gain) via a serial protocol over the feeder cable.	telecom intermediate HetNet
+handover trigger	<b>切换触发</b><br><br>The combination of measurement event type, threshold, hysteresis, and time-to-trigger that initiates a handover procedure.	telecom intermediate HetNet
+coverage hole	<b>覆盖盲区</b><br><br>An area where received signal falls below the minimum required for service; typically filled by adding a small cell or adjusting antenna tilt.	telecom intermediate HetNet
+co-channel interference	<b>同频干扰</b><br><br>Interference from cells operating on the same frequency; the primary impairment in frequency-reuse-1 networks, addressed by ICIC and beamforming.	telecom intermediate HetNet
+active antenna system (AAS)	<b>有源天线系统</b><br><br>Antenna array with integrated RF chains and digital beamforming capability; same concept as AAU; enables massive MIMO in macro cells.	telecom intermediate HetNet
+HetNet mobility	<b>异构网络移动性</b><br><br>Challenges of UE mobility between macro and small cells with large power differences; requires cell range expansion bias and fast handover timers.	telecom intermediate HetNet
+neutral host	<b>中立主机</b><br><br>A third-party operator deploying and maintaining shared indoor network infrastructure used by multiple MNOs, reducing per-operator deployment cost.	telecom intermediate HetNet
+干扰协调 (gānrǎo xiétiáo)	<b>interference coordination</b><br><br>小区间干扰协调是提升小区边缘用户体验的关键技术，常通过X2接口交换资源使用信息来实现。	telecom intermediate 中文
+协议栈 (xiéyì zhàn)	<b>protocol stack</b><br><br>LTE协议栈从物理层到应用层共分为多个功能层次，每层为上层提供服务并与对等层通信。	telecom intermediate 中文
+信道估计 (xìndào gūjì)	<b>channel estimation</b><br><br>DMRS用于信道估计，使接收端能够准确补偿信道失真并正确恢复发送数据。	telecom intermediate 中文
+同步 (tóngbù)	<b>synchronisation</b><br><br>5G TDD网络对基站间相位同步精度要求达到±1.5微秒以内，超标将引起上行同频干扰。	telecom intermediate 中文
+授权频谱 (shòuquán pínpǔ)	<b>licensed spectrum</b><br><br>运营商通过竞拍获得授权频谱的使用权，在该频段内享有排他性保护，是5G商用的基础。	telecom intermediate 中文
+非授权频谱 (fēi shòuquán pínpǔ)	<b>unlicensed spectrum</b><br><br>NR-U将5G技术扩展到5 GHz非授权频谱，需采用先听后发机制与Wi-Fi共存。	telecom intermediate 中文
+室内覆盖 (shìnèi fùgài)	<b>indoor coverage</b><br><br>室内覆盖方案通常采用分布式天线系统或小基站，解决信号穿墙损耗带来的深度覆盖问题。	telecom intermediate 中文
+异构网络 (yìgòu wǎngluò)	<b>heterogeneous network</b><br><br>宏基站与小基站共同构成异构网络，通过不同功率层次实现覆盖与容量的协同优化。	telecom intermediate 中文
+虚拟化 (xūnǐhuà)	<b>virtualisation</b><br><br>网络功能虚拟化将核心网功能从专用硬件迁移到通用服务器上运行，大幅降低部署成本。	telecom intermediate 中文
+容器 (róngqì)	<b>container</b><br><br>云原生5G核心网功能以容器形式部署在Kubernetes集群上，支持快速扩容和灰度升级。	telecom intermediate 中文
+编排 (biānpái)	<b>orchestration</b><br><br>网络切片的生命周期管理依赖SMO进行自动化编排，统一调度跨域的计算、存储和网络资源。	telecom intermediate 中文
+告警 (gàojǐng)	<b>alarm</b><br><br>基站发生硬件故障时，EMS会立即上报告警信息，触发运维人员进行远程诊断或派单处理。	telecom intermediate 中文
+故障定位 (gùzhàng dìngwèi)	<b>fault localisation</b><br><br>通过告警关联分析和信令跟踪，可以快速完成故障定位，有效缩短平均修复时间。	telecom intermediate 中文
+仿真 (fǎngzhēn)	<b>simulation</b><br><br>系统级仿真通过建立信道模型和基站拓扑，评估新算法在不同覆盖场景下的性能增益。	telecom intermediate 中文
+邻区 (línqū)	<b>neighbour cell</b><br><br>准确配置邻区关系是保障切换成功率的基础，自动邻区关系功能可大幅减少人工配置工作量。	telecom intermediate 中文
+网络拓扑 (wǎngluò tuōpú)	<b>network topology</b><br><br>5G CU/DU分离部署使网络拓扑更加灵活，集中式CU可同时服务多个分布式DU站点。	telecom intermediate 中文
+信令流程 (xìnlìng liúchéng)	<b>signalling procedure</b><br><br>熟悉附着信令流程和PDU会话建立流程，是快速定位5G核心网接入问题的基本功。	telecom intermediate 中文
+频率规划 (pínlǜ guīhuà)	<b>frequency planning</b><br><br>合理的频率规划能够降低同频干扰，提升整网频谱效率，是无线网络规划的核心任务之一。	telecom intermediate 中文
+站址 (zhàn zhǐ)	<b>site (base station site)</b><br><br>5G毫米波需要更密集的站址部署，站址资源获取难度大，是运营商5G建网的主要挑战之一。	telecom intermediate 中文
+外场测试 (wàichǎng cèshì)	<b>field test</b><br><br>新功能在实验室验证通过后还需进行外场测试，以评估真实传播环境下的实际商用效果。	telecom intermediate 中文
+网络架构 (wǎngluò jiàgòu)	<b>network architecture</b><br><br>5G SA网络架构采用基于服务的接口，实现了核心网各网络功能的解耦与灵活独立部署。	telecom intermediate 中文
+优化参数 (yōuhuà cānshù)	<b>optimisation parameter</b><br><br>天线倾角、功率和切换门限是无线网优中最常调整的参数，调整不当会导致覆盖或干扰问题。	telecom intermediate 中文
+承载 (chéngjì)	<b>bearer</b><br><br>LTE中每个数据业务对应一个EPS承载，不同QCI的承载具有差异化的调度优先级和时延要求。	telecom intermediate 中文
+切换参数 (qiēhuàn cānshù)	<b>handover parameter</b><br><br>切换门限和时间迟滞参数的优化需要在切换及时性与乒乓切换之间找到合理的平衡点。	telecom intermediate 中文
+规划工具 (guīhuà gōngjù)	<b>planning tool</b><br><br>无线规划工具（如Atoll、Planet）基于传播模型和地形数据预测覆盖，是站址规划的核心工具。	telecom intermediate 中文
+ARPU (Average Revenue Per User)	<b>每用户平均收入</b><br><br>Key operator financial metric; 5G monetisation strategies aim to increase ARPU through enterprise services and value-added content.	telecom intermediate business
+CAPEX (Capital Expenditure)	<b>资本支出</b><br><br>Investment in physical assets (spectrum, base stations, core equipment); 5G CAPEX requirements drove operators toward RAN sharing and O-RAN.	telecom intermediate business
+OPEX (Operating Expenditure)	<b>运营支出</b><br><br>Ongoing costs of running the network (energy, site leases, maintenance); NFV, SON, and energy-saving features aim to reduce OPEX.	telecom intermediate business
+TCO (Total Cost of Ownership)	<b>总体拥有成本</b><br><br>The sum of CAPEX and OPEX over the network lifetime; TCO comparison is the standard framework for vendor selection and deployment strategy.	telecom intermediate business
+ROI (Return on Investment)	<b>投资回报率</b><br><br>Measure of financial return on network investment; 5G ROI depends on new use cases (enterprise slices, MEC, private networks) beyond eMBB.	telecom intermediate business
+RAN sharing (MOCN / MORAN)	<b>无线接入网共享</b><br><br>Arrangement where two or more operators share RAN infrastructure (MOCN or MORAN) to reduce 5G deployment cost in low-traffic areas.	telecom intermediate business
+MVNO (Mobile Virtual Network Operator)	<b>移动虚拟网络运营商</b><br><br>An operator providing mobile services using another operator's network infrastructure without owning radio spectrum or base stations.	telecom intermediate business
+spectrum auction	<b>频谱拍卖</b><br><br>Government-run process allocating spectrum licences to operators; 5G spectrum auctions (3.5 GHz, 26 GHz) raised tens of billions of dollars globally.	telecom intermediate business
+ITU-R	<b>国际电信联盟无线电通信部门</b><br><br>The ITU body responsible for global radio frequency management, including IMT spectrum identification and minimum performance requirements for cellular standards.	telecom intermediate business
+IMT-2020	<b>IMT-2020</b><br><br>ITU-R framework defining 5G requirements: peak rate 20 Gbps DL / 10 Gbps UL, latency 1 ms, 10⁶ devices/km²; the basis for 3GPP Release 15 design.	telecom intermediate business
+WRC (World Radiocommunication Conference)	<b>世界无线电通信大会</b><br><br>ITU conference held every 4 years to revise the Radio Regulations and allocate new spectrum for mobile use; WRC-23 identified bands for IMT-2030.	telecom intermediate business
+3GPP release	<b>3GPP版本</b><br><br>3GPP versioned specification sets: Rel-15 = first 5G NR, Rel-16 = 5G phase 2 (URLLC/V2X), Rel-17 = RedCap/positioning, Rel-18 = 5G-Advanced.	telecom intermediate business
+NSA option 3x	<b>NSA选项3x</b><br><br>Most widely deployed NSA architecture; LTE eNB is the master (MCG) providing control plane anchor; NR gNB adds secondary (SCG) capacity.	telecom intermediate business
+vendor lock-in	<b>厂商锁定</b><br><br>Dependency on a single vendor's proprietary technology; O-RAN open interfaces aim to reduce RAN vendor lock-in and enable multi-vendor deployment.	telecom intermediate business
+spectrum refarming	<b>频谱重耕</b><br><br>Reallocation of spectrum previously used for 2G/3G to LTE or 5G NR; common for 900 MHz (GSM → NR) and 1800 MHz (GSM → LTE) bands.	telecom intermediate business
+network sharing agreement	<b>网络共享协议</b><br><br>Commercial and technical agreement between operators covering shared infrastructure, spectrum usage rights, and operational responsibilities.	telecom intermediate business
+MOCN (Multi-Operator Core Network)	<b>多运营商核心网</b><br><br>RAN sharing model where multiple operators share the same base station hardware and spectrum, each connecting to their own separate core network.	telecom intermediate business
+open standards	<b>开放标准</b><br><br>Specifications developed by 3GPP, IEEE, and IETF accessible to all; enable multi-vendor interoperability and reduce technology lock-in.	telecom intermediate business
+private network business case	<b>私有网络商业模式</b><br><br>Enterprise 5G private network business cases include: campus coverage, industrial IoT, AR-assisted maintenance, and AGV control with URLLC.	telecom intermediate business
+edge computing business model	<b>边缘计算商业模式</b><br><br>MEC enables operators to offer compute-as-a-service at the network edge, monetising ultra-low latency for applications like cloud gaming and V2X.	telecom intermediate business
