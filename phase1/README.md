@@ -7,6 +7,20 @@ Day 0 = **2026年7月3日（周五）** · 结束日/出发日 = **2026年8月22
 
 ---
 
+## §0 · 单元制 Unit system — how any day-card actually runs (added 2026-07-09)
+
+Day cards are unchanged; this section governs **how you execute them**. `day-00.md` is the worked example.
+
+- **Unit** = a 15–25 min timeboxed slice with one ✔ win condition. For every card: one block ≈ 1–2 units — split a 45–75 min block at its natural checkpoint (e.g. "SRS +10 words" → "SRS first 5" + "SRS last 5 + worst-3 re-record").
+- **MIN DAY = 1 unit (≥20 min), tone or SRS reps preferred.** This is §3's own law — "SRS floor = 20 min/day, never zero" — made concrete. One unit keeps the streak alive. It does **not** pass the card; it keeps you in the game, which is the thing that actually predicts landing state.
+- **FULL DAY** = enough units to attempt the hard gate → `dayNN:` PASS commit (hook rules unchanged).
+- **HOT DAY** = chain past the gate into the next card's units. Two *cards* in one day: allowed **only in Stage B (Day 22+)** — tone acquisition is day-gated, not hour-gated (§2). Stage A never doubles; hot Stage-A energy goes into extra HVPT reps or tomorrow's SRS block instead.
+- **Commits are the streak — no new tooling.** After any unit: `unit: dayNN <what> | <min>` (sails through the hook). On gate pass: `dayNN: ...` as before (§8). Streak = consecutive calendar days with ≥1 commit of either kind; `git log --oneline` is the whole scoreboard.
+- **Session opener ritual (90 s):** `uv run python scripts/tone_compare.py --record ma2` — any syllable. A verdict and a picture before any decision about how much to do. Start = play.
+- **A broken streak costs the streak, nothing else.** Slips already have their price (§7 auto-shrink — scope, not shame). Log it, forgive it — self-forgiveness after a lapse measurably reduces the next lapse (Wohl et al. 2010) — then take the next MIN DAY.
+
+---
+
 ### 官方 HSK 字数 — 直接从大纲核实
 
 来源：**`新版HSK考试大纲1219.pdf`** = *中文水平考试 HSK 考试大纲*，中外语言交流合作中心，**2025年11月出版，2026年7月起生效**。直接从词汇大纲/汉字大纲列表解析（连续序号，等级标注）。**[R]**
