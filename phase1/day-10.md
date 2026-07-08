@@ -1,4 +1,4 @@
-# Day 10 — Sat 25 Jul 2026 · Week 2 · Stage A
+# Day 10 — Mon 13 Jul 2026 · Week 2 · Stage A
 **Multi-speaker generalisation.** Accuracy on one voice ≠ real perception. Force new speakers so the category generalises (this is what makes the gains durable).
 
 ## Hard gate

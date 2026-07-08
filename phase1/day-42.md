@@ -1,4 +1,4 @@
-# Day 42 — Wed 26 Aug 2026 · Week 7 · Stage B
+# Day 42 — Fri 14 Aug 2026 · Week 7 · Stage B
 **HSK-3 mock, section 1 (listening + reading).** Final week is consolidate-and-test, not cram. Run a real mock to find gaps while there's still time to fix them.
 
 ## Hard gate

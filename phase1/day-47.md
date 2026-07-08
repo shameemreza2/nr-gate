@@ -1,5 +1,5 @@
-# Day 47 — Mon 31 Aug 2026 · Week 7 · Stage B · **FLY-READINESS GATE**
-**Last day before China.** Light study, full readiness check. Tomorrow you fly.
+# Day 47 — Wed 19 Aug 2026 · Week 7 · Stage B · **FLY-READINESS GATE**
+**Core-curriculum exit gate.** Light study, full readiness check. 2 buffer days then you fly (22 Aug).
 
 ## Hard gate (Phase-1 exit gate)
 All three:

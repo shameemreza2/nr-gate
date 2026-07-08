@@ -1,4 +1,4 @@
-# Day 35 — Wed 19 Aug 2026 · Week 6 · Stage B
+# Day 35 — Fri 7 Aug 2026 · Week 6 · Stage B
 **把 construction (recognition).** The disposal pattern — recognise it, don't drill production yet. Rate steps to 40/day for the final push.
 
 ## Hard gate

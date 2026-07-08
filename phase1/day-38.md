@@ -1,4 +1,4 @@
-# Day 38 — Sat 22 Aug 2026 · Week 6 · Stage B
+# Day 38 — Mon 10 Aug 2026 · Week 6 · Stage B
 **Listening at HSK-3 speed.** Push input tempo to real HSK-3 audio. Vocab past 800.
 
 ## Hard gate

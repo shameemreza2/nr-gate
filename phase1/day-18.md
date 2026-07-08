@@ -1,4 +1,4 @@
-# Day 18 — Sun 2 Aug 2026 · Week 3 · Stage A · DELOAD
+# Day 18 — Tue 21 Jul 2026 · Week 3 · Stage A · DELOAD
 **Hold 90. No new material.** Let consolidation do its work before the final pre-unlock push.
 
 ## Hard gate

@@ -1,4 +1,4 @@
-# Day 23 — Fri 7 Aug 2026 · Week 4 · Stage B
+# Day 23 — Sun 26 Jul 2026 · Week 4 · Stage B
 **Measure words.** 个 / 位 / 张 — your Bangla classifier instinct (টা/জন/খানা) transfers here. Use it.
 
 ## Hard gate

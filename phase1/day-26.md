@@ -1,4 +1,4 @@
-# Day 26 — Mon 10 Aug 2026 · Week 4 · Stage B
+# Day 26 — Wed 29 Jul 2026 · Week 4 · Stage B
 **了 — change & completion.** The first real aspect particle. Rate steps up to 35/day now that reviews are under control.
 
 ## Hard gate

@@ -1,5 +1,5 @@
-# Day 46 — Sun 30 Aug 2026 · Week 7 · Stage B · DELOAD
-**Stabilise + start packing. No new words.** Penultimate day — protect the base, don't strain it.
+# Day 46 — Tue 18 Aug 2026 · Week 7 · Stage B · DELOAD
+**Stabilise + start packing. No new words.** 4 days out — protect the base, don't strain it.
 
 ## Hard gate
 Tone-pair ID **≥97%** sustained **and** **self-intro fluent** (60s, correct tones, no script). Missed → `day46-r1`.

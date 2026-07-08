@@ -1,4 +1,4 @@
-# Day 31 — Sat 15 Aug 2026 · Week 5 · Stage B
+# Day 31 — Mon 3 Aug 2026 · Week 5 · Stage B
 **Comparison 比.** A 比 B + adjective — the core HSK-2 comparison pattern. Vocab hits 600.
 
 ## Hard gate

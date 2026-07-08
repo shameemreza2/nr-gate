@@ -1,16 +1,16 @@
 # HVPT Trainer — Design Spec
 
 **High-Variability Phonetic Training for Mandarin tone perception.**
-Date: 2026-06-19 · Repo: `D:\hsk3~5` · Target: Phase 1 (Day 0 = 15 Jul 2026 → fly day 1 Sep 2026)
+Date: 2026-06-19 · Repo: `D:\hsk3~5` · Target: Phase 1 (Day 0 = 3 Jul 2026 → fly day 22 Aug 2026)
 
-> **Status: spec locked 2026-06-19. Corpus decision updated 2026-06-19.**
-> Official Tone Perfect corpus request submitted to MSU (ryuc@msu.edu) — pending FileDepot delivery.
-> **Public access confirmed unavailable (2026-06-19):** no public mirror; only a synthetic
-> voice-changing GitHub adaptation (files tagged `（fake）` — excluded by `parse_filename`).
-> **Temporary alt corpus adopted:** `scripts/make_alt_corpus.py` — edge-tts zh-CN TTS,
-> 10 syllables × 4 tones × 4 voices = 160 MP3s (`pip install edge-tts`, then run the script).
-> Official corpus swaps in flat into `corpus/tone_perfect/` with **zero code or spec changes**.
-> Checkpoint: 2026-07-08. See §3.3 and §13 R1/R2.
+> **Status: spec locked 2026-06-19. Official corpus DELIVERED — verified 2026-07-03.**
+> Official Tone Perfect corpus arrived via MSU FileDepot and is placed flat in
+> `corpus/tone_perfect/`: **9,839 / 9,840 files** (410 syllables × 4 tones × 6 speakers;
+> one gap — `jiao1_FV3` — missing from the delivered set, negligible at this scale).
+> All filenames parse cleanly, zero `（fake）`-tagged files, zero-byte files, or format
+> mismatches. `scripts/make_alt_corpus.py` (the temporary edge-tts stand-in) has been
+> deleted per its own swap-in instruction — no code/config changes needed, `hvpt_config.json`
+> already points at `corpus/tone_perfect/`. Ready for the Day-0 baseline run. See §3.3 and §13 R1/R2.
 
 ---
 

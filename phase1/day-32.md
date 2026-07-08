@@ -1,4 +1,4 @@
-# Day 32 — Sun 16 Aug 2026 · Week 5 · Stage B · DELOAD
+# Day 32 — Tue 4 Aug 2026 · Week 5 · Stage B · DELOAD
 **Reviews + tone audit. No new words.**
 
 ## Hard gate

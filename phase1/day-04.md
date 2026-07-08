@@ -1,4 +1,4 @@
-# Day 4 — Sun 19 Jul 2026 · Week 1 · Stage A · DELOAD
+# Day 4 — Tue 7 Jul 2026 · Week 1 · Stage A · DELOAD
 **Consolidate Week-1 initials. No new material.** Spacing beats bingeing — today is half-load on purpose.
 
 ## Hard gate

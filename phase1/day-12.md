@@ -1,4 +1,4 @@
-# Day 12 — Mon 27 Jul 2026 · Week 2 · Stage A
+# Day 12 — Wed 15 Jul 2026 · Week 2 · Stage A
 **Tone-3 sandhi.** Two T3s in a row → first becomes T2 (nǐ hǎo → ní hǎo). Hear it and say it; this is a real exam and speech item.
 
 ## Hard gate

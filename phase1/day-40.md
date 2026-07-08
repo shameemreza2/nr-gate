@@ -1,4 +1,4 @@
-# Day 40 — Mon 24 Aug 2026 · Week 6 · Stage B
+# Day 40 — Wed 12 Aug 2026 · Week 6 · Stage B
 **T2↔T3 to 95.** Close out your hardest contrast at the terminal bar while the vocab sprint continues.
 
 ## Hard gate

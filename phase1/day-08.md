@@ -1,4 +1,4 @@
-# Day 8 — Thu 23 Jul 2026 · Week 2 · Stage A
+# Day 8 — Sat 11 Jul 2026 · Week 2 · Stage A
 **T2 vs T3 — your hardest category.** Research on Bangla-L1 learners names Tone 2 as the dominant error. Over-weight it every day from here.
 
 ## Hard gate

@@ -1,4 +1,4 @@
-# Day 44 — Fri 28 Aug 2026 · Week 7 · Stage B
+# Day 44 — Sun 16 Aug 2026 · Week 7 · Stage B
 **Weak-item drilling.** Cross 1,000 words = **full HSK 3 vocabulary**. Target your personal leech list, not new breadth.
 
 ## Hard gate

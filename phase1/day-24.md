@@ -1,4 +1,4 @@
-# Day 24 — Sat 8 Aug 2026 · Week 4 · Stage B
+# Day 24 — Mon 27 Jul 2026 · Week 4 · Stage B
 **的 + basic questions.** 吗 / 什么 / 哪 / 谁 — enough to start asking, not just naming.
 
 ## Hard gate

@@ -1,4 +1,4 @@
-# Day 41 — Tue 25 Aug 2026 · Week 6 · Stage B
+# Day 41 — Thu 13 Aug 2026 · Week 6 · Stage B
 **Consolidation.** Slightly lighter new-word load; spend the slack stabilising what's shaky before the final week.
 
 ## Hard gate

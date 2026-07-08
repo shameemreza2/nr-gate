@@ -1,4 +1,4 @@
-# Day 0 — Wed 15 Jul 2026 · Week 1 · Stage A
+# Day 0 — Fri 3 Jul 2026 · Week 1 · Stage A
 **Setup + the four tones + what pinyin is.** Today builds the machine; tomorrow it runs.
 
 ## Hard gate (pass before advancing)
@@ -15,7 +15,7 @@ If missed → repeat as `day00-r1`, add nothing new (README §7).
 - 0:30 — Log + git commit + confirm `[verify]` HSK 2 counts noted.
 
 ## Materials
-Pleco · Anki · HVPT source · native four-tone audio · official syllabus PDF.
+Pleco · Anki · HVPT source · native four-tone audio · official syllabus PDF · **Praat** (pitch-contour visualization — record + native model, overlay/compare F0 curves).
 
 ## Self-test
 Play your 5-syllable recording back-to-back with the native model. Contours match? Setup boxes all ticked?

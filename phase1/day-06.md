@@ -1,4 +1,4 @@
-# Day 6 — Tue 21 Jul 2026 · Week 1 · Stage A · WEEK-1 GATE
+# Day 6 — Thu 9 Jul 2026 · Week 1 · Stage A · WEEK-1 GATE
 **Compound finals + close out pinyin.** End of week 1: the whole pinyin system should be decodable.
 
 ## Hard gate (week gate)

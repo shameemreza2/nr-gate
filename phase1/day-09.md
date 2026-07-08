@@ -1,4 +1,4 @@
-# Day 9 — Fri 24 Jul 2026 · Week 2 · Stage A
+# Day 9 — Sun 12 Jul 2026 · Week 2 · Stage A
 **T2 vs T1.** Rising vs high-flat — the other T2 confusion. Keep T2↔T3 warm while adding this.
 
 ## Hard gate

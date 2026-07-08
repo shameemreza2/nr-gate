@@ -1,4 +1,4 @@
-# Day 14 — Wed 29 Jul 2026 · Week 3 · Stage A
+# Day 14 — Fri 17 Jul 2026 · Week 3 · Stage A
 **Climb begins toward 95.** Two weeks in — the literature says ~90% is reachable around here; you're pushing past it. Hold tone work as the priority; vocab stays a slow floor.
 
 ## Hard gate

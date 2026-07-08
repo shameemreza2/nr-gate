@@ -1,4 +1,4 @@
-# Day 21 — Wed 5 Aug 2026 · Week 4 · **UNLOCK DAY**
+# Day 21 — Fri 24 Jul 2026 · Week 4 · **UNLOCK DAY**
 **The hinge of Phase 1.** Pass this and vocab scaling opens. Miss it and you hold here, keep drilling tones, and the fly-day vocab target auto-shrinks (README §7) — that's the deal you chose with the 95% gate, and it's the safe one.
 
 ## Hard gate (THE unlock)

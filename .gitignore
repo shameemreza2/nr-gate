@@ -1,9 +1,13 @@
 corpus/tone_perfect/
 logs/hvpt_sessions.csv
+recordings/**/*.wav
+recordings/**/*.mp3
+recordings/**/*.m4a
 
 # Python
 __pycache__/
 *.pyc
+.pytest_tmp/
 
 # graphify local/machine-specific + cache (graph outputs themselves are kept)
 graphify-out/.graphify_python

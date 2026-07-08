@@ -1,7 +1,7 @@
-# Fly Day — Tue 1 Sep 2026 · Phase 1 → Phase 2 handoff
+# Fly Day (Day 50) — Sat 22 Aug 2026 · Phase 1 → Phase 2 handoff
 **✈ Travel to HIT-SZ, Shenzhen.** No study target today except the SRS floor (do it on the plane — 20 min, never zero).
 
-## Carry-over snapshot (fill from tracker on Day 47)
+## Carry-over snapshot (fill from tracker on Day 49)
 - Final tone-pair ID: ____%  · T2↔T3: ____%
 - Vocab recognised: ____ (target ~1,075 = full HSK 3 vocabulary, 1,000)
 - Recognition characters: ~____ (target ~655 = full HSK 3 认读字 set)

@@ -1,4 +1,4 @@
-# Day 20 — Tue 4 Aug 2026 · Week 3 · Stage A · WEEK-3 GATE
+# Day 20 — Thu 23 Jul 2026 · Week 3 · Stage A · WEEK-3 GATE
 **Last gate before the unlock.** Survival vocab floor (~300) is reached. Clear ≥92% and you're one step from opening the sprint.
 
 ## Hard gate (week gate)

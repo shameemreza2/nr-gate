@@ -1,4 +1,4 @@
-# Day 13 — Tue 28 Jul 2026 · Week 2 · Stage A · WEEK-2 GATE
+# Day 13 — Thu 16 Jul 2026 · Week 2 · Stage A · WEEK-2 GATE
 **Lock tone pairs at 85.** Halfway to the unlock. This gate is the proof your perception is real, not memorised.
 
 ## Hard gate (week gate)

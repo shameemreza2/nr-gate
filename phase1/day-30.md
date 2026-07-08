@@ -1,4 +1,4 @@
-# Day 30 — Fri 14 Aug 2026 · Week 5 · Stage B
+# Day 30 — Sun 2 Aug 2026 · Week 5 · Stage B
 **Progressive 在…呢.** Saying what's happening right now. Halfway through the sprint — vocab past 550.
 
 ## Hard gate

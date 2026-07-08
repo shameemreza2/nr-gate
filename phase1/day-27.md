@@ -1,4 +1,4 @@
-# Day 27 — Tue 11 Aug 2026 · Week 4 · Stage B
+# Day 27 — Thu 30 Jul 2026 · Week 4 · Stage B
 **Modals: 想 / 要 / 会 / 能.** Wanting and being able — the verbs that unlock real sentences.
 
 ## Hard gate

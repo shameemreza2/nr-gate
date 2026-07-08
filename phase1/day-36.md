@@ -1,4 +1,4 @@
-# Day 36 — Thu 20 Aug 2026 · Week 6 · Stage B
+# Day 36 — Sat 8 Aug 2026 · Week 6 · Stage B
 **Connected-speech tones.** Isolated tones are solved; now keep them correct *inside sentences* — where they really slip.
 
 ## Hard gate

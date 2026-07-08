@@ -1,4 +1,4 @@
-# Day 7 — Wed 22 Jul 2026 · Week 2 · Stage A
+# Day 7 — Fri 10 Jul 2026 · Week 2 · Stage A
 **Tone PAIRS begin.** Single tones are easy; the difficulty lives in two-syllable combinations. This is where the gate ladder gets steep.
 
 ## Hard gate

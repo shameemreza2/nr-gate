@@ -1,4 +1,4 @@
-# Day 5 — Mon 20 Jul 2026 · Week 1 · Stage A
+# Day 5 — Wed 8 Jul 2026 · Week 1 · Stage A
 **Simple finals + ü isolation.** ü (the lǜ/nǚ vowel) exists in neither Bangla nor English — build it from scratch today.
 
 ## Hard gate

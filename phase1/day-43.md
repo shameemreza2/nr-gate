@@ -1,4 +1,4 @@
-# Day 43 — Thu 27 Aug 2026 · Week 7 · Stage B
+# Day 43 — Sat 15 Aug 2026 · Week 7 · Stage B
 **HSK-3 mock, section 2 + error sweep.** Turn yesterday's misses into today's reviews.
 
 ## Hard gate

@@ -1,4 +1,4 @@
-# Day 22 — Thu 6 Aug 2026 · Week 4 · Stage B
+# Day 22 — Sat 25 Jul 2026 · Week 4 · Stage B
 **Sprint start.** Vocab is open. Two rules keep it from fossilising: tones held ≥95% daily, and every new word recorded + shadowed once.
 
 ## Hard gate

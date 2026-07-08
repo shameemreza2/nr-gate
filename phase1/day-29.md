@@ -1,4 +1,4 @@
-# Day 29 — Thu 13 Aug 2026 · Week 5 · Stage B
+# Day 29 — Sat 1 Aug 2026 · Week 5 · Stage B
 **Locations & directions.** 在 + place, 上/下/里/外/前/后 — where things are. Useful from your first day in Shenzhen.
 
 ## Hard gate

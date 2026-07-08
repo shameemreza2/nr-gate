@@ -1,4 +1,4 @@
-# Day 34 — Tue 18 Aug 2026 · Week 5 · Stage B
+# Day 34 — Thu 6 Aug 2026 · Week 5 · Stage B
 **Resultative verbs (intro).** 看见/听到/吃完 — verb + result. Recognition only; don't over-engineer it now.
 
 ## Hard gate

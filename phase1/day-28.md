@@ -1,4 +1,4 @@
-# Day 28 — Wed 12 Aug 2026 · Week 5 · Stage B
+# Day 28 — Fri 31 Jul 2026 · Week 5 · Stage B
 **Time & dates.** 点/分, 今天/明天/昨天, days, months — the scaffolding for everyday talk.
 
 ## Hard gate

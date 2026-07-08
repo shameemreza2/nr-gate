@@ -1,4 +1,4 @@
-# Day 25 — Sun 9 Aug 2026 · Week 4 · Stage B · DELOAD
+# Day 25 — Tue 28 Jul 2026 · Week 4 · Stage B · DELOAD
 **Catch up reviews. No new words.** Sprint weeks need a valve — today reviews and tones only.
 
 ## Hard gate

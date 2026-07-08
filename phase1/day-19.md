@@ -1,4 +1,4 @@
-# Day 19 — Mon 3 Aug 2026 · Week 3 · Stage A
+# Day 19 — Wed 22 Jul 2026 · Week 3 · Stage A
 **Pre-unlock push.** Two days from the vocab unlock. Squeeze the last points out of perception now.
 
 ## Hard gate

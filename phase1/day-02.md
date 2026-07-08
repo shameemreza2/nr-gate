@@ -1,4 +1,4 @@
-# Day 2 — Fri 17 Jul 2026 · Week 1 · Stage A
+# Day 2 — Sun 5 Jul 2026 · Week 1 · Stage A
 **Initials g k h + j q x (palatals).** j/q/x are new territory — tongue position matters; don't map them to English.
 
 ## Hard gate

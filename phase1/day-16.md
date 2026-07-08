@@ -1,4 +1,4 @@
-# Day 16 — Fri 31 Jul 2026 · Week 3 · Stage A
+# Day 16 — Sun 19 Jul 2026 · Week 3 · Stage A
 **Speed up.** Add tempo — perception must survive normal conversational pace, not just slow drills.
 
 ## Hard gate

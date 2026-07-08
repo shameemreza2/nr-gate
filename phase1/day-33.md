@@ -1,4 +1,4 @@
-# Day 33 — Mon 17 Aug 2026 · Week 5 · Stage B
+# Day 33 — Wed 5 Aug 2026 · Week 5 · Stage B
 **过 — experience aspect.** "Have you ever…" Hit the **≥97% terminal tone target** today and just hold it from here.
 
 ## Hard gate

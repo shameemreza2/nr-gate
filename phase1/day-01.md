@@ -1,4 +1,4 @@
-# Day 1 — Thu 16 Jul 2026 · Week 1 · Stage A
+# Day 1 — Sat 4 Jul 2026 · Week 1 · Stage A
 **Initials b p m f d t n l + single-tone ID begins.** Your Bangla aspiration contrast (ক/খ) is an asset here — lean on it for b/p, d/t.
 
 ## Hard gate

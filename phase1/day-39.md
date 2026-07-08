@@ -1,4 +1,4 @@
-# Day 39 — Sun 23 Aug 2026 · Week 6 · Stage B · DELOAD
+# Day 39 — Tue 11 Aug 2026 · Week 6 · Stage B · DELOAD
 **Reviews + full HSK-2 listening check. No new words.**
 
 ## Hard gate

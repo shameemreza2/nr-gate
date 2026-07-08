@@ -1,4 +1,4 @@
-# Day 11 — Sun 26 Jul 2026 · Week 2 · Stage A · DELOAD
+# Day 11 — Tue 14 Jul 2026 · Week 2 · Stage A · DELOAD
 **Consolidate tone pairs. No new material.**
 
 ## Hard gate

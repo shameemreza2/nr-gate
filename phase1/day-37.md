@@ -1,4 +1,4 @@
-# Day 37 — Fri 21 Aug 2026 · Week 6 · Stage B
+# Day 37 — Sun 9 Aug 2026 · Week 6 · Stage B
 **Self-intro draft — the Phase-2 seed.** Write a 60-second Mandarin self-introduction (name, country, major, why telecom, why HIT-SZ). This becomes your supervisor-meeting pitch later.
 
 ## Hard gate

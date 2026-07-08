@@ -1,4 +1,4 @@
-# Day 3 — Sat 18 Jul 2026 · Week 1 · Stage A
+# Day 3 — Mon 6 Jul 2026 · Week 1 · Stage A
 **Retroflex zh ch sh r + dentals z c s.** This is your documented #1 *initials* error site (Bangla-L1). Over-drill it now or pay later.
 
 ## Hard gate

@@ -1,4 +1,4 @@
-# Day 17 — Sat 1 Aug 2026 · Week 3 · Stage A
+# Day 17 — Mon 20 Jul 2026 · Week 3 · Stage A
 **Cross the 90 line.** This is the milestone the canonical training study reaches around now. Everything past here is the tail you're paying for.
 
 ## Hard gate

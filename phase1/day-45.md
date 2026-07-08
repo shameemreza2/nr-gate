@@ -1,4 +1,4 @@
-# Day 45 — Sat 29 Aug 2026 · Week 7 · Stage B
+# Day 45 — Mon 17 Aug 2026 · Week 7 · Stage B
 **Full HSK-3 listening+reading mock.** A complete dry run to prove the base is real and exam-shaped (you won't sit HSK 3 yet — this is calibration; handwriting + speaking come in Phase 2).
 
 ## Hard gate

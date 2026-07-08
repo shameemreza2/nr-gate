@@ -1,4 +1,4 @@
-# Day 15 — Thu 30 Jul 2026 · Week 3 · Stage A
+# Day 15 — Sat 18 Jul 2026 · Week 3 · Stage A
 **Disyllabic-word tones.** Move from abstract pairs to real two-syllable words — tones in the words you actually use.
 
 ## Hard gate
